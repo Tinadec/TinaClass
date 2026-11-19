@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Usage text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Usage.Localization.UsageLangResourceKind">
+    <unit id="NavUsage"><segment><source>Usage</source><target state="translated">Usage</target></segment></unit>
+    <unit id="Title"><segment><source>Usage and budget</source><target state="translated">Usage and budget</target></segment></unit>
+    <unit id="Lead"><segment><source>What the workspace spent, where it went, and how close it is to the monthly budget.</source><target state="translated">What the workspace spent, where it went, and how close it is to the monthly budget.</target></segment></unit>
+    <unit id="RangeMonth"><segment><source>This month</source><target state="translated">This month</target></segment></unit>
+    <unit id="Range7"><segment><source>Last 7 days</source><target state="translated">Last 7 days</target></segment></unit>
+    <unit id="Total"><segment><source>Spend</source><target state="translated">Spend</target></segment></unit>
+    <unit id="Tokens"><segment><source>Tokens</source><target state="translated">Tokens</target></segment></unit>
+    <unit id="Requests"><segment><source>Requests</source><target state="translated">Requests</target></segment></unit>
+    <unit id="FirstToken"><segment><source>First token</source><target state="translated">First token</target></segment></unit>
+    <unit id="CacheHit"><segment><source>{0}% from cache</source><target state="translated">{0}% from cache</target></segment></unit>
+    <unit id="Seconds"><segment><source>s</source><target state="translated">s</target></segment></unit>
+    <unit id="Budget"><segment><source>Monthly budget</source><target state="translated">Monthly budget</target></segment></unit>
+    <unit id="BudgetUsed"><segment><source>{0} of {1} used</source><target state="translated">{0} of {1} used</target></segment></unit>
+    <unit id="StateOk"><segment><source>On track</source><target state="translated">On track</target></segment></unit>
+    <unit id="StateWarn50"><segment><source>Half used</source><target state="translated">Half used</target></segment></unit>
+    <unit id="StateWarn80"><segment><source>Almost used</source><target state="translated">Almost used</target></segment></unit>
+    <unit id="StateOver"><segment><source>Over budget</source><target state="translated">Over budget</target></segment></unit>
+    <unit id="Projected"><segment><source>At this pace the budget runs out on {0}.</source><target state="translated">At this pace the budget runs out on {0}.</target></segment></unit>
+    <unit id="Lasts"><segment><source>The budget lasts through the month at this pace.</source><target state="translated">The budget lasts through the month at this pace.</target></segment></unit>
+    <unit id="Daily"><segment><source>Daily spend</source><target state="translated">Daily spend</target></segment></unit>
+    <unit id="DailyNote"><segment><source>Weekends are lighter.</source><target state="translated">Weekends are lighter.</target></segment></unit>
+    <unit id="ByModel"><segment><source>By model</source><target state="translated">By model</target></segment></unit>
+    <unit id="ByMember"><segment><source>By member</source><target state="translated">By member</target></segment></unit>
+    <unit id="ColMember"><segment><source>Member</source><target state="translated">Member</target></segment></unit>
+    <unit id="ColModel"><segment><source>Model</source><target state="translated">Model</target></segment></unit>
+    <unit id="ColCost"><segment><source>Spend</source><target state="translated">Spend</target></segment></unit>
+    <unit id="ColRequests"><segment><source>Requests</source><target state="translated">Requests</target></segment></unit>
+    <unit id="ColTokens"><segment><source>Tokens</source><target state="translated">Tokens</target></segment></unit>
+    <unit id="ColShare"><segment><source>Share</source><target state="translated">Share</target></segment></unit>
+    <unit id="AutoRuns"><segment><source>Agents running on their own</source><target state="translated">Agents running on their own</target></segment></unit>
+    <unit id="Empty"><segment><source>No requests yet</source><target state="translated">No requests yet</target></segment></unit>
+    <unit id="EmptyHint"><segment><source>Send a message in Chat and its cost shows up here.</source><target state="translated">Send a message in Chat and its cost shows up here.</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the usage</source><target state="translated">Could not read the usage</target></segment></unit>
+    <unit id="RoleOwner"><segment><source>Owner</source><target state="translated">Owner</target></segment></unit>
+    <unit id="RoleAdmin"><segment><source>Administrator</source><target state="translated">Administrator</target></segment></unit>
+    <unit id="RoleMember"><segment><source>Member</source><target state="translated">Member</target></segment></unit>
+    <unit id="RoleViewer"><segment><source>Viewer</source><target state="translated">Viewer</target></segment></unit>
+    <unit id="RoleAgent"><segment><source>Agent</source><target state="translated">Agent</target></segment></unit>
+    <unit id="ActionPreviousRange"><segment><source>Previous range</source><target state="translated">Previous range</target></segment></unit>
+    <unit id="ActionNextRange"><segment><source>Next range</source><target state="translated">Next range</target></segment></unit>
+    <unit id="CurrencyUnit"><segment><source>CNY</source><target state="translated">CNY</target></segment></unit>
+    <unit id="MeterFree"><segment><source>left</source><target state="translated">left</target></segment></unit>
+    <unit id="MeterOver"><segment><source>over</source><target state="translated">over</target></segment></unit>
+    <unit id="DailyAverage"><segment><source>Daily average</source><target state="translated">Daily average</target></segment></unit>
+  </file>
+</xliff>

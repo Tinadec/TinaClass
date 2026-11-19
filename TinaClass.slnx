@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TinaClass.Contracts/TinaClass.Contracts.csproj" />
+    <Project Path="src/TinaClass.App/TinaClass.App.csproj" />
+    <Project Path="src/TinaClass.Api/TinaClass.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TinaClass.App.Tests/TinaClass.App.Tests.csproj" />
+    <Project Path="tests/TinaClass.Api.Tests/TinaClass.Api.Tests.csproj" />
+  </Folder>
+</Solution>

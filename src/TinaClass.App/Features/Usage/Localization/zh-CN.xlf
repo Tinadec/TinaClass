@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Usage text in zh-CN: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-CN" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Usage.Localization.UsageLangResourceKind">
+    <unit id="NavUsage"><segment><source>Usage</source><target state="translated">用量</target></segment></unit>
+    <unit id="Title"><segment><source>Usage and budget</source><target state="translated">用量与预算</target></segment></unit>
+    <unit id="Lead"><segment><source>What the workspace spent, where it went, and how close it is to the monthly budget.</source><target state="translated">工作区花了多少、花在哪里，离每月预算还有多远。</target></segment></unit>
+    <unit id="RangeMonth"><segment><source>This month</source><target state="translated">本月</target></segment></unit>
+    <unit id="Range7"><segment><source>Last 7 days</source><target state="translated">近 7 天</target></segment></unit>
+    <unit id="Total"><segment><source>Spend</source><target state="translated">花费</target></segment></unit>
+    <unit id="Tokens"><segment><source>Tokens</source><target state="translated">Token 数</target></segment></unit>
+    <unit id="Requests"><segment><source>Requests</source><target state="translated">请求数</target></segment></unit>
+    <unit id="FirstToken"><segment><source>First token</source><target state="translated">首字延迟</target></segment></unit>
+    <unit id="CacheHit"><segment><source>{0}% from cache</source><target state="translated">{0}% 来自缓存</target></segment></unit>
+    <unit id="Seconds"><segment><source>s</source><target state="translated">秒</target></segment></unit>
+    <unit id="Budget"><segment><source>Monthly budget</source><target state="translated">本月预算</target></segment></unit>
+    <unit id="BudgetUsed"><segment><source>{0} of {1} used</source><target state="translated">已用 {0}，共 {1}</target></segment></unit>
+    <unit id="StateOk"><segment><source>On track</source><target state="translated">正常</target></segment></unit>
+    <unit id="StateWarn50"><segment><source>Half used</source><target state="translated">已用一半</target></segment></unit>
+    <unit id="StateWarn80"><segment><source>Almost used</source><target state="translated">接近上限</target></segment></unit>
+    <unit id="StateOver"><segment><source>Over budget</source><target state="translated">已超出</target></segment></unit>
+    <unit id="Projected"><segment><source>At this pace the budget runs out on {0}.</source><target state="translated">按当前速度，预算会在 {0} 用完。</target></segment></unit>
+    <unit id="Lasts"><segment><source>The budget lasts through the month at this pace.</source><target state="translated">按当前速度，预算够用到月底。</target></segment></unit>
+    <unit id="Daily"><segment><source>Daily spend</source><target state="translated">每日花费</target></segment></unit>
+    <unit id="DailyNote"><segment><source>Weekends are lighter.</source><target state="translated">周末颜色较浅。</target></segment></unit>
+    <unit id="ByModel"><segment><source>By model</source><target state="translated">按模型</target></segment></unit>
+    <unit id="ByMember"><segment><source>By member</source><target state="translated">按成员</target></segment></unit>
+    <unit id="ColMember"><segment><source>Member</source><target state="translated">成员</target></segment></unit>
+    <unit id="ColModel"><segment><source>Model</source><target state="translated">模型</target></segment></unit>
+    <unit id="ColCost"><segment><source>Spend</source><target state="translated">花费</target></segment></unit>
+    <unit id="ColRequests"><segment><source>Requests</source><target state="translated">请求</target></segment></unit>
+    <unit id="ColTokens"><segment><source>Tokens</source><target state="translated">Token</target></segment></unit>
+    <unit id="ColShare"><segment><source>Share</source><target state="translated">占比</target></segment></unit>
+    <unit id="AutoRuns"><segment><source>Agents running on their own</source><target state="translated">智能体自动运行</target></segment></unit>
+    <unit id="Empty"><segment><source>No requests yet</source><target state="translated">还没有请求</target></segment></unit>
+    <unit id="EmptyHint"><segment><source>Send a message in Chat and its cost shows up here.</source><target state="translated">在对话里发一条消息，花费就会出现在这里。</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the usage</source><target state="translated">无法读取用量</target></segment></unit>
+    <unit id="RoleOwner"><segment><source>Owner</source><target state="translated">所有者</target></segment></unit>
+    <unit id="RoleAdmin"><segment><source>Administrator</source><target state="translated">管理员</target></segment></unit>
+    <unit id="RoleMember"><segment><source>Member</source><target state="translated">成员</target></segment></unit>
+    <unit id="RoleViewer"><segment><source>Viewer</source><target state="translated">只读成员</target></segment></unit>
+    <unit id="RoleAgent"><segment><source>Agent</source><target state="translated">智能体</target></segment></unit>
+    <unit id="ActionPreviousRange"><segment><source>Previous range</source><target state="translated">上一个区间</target></segment></unit>
+    <unit id="ActionNextRange"><segment><source>Next range</source><target state="translated">下一个区间</target></segment></unit>
+    <unit id="CurrencyUnit"><segment><source>CNY</source><target state="translated">元</target></segment></unit>
+    <unit id="MeterFree"><segment><source>left</source><target state="translated">剩余</target></segment></unit>
+    <unit id="MeterOver"><segment><source>over</source><target state="translated">超出</target></segment></unit>
+    <unit id="DailyAverage"><segment><source>Daily average</source><target state="translated">日均</target></segment></unit>
+  </file>
+</xliff>

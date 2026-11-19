@@ -1,0 +1,14 @@
+# The Docker build context is the repository root (deploy/Dockerfile). Build output on the host must never reach the image:
+# a host obj/ carries restore paths that do not exist in the container.
+**/bin/
+**/obj/
+**/.vs/
+**/.idea/
+.git/
+.env
+.env.*
+!.env.example
+**/*.db
+**/*.db-shm
+**/*.db-wal
+capture/

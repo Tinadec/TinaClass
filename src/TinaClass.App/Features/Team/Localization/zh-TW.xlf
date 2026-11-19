@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Team text in zh-TW: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-TW" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Team.Localization.TeamLangResourceKind">
+    <unit id="NavTeam"><segment><source>Team</source><target state="translated">團隊</target></segment></unit>
+    <unit id="Title"><segment><source>Team</source><target state="translated">團隊</target></segment></unit>
+    <unit id="Lead"><segment><source>Who is in the workspace, what they may do, and what changed.</source><target state="translated">谁在工作區里、能做什么，以及改動記錄。</target></segment></unit>
+    <unit id="TabMembers"><segment><source>Members</source><target state="translated">成員</target></segment></unit>
+    <unit id="TabAudit"><segment><source>Audit log</source><target state="translated">審計日誌</target></segment></unit>
+    <unit id="Invite"><segment><source>Invite a member</source><target state="translated">邀請成員</target></segment></unit>
+    <unit id="InviteTitle"><segment><source>Invite a member</source><target state="translated">邀請成員</target></segment></unit>
+    <unit id="InviteEmail"><segment><source>Email</source><target state="translated">郵箱</target></segment></unit>
+    <unit id="InviteRole"><segment><source>Role</source><target state="translated">角色</target></segment></unit>
+    <unit id="InviteSend"><segment><source>Send invitation</source><target state="translated">發送邀請</target></segment></unit>
+    <unit id="InviteSent"><segment><source>Invitation sent to {0}</source><target state="translated">已向 {0} 發送邀請</target></segment></unit>
+    <unit id="InviteLink"><segment><source>The link works once and is shown only now:</source><target state="translated">連結只顯示這一次：</target></segment></unit>
+    <unit id="Close"><segment><source>Close</source><target state="translated">關闭</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="ColName"><segment><source>Name</source><target state="translated">姓名</target></segment></unit>
+    <unit id="ColEmail"><segment><source>Email</source><target state="translated">郵箱</target></segment></unit>
+    <unit id="ColRole"><segment><source>Role</source><target state="translated">角色</target></segment></unit>
+    <unit id="ColStatus"><segment><source>Status</source><target state="translated">狀態</target></segment></unit>
+    <unit id="ColJoined"><segment><source>Joined</source><target state="translated">加入時間</target></segment></unit>
+    <unit id="ColActor"><segment><source>Who</source><target state="translated">操作人</target></segment></unit>
+    <unit id="ColAction"><segment><source>Action</source><target state="translated">操作</target></segment></unit>
+    <unit id="ColDetail"><segment><source>Detail</source><target state="translated">說明</target></segment></unit>
+    <unit id="ColWhen"><segment><source>When</source><target state="translated">時間</target></segment></unit>
+    <unit id="StatusActive"><segment><source>Active</source><target state="translated">正常</target></segment></unit>
+    <unit id="StatusInvited"><segment><source>Invited</source><target state="translated">已邀請</target></segment></unit>
+    <unit id="StatusDisabled"><segment><source>Disabled</source><target state="translated">已停用</target></segment></unit>
+    <unit id="RoleOwner"><segment><source>Owner</source><target state="translated">所有者</target></segment></unit>
+    <unit id="RoleAdmin"><segment><source>Administrator</source><target state="translated">管理員</target></segment></unit>
+    <unit id="RoleMember"><segment><source>Member</source><target state="translated">成員</target></segment></unit>
+    <unit id="RoleViewer"><segment><source>Viewer</source><target state="translated">只讀成員</target></segment></unit>
+    <unit id="Disable"><segment><source>Disable</source><target state="translated">停用</target></segment></unit>
+    <unit id="Enable"><segment><source>Enable</source><target state="translated">啟用</target></segment></unit>
+    <unit id="EmptyAudit"><segment><source>Nothing recorded yet</source><target state="translated">還没有記錄</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the team</source><target state="translated">无法讀取團隊</target></segment></unit>
+    <unit id="FilterAll"><segment><source>All actions</source><target state="translated">全部操作</target></segment></unit>
+    <unit id="ErrorLastOwner"><segment><source>A workspace needs at least one owner.</source><target state="translated">工作區至少要有一位擁有者。</target></segment></unit>
+  </file>
+</xliff>

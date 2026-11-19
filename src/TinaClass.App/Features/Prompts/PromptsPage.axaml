@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:pl="using:TinaClass.App.Features.Prompts.Localization"
+             xmlns:p="using:TinaClass.App.Features.Prompts"
+             x:Class="TinaClass.App.Features.Prompts.PromptsPage"
+             x:DataType="p:PromptsViewModel">
+    <!-- Arc's PromptStudio does the editing (system and user text, variables, versions with compare, test cases, trial run); the list is a ListBox in a panel. -->
+    <Grid ColumnDefinitions="288,*" Margin="24,20,24,24" ColumnSpacing="16">
+        <Border Classes="panel" VerticalAlignment="Stretch">
+            <DockPanel>
+                <arc:SearchField x:Name="SearchBox" DockPanel.Dock="Top" Margin="12,12,12,8" Text="{Binding Query, Mode=TwoWay}" />
+                <ListBox ItemsSource="{Binding Items}" SelectedItem="{Binding Selected, Mode=TwoWay}" Background="Transparent" Padding="6,0,6,8">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="p:PromptRow">
+                            <Grid ColumnDefinitions="*,Auto" Margin="6,6" ColumnSpacing="8">
+                                <StackPanel Spacing="2">
+                                    <TextBlock Text="{Binding Name}" FontWeight="Medium" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" />
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <TextBlock Classes="muted small mono" Text="{Binding Command}" />
+                                        <TextBlock Classes="muted small" Text="{Binding Meta}" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+                                </StackPanel>
+                                <arc:Badge Grid.Column="1" VerticalAlignment="Center" IsVisible="{Binding HasCases}" Tone="Success" Content="{Binding CasesText}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Border>
+        <Grid Grid.Column="1" RowDefinitions="Auto,Auto,*" RowSpacing="12">
+            <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+            <arc:Alert Grid.Row="1" Tone="Success" IsOpen="{Binding CasesResult, Mode=OneWay, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" Content="{Binding CasesResult}" />
+            <arc:PromptStudio x:Name="Studio" Grid.Row="2" />
+            <StackPanel Grid.Row="2" IsVisible="{Binding HasNoPrompts}" VerticalAlignment="Center" Spacing="4">
+                <TextBlock Classes="h2" HorizontalAlignment="Center" Text="{pl:PromptsLangResource Empty}" />
+                <TextBlock Classes="muted" HorizontalAlignment="Center" Text="{pl:PromptsLangResource EmptyHint}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,195 @@
+<!-- The look the pages share: panels, header bars, rows and text roles. Colors, fonts, radii, sizes and spacing are Arc
+     tokens, so arc.theme.json (accent, corners, overrides) and light/dark apply everywhere. Included by the shell
+     (MainView). Only Thickness values (margins, paddings) are literals: Arc has no Thickness tokens. -->
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+        xmlns:ui="using:TinaClass.App.Common.Ui">
+
+    <!-- Surfaces. Hand-rolled: Arc's Card is a media/quick-look card with fixed padding (see docs/ARCHITECTURE.md). -->
+    <Style Selector="Border.panel">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource Surface}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Border}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="{arc:ArcDesignTokenResource RadiusPanel}" />
+        <Setter Property="ClipToBounds" Value="True" />
+    </Style>
+    <Style Selector="Border.bar">
+        <Setter Property="Height" Value="{arc:ArcDesignTokenResource Space12}" />
+        <Setter Property="Padding" Value="16,0" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Border}" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+    </Style>
+    <Style Selector="Border.panel-head">
+        <Setter Property="Height" Value="{arc:ArcDesignTokenResource Space10}" />
+        <Setter Property="Padding" Value="12,0" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource BorderSubtle}" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+    </Style>
+    <Style Selector="Border.line">
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource BorderSubtle}" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+    </Style>
+
+    <!-- Controls in header bars keep their own compact height and sit in the middle of the bar. -->
+    <Style Selector="Border.bar arc|Button, Border.panel-head arc|Button">
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="arc|Button.primary">
+        <Setter Property="Variant" Value="Primary" />
+    </Style>
+    <Style Selector="arc|Button.compact">
+        <Setter Property="Height" Value="{arc:ArcDesignTokenResource Space8}" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="arc|Button.icon-only">
+        <Setter Property="Width" Value="{arc:ArcDesignTokenResource Space8}" />
+        <Setter Property="Height" Value="{arc:ArcDesignTokenResource Space8}" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!-- Plain row lists (the bases, prompts and agents lists, the Spaces rail). Hand-rolled: Arc has no selectable list of rows (its Sidebar
+         is the navigation, ListBox has no template without a base theme), see docs/ARCHITECTURE.md. A row is a rounded cell that is muted on
+         hover and raised and outlined when selected. -->
+    <Style Selector="ListBox">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <ItemsPresenter Name="PART_ItemsPresenter" ItemsPanel="{TemplateBinding ItemsPanel}" Margin="{TemplateBinding Padding}" />
+                </ScrollViewer>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="ListBoxItem">
+        <Setter Property="Padding" Value="8,2" />
+        <Setter Property="Margin" Value="0,1" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource Foreground}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Name="PART_Row" Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="1"
+                        CornerRadius="{arc:ArcDesignTokenResource RadiusControl}" Padding="{TemplateBinding Padding}">
+                    <ContentPresenter Name="PART_ContentPresenter" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" />
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="ListBoxItem:pointerover /template/ Border#PART_Row">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceMuted}" />
+    </Style>
+    <Style Selector="ListBoxItem:selected /template/ Border#PART_Row">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceMuted}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Border}" />
+    </Style>
+
+    <!-- Alerts leave the layout once they have collapsed (Common/Ui/Motion.cs). -->
+    <Style Selector="arc|Alert">
+        <Setter Property="ui:Motion.HidesWhenClosed" Value="True" />
+    </Style>
+
+    <!-- Text roles -->
+    <Style Selector="TextBlock.title">
+        <Setter Property="FontFamily" Value="{arc:ArcDesignTokenResource DisplayFontFamily}" />
+        <Setter Property="FontSize" Value="{arc:ArcDesignTokenResource TypeLG}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="TextBlock.h2">
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="TextBlock.muted">
+        <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextMuted}" />
+    </Style>
+    <Style Selector="TextBlock.secondary">
+        <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextSecondary}" />
+    </Style>
+    <Style Selector="TextBlock.small">
+        <Setter Property="FontSize" Value="{arc:ArcDesignTokenResource TypeXS}" />
+    </Style>
+    <Style Selector="TextBlock.mono">
+        <Setter Property="FontFamily" Value="{arc:ArcDesignTokenResource MonoFontFamily}" />
+    </Style>
+
+    <!-- Density for Arc MetricCards: the rolling value at TypeXL instead of Type3XL (Arc type scale), padding in arc.theme.json. -->
+    <Style Selector="arc|MetricCard /template/ arc|AnimatedCounter#PART_Value">
+        <Setter Property="FontSize" Value="{arc:ArcDesignTokenResource TypeXL}" />
+    </Style>
+    <!-- StatusDot (Common/Ui/StatusDot.cs): 8px, colors are the design's status tokens; the running dot pulses at Full motion only. -->
+    <Style Selector="ui|StatusDot">
+        <Setter Property="Width" Value="8" />
+        <Setter Property="Height" Value="8" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource TextMuted}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource TextMuted}" />
+        <Setter Property="BorderThickness" Value="1.5" />
+    </Style>
+    <Style Selector="ui|StatusDot.success">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource Success}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Success}" />
+    </Style>
+    <Style Selector="ui|StatusDot.warning">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource Warning}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Warning}" />
+    </Style>
+    <Style Selector="ui|StatusDot.danger">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource Danger}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Danger}" />
+    </Style>
+    <Style Selector="ui|StatusDot.running">
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource Foreground}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Foreground}" />
+    </Style>
+    <Style Selector="ui|StatusDot.hollow">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="ui|StatusDot.running:motion-full">
+        <Style.Animations>
+            <Animation Duration="0:0:1.6" IterationCount="INFINITE" Easing="SineEaseInOut">
+                <KeyFrame Cue="0%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+                <KeyFrame Cue="50%"><Setter Property="Opacity" Value="0.3" /></KeyFrame>
+                <KeyFrame Cue="100%"><Setter Property="Opacity" Value="1" /></KeyFrame>
+            </Animation>
+        </Style.Animations>
+    </Style>
+
+    <!-- KeyCap (Common/Ui/KeyCap.cs): a mono cap with a slightly raised lower edge. -->
+    <Style Selector="ui|KeyCap.keycap">
+        <Setter Property="MinWidth" Value="20" />
+        <Setter Property="Height" Value="20" />
+        <Setter Property="Padding" Value="5,0" />
+        <Setter Property="CornerRadius" Value="6" />
+        <Setter Property="Background" Value="{arc:ArcDesignTokenResource SurfaceMuted}" />
+        <Setter Property="BorderBrush" Value="{arc:ArcDesignTokenResource Border}" />
+        <Setter Property="BorderThickness" Value="1,1,1,2" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="ui|KeyCap.keycap > TextBlock">
+        <Setter Property="FontFamily" Value="{arc:ArcDesignTokenResource MonoFontFamily}" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="Foreground" Value="{arc:ArcDesignTokenResource TextSecondary}" />
+    </Style>
+
+    <!-- Page layout: the content of a page is a column with 24px gutters; sections are headed by a small semibold line. -->
+    <Style Selector="TextBlock.section">
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="FontSize" Value="{arc:ArcDesignTokenResource TypeSM}" />
+    </Style>
+    <Style Selector="TextBlock.display">
+        <Setter Property="FontFamily" Value="{arc:ArcDesignTokenResource DisplayFontFamily}" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="FontSize" Value="28" />
+    </Style>
+    <Style Selector="TextBlock.num">
+        <Setter Property="FontFamily" Value="{arc:ArcDesignTokenResource MonoFontFamily}" />
+    </Style>
+</Styles>

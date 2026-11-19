@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home text in zh-CN: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-CN" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Home.Localization.HomeLangResourceKind">
+    <unit id="NavHome"><segment><source>Home</source><target state="translated">主页</target></segment></unit>
+    <unit id="GreetingMorning"><segment><source>Good morning, {0}</source><target state="translated">{0}，上午好</target></segment></unit>
+    <unit id="GreetingAfternoon"><segment><source>Good afternoon, {0}</source><target state="translated">{0}，下午好</target></segment></unit>
+    <unit id="GreetingEvening"><segment><source>Good evening, {0}</source><target state="translated">{0}，晚上好</target></segment></unit>
+    <unit id="Lead"><segment><source>AI workbench</source><target state="translated">Agent in Educational</target></segment></unit>
+    <unit id="Placeholder"><segment><source>Ask anything, or type / for a prompt</source><target state="translated">问点什么，或输入 / 调用提示词</target></segment></unit>
+    <unit id="Recent"><segment><source>Recent conversations</source><target state="translated">最近的对话</target></segment></unit>
+    <unit id="Spaces"><segment><source>Spaces</source><target state="translated">空间</target></segment></unit>
+    <unit id="NoRecent"><segment><source>Start with a question above.</source><target state="translated">从上面的输入框开始。</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read your history.</source><target state="translated">无法读取历史。</target></segment></unit>
+    <unit id="Retry"><segment><source>Try again</source><target state="translated">重试</target></segment></unit>
+    <unit id="Chats"><segment><source>{0} chats</source><target state="translated">{0} 个对话</target></segment></unit>
+  </file>
+</xliff>

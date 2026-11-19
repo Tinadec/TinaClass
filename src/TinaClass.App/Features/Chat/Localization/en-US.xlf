@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chat text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Chat.Localization.ChatLangResourceKind">
+    <unit id="NavChat"><segment><source>Chat</source><target state="translated">Chat</target></segment></unit>
+    <unit id="Greeting"><segment><source>What are we working on?</source><target state="translated">What are we working on?</target></segment></unit>
+    <unit id="Placeholder"><segment><source>Message TinaClass</source><target state="translated">Message TinaClass</target></segment></unit>
+    <unit id="StarterSummarize"><segment><source>Summarize a document</source><target state="translated">Summarize a document</target></segment></unit>
+    <unit id="StarterSummarizePrompt"><segment><source>Summarize the attached document in five bullet points and list the open questions.</source><target state="translated">Summarize the attached document in five bullet points and list the open questions.</target></segment></unit>
+    <unit id="StarterPainPoints"><segment><source>Top pain points</source><target state="translated">Top pain points</target></segment></unit>
+    <unit id="StarterPainPointsPrompt"><segment><source>Based on the Q3 interviews and the support tickets, what are the top three export pain points, and what should we do first?</source><target state="translated">Based on the Q3 interviews and the support tickets, what are the top three export pain points, and what should we do first?</target></segment></unit>
+    <unit id="StarterSql"><segment><source>Explain a slow query</source><target state="translated">Explain a slow query</target></segment></unit>
+    <unit id="StarterSqlPrompt"><segment><source>Explain why this export SQL is slow and how to fix it.</source><target state="translated">Explain why this export SQL is slow and how to fix it.</target></segment></unit>
+    <unit id="StarterWeekly"><segment><source>Weekly report</source><target state="translated">Weekly report</target></segment></unit>
+    <unit id="StarterWeeklyPrompt"><segment><source>Turn this week's ticket report into a short summary for management.</source><target state="translated">Turn this week's ticket report into a short summary for management.</target></segment></unit>
+    <unit id="InspectorRun"><segment><source>Run</source><target state="translated">Run</target></segment></unit>
+    <unit id="InspectorSources"><segment><source>Sources</source><target state="translated">Sources</target></segment></unit>
+    <unit id="InspectorContext"><segment><source>Context</source><target state="translated">Context</target></segment></unit>
+    <unit id="InspectorPlan"><segment><source>Plan</source><target state="translated">Plan</target></segment></unit>
+    <unit id="InspectorNoRun"><segment><source>Ask something and the plan, sources and cost of the answer appear here.</source><target state="translated">Ask something and the plan, sources and cost of the answer appear here.</target></segment></unit>
+    <unit id="InspectorCost"><segment><source>Cost of this answer</source><target state="translated">Cost of this answer</target></segment></unit>
+    <unit id="InspectorNoSources"><segment><source>This answer cites no sources.</source><target state="translated">This answer cites no sources.</target></segment></unit>
+    <unit id="InspectorCited"><segment><source>Cited in this answer</source><target state="translated">Cited in this answer</target></segment></unit>
+    <unit id="ToggleInspector"><segment><source>Show or hide the inspector</source><target state="translated">Show or hide the inspector</target></segment></unit>
+    <unit id="NewChat"><segment><source>New chat</source><target state="translated">New chat</target></segment></unit>
+    <unit id="Rename"><segment><source>Rename</source><target state="translated">Rename</target></segment></unit>
+    <unit id="Pin"><segment><source>Pin</source><target state="translated">Pin</target></segment></unit>
+    <unit id="Unpin"><segment><source>Unpin</source><target state="translated">Unpin</target></segment></unit>
+    <unit id="DeleteChat"><segment><source>Delete</source><target state="translated">Delete</target></segment></unit>
+    <unit id="MoveTo"><segment><source>Move to folder</source><target state="translated">Move to folder</target></segment></unit>
+    <unit id="Unfiled"><segment><source>Unfiled</source><target state="translated">Unfiled</target></segment></unit>
+    <unit id="Folders"><segment><source>Folders</source><target state="translated">Folders</target></segment></unit>
+    <unit id="Pinned"><segment><source>Pinned</source><target state="translated">Pinned</target></segment></unit>
+    <unit id="NewFolder"><segment><source>New folder</source><target state="translated">New folder</target></segment></unit>
+    <unit id="ErrorNotFound"><segment><source>The conversation no longer exists.</source><target state="translated">The conversation no longer exists.</target></segment></unit>
+    <unit id="PlanHeading"><segment><source>Run plan</source><target state="translated">Run plan</target></segment></unit>
+    <unit id="PlanApprove"><segment><source>Approve</source><target state="translated">Approve</target></segment></unit>
+    <unit id="PlanPause"><segment><source>Pause</source><target state="translated">Pause</target></segment></unit>
+    <unit id="PlanResume"><segment><source>Resume</source><target state="translated">Resume</target></segment></unit>
+    <unit id="PlanRetry"><segment><source>Retry</source><target state="translated">Retry</target></segment></unit>
+    <unit id="PlanSkip"><segment><source>Skip</source><target state="translated">Skip</target></segment></unit>
+    <unit id="PlanStateDone"><segment><source>Done</source><target state="translated">Done</target></segment></unit>
+    <unit id="PlanStateActive"><segment><source>Working</source><target state="translated">Working</target></segment></unit>
+    <unit id="PlanStatePending"><segment><source>Waiting</source><target state="translated">Waiting</target></segment></unit>
+    <unit id="PlanStateFailed"><segment><source>Failed</source><target state="translated">Failed</target></segment></unit>
+    <unit id="PlanStateSkipped"><segment><source>Skipped</source><target state="translated">Skipped</target></segment></unit>
+    <unit id="PlanWorking"><segment><source>Working on step {0}</source><target state="translated">Working on step {0}</target></segment></unit>
+    <unit id="PlanPaused"><segment><source>Paused at step {0}</source><target state="translated">Paused at step {0}</target></segment></unit>
+    <unit id="PlanFailed"><segment><source>Step {0} failed</source><target state="translated">Step {0} failed</target></segment></unit>
+    <unit id="PlanDoneIn"><segment><source>Done in {0}</source><target state="translated">Done in {0}</target></segment></unit>
+    <unit id="PlanSteps"><segment><source>{0} steps</source><target state="translated">{0} steps</target></segment></unit>
+    <unit id="PlanPosition"><segment><source>Step {0} of {1}</source><target state="translated">Step {0} of {1}</target></segment></unit>
+    <unit id="PlanSecond"><segment><source>{0} s</source><target state="translated">{0} s</target></segment></unit>
+    <unit id="StatsFirstToken"><segment><source>First token</source><target state="translated">First token</target></segment></unit>
+    <unit id="StatsSpeed"><segment><source>Speed</source><target state="translated">Speed</target></segment></unit>
+    <unit id="StatsOutput"><segment><source>Output</source><target state="translated">Output</target></segment></unit>
+    <unit id="StatsCost"><segment><source>Cost</source><target state="translated">Cost</target></segment></unit>
+    <unit id="StatsDone"><segment><source>Done</source><target state="translated">Done</target></segment></unit>
+    <unit id="StatsDoneIn"><segment><source>Done in {0}</source><target state="translated">Done in {0}</target></segment></unit>
+    <unit id="StatsWaiting"><segment><source>Waiting</source><target state="translated">Waiting</target></segment></unit>
+    <unit id="StatsStreaming"><segment><source>Writing</source><target state="translated">Writing</target></segment></unit>
+    <unit id="StatsStopped"><segment><source>Stopped</source><target state="translated">Stopped</target></segment></unit>
+    <unit id="StatsFailed"><segment><source>Failed</source><target state="translated">Failed</target></segment></unit>
+    <unit id="StatsDetails"><segment><source>Details</source><target state="translated">Details</target></segment></unit>
+    <unit id="StatsShowDetails"><segment><source>Show details</source><target state="translated">Show details</target></segment></unit>
+    <unit id="StatsHideDetails"><segment><source>Hide details</source><target state="translated">Hide details</target></segment></unit>
+    <unit id="StatsRetry"><segment><source>Retry</source><target state="translated">Retry</target></segment></unit>
+    <unit id="AiThinking"><segment><source>Thinking</source><target state="translated">Thinking</target></segment></unit>
+    <unit id="AiThoughtFor"><segment><source>Thought for {0}s</source><target state="translated">Thought for {0}s</target></segment></unit>
+    <unit id="AiCopy"><segment><source>Copy</source><target state="translated">Copy</target></segment></unit>
+    <unit id="AiCopied"><segment><source>Copied</source><target state="translated">Copied</target></segment></unit>
+    <unit id="AiEdit"><segment><source>Edit</source><target state="translated">Edit</target></segment></unit>
+    <unit id="AiCancel"><segment><source>Cancel</source><target state="translated">Cancel</target></segment></unit>
+    <unit id="AiSend"><segment><source>Send</source><target state="translated">Send</target></segment></unit>
+    <unit id="AiRetry"><segment><source>Regenerate</source><target state="translated">Regenerate</target></segment></unit>
+    <unit id="AiGood"><segment><source>Good answer</source><target state="translated">Good answer</target></segment></unit>
+    <unit id="AiBad"><segment><source>Bad answer</source><target state="translated">Bad answer</target></segment></unit>
+    <unit id="AiStopped"><segment><source>Stopped</source><target state="translated">Stopped</target></segment></unit>
+    <unit id="AiStoppedEarly"><segment><source>Stopped before answering</source><target state="translated">Stopped before answering</target></segment></unit>
+    <unit id="AiReplyFailed"><segment><source>The answer failed</source><target state="translated">The answer failed</target></segment></unit>
+    <unit id="AiStop"><segment><source>Stop</source><target state="translated">Stop</target></segment></unit>
+    <unit id="AiAttach"><segment><source>Attach files</source><target state="translated">Attach files</target></segment></unit>
+    <unit id="AiSources"><segment><source>Sources</source><target state="translated">Sources</target></segment></unit>
+    <unit id="AiSearches"><segment><source>Searches</source><target state="translated">Searches</target></segment></unit>
+    <unit id="AiResult"><segment><source>Result</source><target state="translated">Result</target></segment></unit>
+    <unit id="AiNewChat"><segment><source>New chat</source><target state="translated">New chat</target></segment></unit>
+    <unit id="AiUntitled"><segment><source>New chat</source><target state="translated">New chat</target></segment></unit>
+    <unit id="AiScroll"><segment><source>Scroll to latest</source><target state="translated">Scroll to latest</target></segment></unit>
+    <unit id="AiPrevVersion"><segment><source>Previous version</source><target state="translated">Previous version</target></segment></unit>
+    <unit id="AiNextVersion"><segment><source>Next version</source><target state="translated">Next version</target></segment></unit>
+    <unit id="AiVersion"><segment><source>Version {0} of {1}</source><target state="translated">Version {0} of {1}</target></segment></unit>
+    <unit id="PlanStartOver"><segment><source>Start over</source><target state="translated">Start over</target></segment></unit>
+    <unit id="RenameTitle"><segment><source>Rename conversation</source><target state="translated">Rename conversation</target></segment></unit>
+    <unit id="RenameLabel"><segment><source>Title</source><target state="translated">Title</target></segment></unit>
+    <unit id="DeleteTitle"><segment><source>Delete this conversation?</source><target state="translated">Delete this conversation?</target></segment></unit>
+    <unit id="DeleteBody"><segment><source>"{0}" and its messages are removed. This cannot be undone.</source><target state="translated">"{0}" and its messages are removed. This cannot be undone.</target></segment></unit>
+  </file>
+</xliff>

@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:hl="using:TinaClass.App.Features.Home.Localization"
+             xmlns:h="using:TinaClass.App.Features.Home"
+             x:Class="TinaClass.App.Features.Home.HomePage"
+             x:DataType="h:HomeViewModel">
+    <!-- Arc components first: AiComposer (input, model pill, attachments), Button, Alert. The greeting and cards are text and Arc buttons. -->
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+        <StackPanel MaxWidth="720" Margin="24,88,24,40" Spacing="28">
+            <StackPanel Spacing="6" HorizontalAlignment="Center">
+                <TextBlock Classes="display" FontSize="36" HorizontalAlignment="Center" Text="{Binding Greeting}" />
+                <TextBlock Classes="secondary" HorizontalAlignment="Center" Text="{hl:HomeLangResource Lead}" />
+            </StackPanel>
+            <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+            <arc:AiComposer x:Name="Composer" Placeholder="{hl:HomeLangResource Placeholder}" MinLines="2" />
+            <ItemsControl x:Name="Starters" HorizontalAlignment="Center">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate><WrapPanel Orientation="Horizontal" ItemSpacing="8" LineSpacing="8" /></ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            <StackPanel Spacing="10" IsVisible="{Binding HasRecent}">
+                <TextBlock Classes="section secondary" Text="{hl:HomeLangResource Recent}" />
+                <ItemsControl ItemsSource="{Binding Recent}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><UniformGrid Columns="2" /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="h:RecentRow">
+                            <arc:Button Variant="Secondary" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="0,0,8,8" Height="64"
+                                        Command="{Binding $parent[UserControl].((h:HomeViewModel)DataContext).OpenCommand}" CommandParameter="{Binding}">
+                                <StackPanel Spacing="2" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Title}" FontWeight="Medium" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Title}" />
+                                    <TextBlock Classes="muted small" Text="{Binding Meta}" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                            </arc:Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

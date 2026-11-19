@@ -1,0 +1,121 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using TinaClass.Contracts.Auth;
+using TinaClass.Contracts.Chat;
+using TinaClass.Contracts.Common;
+using TinaClass.Contracts.Models;
+using TinaClass.Contracts.Knowledge;
+using TinaClass.Contracts.Agents;
+using TinaClass.Contracts.Workflows;
+using TinaClass.Contracts.Prompts;
+using TinaClass.Contracts.Usage;
+using TinaClass.Contracts.Team;
+
+namespace TinaClass.Contracts;
+
+/// <summary>
+/// Source-generated JSON for every contract: camelCase, enums as strings, dates as ISO 8601. The API registers it with
+/// <c>ConfigureHttpJsonOptions</c>; the app's API client passes <see cref="Default"/> to every call. A new contract type
+/// must be listed here (no reflection, so no JSON without it).
+/// </summary>
+[JsonSourceGenerationOptions(JsonSerializerDefaults.Web, UseStringEnumConverter = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
+[JsonSerializable(typeof(LoginRequest))]
+[JsonSerializable(typeof(TokenPair))]
+[JsonSerializable(typeof(RefreshRequest))]
+[JsonSerializable(typeof(CurrentUser))]
+[JsonSerializable(typeof(IReadOnlyList<ApiKeyDto>))]
+[JsonSerializable(typeof(CreateApiKeyRequest))]
+[JsonSerializable(typeof(CreatedApiKey))]
+// Models
+[JsonSerializable(typeof(ProviderDto))]
+[JsonSerializable(typeof(IReadOnlyList<ProviderDto>))]
+[JsonSerializable(typeof(CreateProviderRequest))]
+[JsonSerializable(typeof(UpdateProviderRequest))]
+[JsonSerializable(typeof(SetKeyRequest))]
+[JsonSerializable(typeof(ProviderTestResult))]
+[JsonSerializable(typeof(ModelDto))]
+[JsonSerializable(typeof(IReadOnlyList<ModelDto>))]
+[JsonSerializable(typeof(UpdateModelRequest))]
+// Chat
+[JsonSerializable(typeof(FolderDto))]
+[JsonSerializable(typeof(IReadOnlyList<FolderDto>))]
+[JsonSerializable(typeof(CreateFolderRequest))]
+[JsonSerializable(typeof(UpdateFolderRequest))]
+[JsonSerializable(typeof(SpaceDto))]
+[JsonSerializable(typeof(IReadOnlyList<SpaceDto>))]
+[JsonSerializable(typeof(CreateSpaceRequest))]
+[JsonSerializable(typeof(ConversationDto))]
+[JsonSerializable(typeof(Paged<ConversationDto>))]
+[JsonSerializable(typeof(CreateConversationRequest))]
+[JsonSerializable(typeof(UpdateConversationRequest))]
+[JsonSerializable(typeof(MessageDto))]
+[JsonSerializable(typeof(IReadOnlyList<MessageDto>))]
+[JsonSerializable(typeof(SendMessageRequest))]
+[JsonSerializable(typeof(RegenerateRequest))]
+[JsonSerializable(typeof(FeedbackRequest))]
+[JsonSerializable(typeof(ChatStreamEvent))]
+[JsonSerializable(typeof(IReadOnlyList<SearchResultDto>))]
+[JsonSerializable(typeof(CreateShareRequest))]
+[JsonSerializable(typeof(ShareDto))]
+[JsonSerializable(typeof(SharedConversationDto))]
+[JsonSerializable(typeof(CitationDetailDto))]
+[JsonSerializable(typeof(IReadOnlyList<MessageBlock>))]
+[JsonSerializable(typeof(IReadOnlyList<CitationDto>))]
+[JsonSerializable(typeof(MessageUsageDto))]
+[JsonSerializable(typeof(KnowledgeBaseDto))]
+[JsonSerializable(typeof(IReadOnlyList<KnowledgeBaseDto>))]
+[JsonSerializable(typeof(CreateKnowledgeBaseRequest))]
+[JsonSerializable(typeof(UpdateKnowledgeBaseRequest))]
+[JsonSerializable(typeof(DocumentDto))]
+[JsonSerializable(typeof(Paged<DocumentDto>))]
+[JsonSerializable(typeof(CreateDocumentRequest))]
+[JsonSerializable(typeof(SearchKnowledgeRequest))]
+[JsonSerializable(typeof(SearchKnowledgeResponse))]
+[JsonSerializable(typeof(AgentDto))]
+[JsonSerializable(typeof(IReadOnlyList<AgentDto>))]
+[JsonSerializable(typeof(SaveAgentRequest))]
+[JsonSerializable(typeof(ToolServerDto))]
+[JsonSerializable(typeof(IReadOnlyList<ToolServerDto>))]
+[JsonSerializable(typeof(CreateToolServerRequest))]
+[JsonSerializable(typeof(ToolDto))]
+[JsonSerializable(typeof(IReadOnlyList<ToolDto>))]
+[JsonSerializable(typeof(UpdateToolRequest))]
+[JsonSerializable(typeof(RunDto))]
+[JsonSerializable(typeof(RunStepDto))]
+[JsonSerializable(typeof(Paged<RunDto>))]
+[JsonSerializable(typeof(StartRunRequest))]
+[JsonSerializable(typeof(ApprovalDto))]
+[JsonSerializable(typeof(IReadOnlyList<ApprovalDto>))]
+[JsonSerializable(typeof(DecideApprovalRequest))]
+[JsonSerializable(typeof(FlowDto))]
+[JsonSerializable(typeof(IReadOnlyList<FlowDto>))]
+[JsonSerializable(typeof(CreateFlowRequest))]
+[JsonSerializable(typeof(PutDraftRequest))]
+[JsonSerializable(typeof(IReadOnlyList<FlowVersionDto>))]
+[JsonSerializable(typeof(FlowGraphDto))]
+[JsonSerializable(typeof(FlowRunDto))]
+[JsonSerializable(typeof(IReadOnlyList<FlowRunDto>))]
+[JsonSerializable(typeof(StartFlowRunRequest))]
+[JsonSerializable(typeof(PromptDto))]
+[JsonSerializable(typeof(IReadOnlyList<PromptDto>))]
+[JsonSerializable(typeof(SavePromptRequest))]
+[JsonSerializable(typeof(IReadOnlyList<PromptVersionDto>))]
+[JsonSerializable(typeof(PublishPromptRequest))]
+[JsonSerializable(typeof(PromptCaseDto))]
+[JsonSerializable(typeof(IReadOnlyList<PromptCaseDto>))]
+[JsonSerializable(typeof(SavePromptCaseRequest))]
+[JsonSerializable(typeof(RunPromptRequest))]
+[JsonSerializable(typeof(RunPromptResponse))]
+[JsonSerializable(typeof(CasesRunDto))]
+[JsonSerializable(typeof(UsageSummaryDto))]
+[JsonSerializable(typeof(Paged<UsageRecordDto>))]
+[JsonSerializable(typeof(BudgetDto))]
+[JsonSerializable(typeof(UpdateBudgetRequest))]
+[JsonSerializable(typeof(MemberDto))]
+[JsonSerializable(typeof(IReadOnlyList<MemberDto>))]
+[JsonSerializable(typeof(InviteRequest))]
+[JsonSerializable(typeof(InviteDto))]
+[JsonSerializable(typeof(UpdateMemberRequest))]
+[JsonSerializable(typeof(AcceptInviteRequest))]
+[JsonSerializable(typeof(Paged<AuditEntryDto>))]
+public sealed partial class ContractsJsonContext : JsonSerializerContext;

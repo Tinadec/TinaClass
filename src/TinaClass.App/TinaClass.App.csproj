@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The desktop app: Avalonia 12 + TKCode.Arc, MVVM (CommunityToolkit.Mvvm), every service registered by hand. -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+    <ApplicationManifest Condition="Exists('app.manifest')">app.manifest</ApplicationManifest>
+    <!-- The .NET 11 SDK's optimized AOT publish drops Avalonia's compiled XAML ("No precompiled XAML found" at start). -->
+    <UseOptimizedPublish>false</UseOptimizedPublish>
+    <!-- Icons picked at run time (navigation) are all compiled in. -->
+    <LucideIconsIncludeAll>true</LucideIconsIncludeAll>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="TKCode.Arc" />
+    <PackageReference Include="TKCode.Arc.Blocks" />
+    <PackageReference Include="TKCode.Arc.Special" />
+    <PackageReference Include="TKCode.Arc.Workflow" />
+    <PackageReference Include="TKCode.Arc.Fonts" />
+    <PackageReference Include="TKCode.Arc.Icons.Lucide" />
+    <PackageReference Include="TKCode.Arc.Themes.Corners" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The API's request and response types: the app's API client and the API share them. -->
+    <ProjectReference Include="../TinaClass.Contracts/TinaClass.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Brand and theme: plain data files next to the executable, read once at start. -->
+    <None Update="app.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="arc.theme.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="TinaClass.App.Tests" />
+  </ItemGroup>
+</Project>

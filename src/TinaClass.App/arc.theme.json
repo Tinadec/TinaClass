@@ -1,0 +1,52 @@
+{
+  "appearance": "Dark",
+  "accent": "#F4F4F5",
+  "corners": 0.9,
+  "density": "spacious",
+  "palette": "mono",
+  "tokens": {
+    "": {},
+    "Sidebar": {
+      "ExpandedWidth": "272"
+    },
+    "Table": {
+      "CompactBreakpoint": "440"
+    },
+    "MetricCard": {
+      "NarrowCardPadding": "14,12",
+      "TopRowMargin": "0,0,0,10",
+      "NarrowTopRowMargin": "0,0,0,8",
+      "ContextMargin": "0,6,0,0"
+    }
+  },
+  "light": {
+    "": {
+      "Background": "#F6F6F4",
+      "Surface": "#FFFFFF",
+      "Foreground": "#141414",
+      "TextSecondary": "#4D4D52",
+      "TextMuted": "#6B6B72",
+      "Accent": "#141414",
+      "AccentStrong": "#000000",
+      "AccentSubtle": "#E9E9E6",
+      "Success": "#0A7A50",
+      "Warning": "#8A5A00",
+      "Danger": "#B0203A"
+    }
+  },
+  "dark": {
+    "": {
+      "Background": "#0B0B0C",
+      "Surface": "#161617",
+      "Foreground": "#F4F4F5",
+      "TextSecondary": "#B6B6BC",
+      "TextMuted": "#8C8C94",
+      "Accent": "#F4F4F5",
+      "AccentStrong": "#FFFFFF",
+      "AccentSubtle": "#2A2A2D",
+      "Success": "#6FE3B4",
+      "Warning": "#FFD27A",
+      "Danger": "#FF9FB1"
+    }
+  }
+}

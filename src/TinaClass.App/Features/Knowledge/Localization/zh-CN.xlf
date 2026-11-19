@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Knowledge text in zh-CN: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-CN" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Knowledge.Localization.KnowledgeLangResourceKind">
+    <unit id="NavKnowledge"><segment><source>Knowledge</source><target state="translated">知识库</target></segment></unit>
+    <unit id="Title"><segment><source>Knowledge bases</source><target state="translated">知识库</target></segment></unit>
+    <unit id="Lead"><segment><source>The documents the assistant can cite. Add files, watch them get indexed, and test what retrieval finds.</source><target state="translated">助手可以引用的资料。上传文件、看索引进度、测试检索会命中什么。</target></segment></unit>
+    <unit id="Bases"><segment><source>Bases</source><target state="translated">资料库</target></segment></unit>
+    <unit id="NewBase"><segment><source>New knowledge base</source><target state="translated">新建知识库</target></segment></unit>
+    <unit id="Upload"><segment><source>Upload</source><target state="translated">上传</target></segment></unit>
+    <unit id="DropLabel"><segment><source>Drop files here, or browse</source><target state="translated">把文件拖到这里，或点击选择</target></segment></unit>
+    <unit id="DropNote"><segment><source>PDF, Word, Excel, Markdown, text and images</source><target state="translated">支持 PDF、Word、Excel、Markdown、文本和图片</target></segment></unit>
+    <unit id="Documents"><segment><source>Documents</source><target state="translated">文档</target></segment></unit>
+    <unit id="DocCounts"><segment><source>{0} documents · {1} chunks</source><target state="translated">{0} 份文档 · {1} 个片段</target></segment></unit>
+    <unit id="ShowingOf"><segment><source>Showing {0} of {1}</source><target state="translated">显示 {0} / {1}</target></segment></unit>
+    <unit id="Filter"><segment><source>Filter documents</source><target state="translated">筛选文档</target></segment></unit>
+    <unit id="ColName"><segment><source>Name</source><target state="translated">名称</target></segment></unit>
+    <unit id="ColSize"><segment><source>Size</source><target state="translated">大小</target></segment></unit>
+    <unit id="ColState"><segment><source>State</source><target state="translated">状态</target></segment></unit>
+    <unit id="ColChunks"><segment><source>Chunks</source><target state="translated">片段</target></segment></unit>
+    <unit id="ColBy"><segment><source>Added by</source><target state="translated">上传者</target></segment></unit>
+    <unit id="ColWhen"><segment><source>When</source><target state="translated">时间</target></segment></unit>
+    <unit id="StateQueued"><segment><source>Queued</source><target state="translated">排队中</target></segment></unit>
+    <unit id="StateUploading"><segment><source>Uploading</source><target state="translated">上传中</target></segment></unit>
+    <unit id="StateParsing"><segment><source>Parsing</source><target state="translated">解析中</target></segment></unit>
+    <unit id="StateChunking"><segment><source>Chunking</source><target state="translated">切分中</target></segment></unit>
+    <unit id="StateEmbedding"><segment><source>Embedding</source><target state="translated">向量化中</target></segment></unit>
+    <unit id="StateReady"><segment><source>Ready</source><target state="translated">就绪</target></segment></unit>
+    <unit id="StateReindexing"><segment><source>Reindexing</source><target state="translated">重新索引中</target></segment></unit>
+    <unit id="StateFailed"><segment><source>Failed</source><target state="translated">失败</target></segment></unit>
+    <unit id="Retry"><segment><source>Retry</source><target state="translated">重试</target></segment></unit>
+    <unit id="Delete"><segment><source>Delete</source><target state="translated">删除</target></segment></unit>
+    <unit id="Settings"><segment><source>Settings</source><target state="translated">设置</target></segment></unit>
+    <unit id="SetEmbedding"><segment><source>Embedding model</source><target state="translated">嵌入模型</target></segment></unit>
+    <unit id="SetChunk"><segment><source>Chunk size</source><target state="translated">片段大小</target></segment></unit>
+    <unit id="SetOverlap"><segment><source>Overlap</source><target state="translated">重叠</target></segment></unit>
+    <unit id="SetHybrid"><segment><source>Hybrid search</source><target state="translated">混合检索</target></segment></unit>
+    <unit id="SetRerank"><segment><source>Rerank</source><target state="translated">重排</target></segment></unit>
+    <unit id="SetThreshold"><segment><source>Score threshold</source><target state="translated">相关度阈值</target></segment></unit>
+    <unit id="SetTopK"><segment><source>Passages returned</source><target state="translated">返回片段数</target></segment></unit>
+    <unit id="SetVisibility"><segment><source>Visible to</source><target state="translated">可见范围</target></segment></unit>
+    <unit id="On"><segment><source>On</source><target state="translated">开</target></segment></unit>
+    <unit id="Off"><segment><source>Off</source><target state="translated">关</target></segment></unit>
+    <unit id="Tokens"><segment><source>{0} tokens</source><target state="translated">{0} 个 token</target></segment></unit>
+    <unit id="VisWorkspace"><segment><source>Everyone</source><target state="translated">全员</target></segment></unit>
+    <unit id="VisSpace"><segment><source>The space</source><target state="translated">所在空间</target></segment></unit>
+    <unit id="VisPrivate"><segment><source>Only you</source><target state="translated">仅自己</target></segment></unit>
+    <unit id="Test"><segment><source>Retrieval test</source><target state="translated">检索测试</target></segment></unit>
+    <unit id="TestHint"><segment><source>Ask a question to see which passages would be found.</source><target state="translated">输入一个问题，看会命中哪些片段。</target></segment></unit>
+    <unit id="TestRun"><segment><source>Search</source><target state="translated">检索</target></segment></unit>
+    <unit id="TestPlaceholder"><segment><source>For example: why is the export slow</source><target state="translated">例如：为什么导出很慢</target></segment></unit>
+    <unit id="Hits"><segment><source>{0} passages in {1} ms</source><target state="translated">{0} 个片段，用时 {1} 毫秒</target></segment></unit>
+    <unit id="NoHits"><segment><source>Nothing matched</source><target state="translated">没有命中的片段</target></segment></unit>
+    <unit id="Score"><segment><source>Score {0}</source><target state="translated">相关度 {0}</target></segment></unit>
+    <unit id="Page"><segment><source>p.{0}</source><target state="translated">第 {0} 页</target></segment></unit>
+    <unit id="EmptyBases"><segment><source>No knowledge base yet</source><target state="translated">还没有知识库</target></segment></unit>
+    <unit id="EmptyBasesHint"><segment><source>Create one and drop your files in.</source><target state="translated">新建一个，把资料拖进来。</target></segment></unit>
+    <unit id="EmptyDocs"><segment><source>No documents in this base</source><target state="translated">这个库里还没有文档</target></segment></unit>
+    <unit id="EmptyDocsHint"><segment><source>Drop files on the area above.</source><target state="translated">把文件拖到上面的区域里。</target></segment></unit>
+    <unit id="NewBaseTitle"><segment><source>New knowledge base</source><target state="translated">新建知识库</target></segment></unit>
+    <unit id="NewBaseName"><segment><source>Name</source><target state="translated">名称</target></segment></unit>
+    <unit id="NewBaseDescription"><segment><source>What it holds</source><target state="translated">里面放什么</target></segment></unit>
+    <unit id="Create"><segment><source>Create</source><target state="translated">创建</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="ConfirmDelete"><segment><source>Delete {0}? Its passages are removed from the index.</source><target state="translated">删除 {0}？它的片段会从索引中移除。</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the knowledge bases</source><target state="translated">无法读取知识库</target></segment></unit>
+    <unit id="FileTooBig"><segment><source>{0} is larger than {1}</source><target state="translated">{0} 超过了 {1}</target></segment></unit>
+    <unit id="UploadFailed"><segment><source>Upload failed</source><target state="translated">上传失败</target></segment></unit>
+    <unit id="ErrorDuplicate"><segment><source>A document with this name is already in the base.</source><target state="translated">这个库里已经有同名的文档。</target></segment></unit>
+    <unit id="DropLimit"><segment><source>Up to 20 files, 25 MB each</source><target state="translated">单次最多 20 个文件，每个不超过 25 MB</target></segment></unit>
+  </file>
+</xliff>

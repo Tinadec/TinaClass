@@ -1,0 +1,62 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:ml="using:TinaClass.App.Features.Models.Localization"
+             xmlns:m="using:TinaClass.App.Features.Models"
+             xmlns:ui="using:TinaClass.App.Common.Ui"
+             x:Class="TinaClass.App.Features.Models.ModelsPage"
+             x:DataType="m:ModelsViewModel">
+    <!-- Arc components first: Switch, Button, Avatar, Alert, Table (the model list), ProviderKeys (Special: key entry, reveal, test). The
+         provider rows are plain rows in Border.panel; the dot is the hand-rolled StatusDot. -->
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+        <StackPanel MaxWidth="1040" Margin="32,28,32,40" Spacing="28">
+            <StackPanel Spacing="4">
+                <TextBlock Classes="display" Text="{ml:ModelsLangResource Title}" />
+                <TextBlock Classes="secondary" TextWrapping="Wrap" Text="{ml:ModelsLangResource Lead}" />
+            </StackPanel>
+            <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+
+            <StackPanel Spacing="10">
+                <TextBlock Classes="section" Text="{ml:ModelsLangResource Providers}" />
+                <ItemsControl ItemsSource="{Binding Providers}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><StackPanel Spacing="8" /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="m:ProviderRow">
+                            <Border Classes="panel" Padding="16,12">
+                                <Grid ColumnDefinitions="Auto,*,Auto,Auto,Auto" ColumnSpacing="14">
+                                    <arc:Avatar DisplayName="{Binding Monogram}" Size="Medium" VerticalAlignment="Center" />
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="2">
+                                        <TextBlock Text="{Binding Name}" FontWeight="Medium" TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Classes="muted small mono" Text="{Binding Detail}" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Detail}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                                        <ui:StatusDot Tone="{Binding Tone}" />
+                                        <TextBlock Classes="secondary" Text="{Binding StatusText}" />
+                                    </StackPanel>
+                                    <arc:Button Grid.Column="3" Classes="compact" Variant="Secondary" IsLoading="{Binding IsTesting}"
+                                                Content="{ml:ModelsLangResource Test}"
+                                                Command="{Binding $parent[UserControl].((m:ModelsViewModel)DataContext).TestCommand}" CommandParameter="{Binding}" />
+                                    <arc:Switch Grid.Column="4" IsChecked="{Binding IsEnabled, Mode=TwoWay}" VerticalAlignment="Center"
+                                                AutomationProperties.Name="{Binding Name}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+
+            <StackPanel Spacing="10">
+                <TextBlock Classes="section" Text="{ml:ModelsLangResource Keys}" />
+                <TextBlock Classes="muted small" TextWrapping="Wrap" Text="{ml:ModelsLangResource KeysNote}" />
+                <arc:ProviderKeys x:Name="Keys" Title="" />
+            </StackPanel>
+
+            <StackPanel Spacing="10">
+                <TextBlock Classes="section" Text="{ml:ModelsLangResource ModelsTable}" />
+                <arc:Table x:Name="ModelTable" ItemsSource="{Binding Models}" IsSelectable="False" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

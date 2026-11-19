@@ -1,0 +1,27 @@
+{
+  "template": "lumora-ai-workbench-kit",
+  "version": "1.0.0",
+  "values": {
+    "projectName": "TinaClass",
+    "productTitle": "TinClass",
+    "tagline": "Agent in Educational",
+    "brandColor": "#F4F4F5",
+    "logoMark": "spark",
+    "appearance": "Dark",
+    "corners": 0.9,
+    "density": "spacious",
+    "accentPalette": "mono",
+    "layout": "studio",
+    "backend": true,
+    "database": "sqlite",
+    "featureKnowledge": true,
+    "featureAgents": true,
+    "featureWorkflows": true,
+    "featurePrompts": true,
+    "featureUsage": true,
+    "featureTeam": true,
+    "defaultProvider": "echo",
+    "defaultModelCode": "echo-1",
+    "currency": "CNY"
+  }
+}

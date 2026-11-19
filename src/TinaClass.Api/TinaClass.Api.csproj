@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- The API: minimal API endpoints per feature (Features/), EF Core with one DbContext per feature. -->
+  <PropertyGroup>
+    <UserSecretsId>tinaclass-api-local</UserSecretsId>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../TinaClass.Contracts/TinaClass.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+    <!-- SQLite is always available: the tests run against it, whichever database the API uses. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="TinaClass.Api.Tests" />
+  </ItemGroup>
+</Project>

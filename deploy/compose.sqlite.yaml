@@ -1,0 +1,30 @@
+# The API with a SQLite database in a volume. From the repository root:
+#   cp deploy/.env.example deploy/.env    (fill it in; never commit it)
+#   docker compose -f deploy/compose.sqlite.yaml up --build -d
+# The API listens on 127.0.0.1:5080 only; put a TLS-terminating reverse proxy in front of it for other machines.
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: tinaclass-api
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      Database__Provider: Sqlite
+      ConnectionStrings__Sqlite: Data Source=/data/tinaclass.db
+      Jwt__SigningKey: ${JWT_SIGNING_KEY:?Set JWT_SIGNING_KEY in deploy/.env (32+ random characters)}
+      Bootstrap__AdminEmail: ${ADMIN_EMAIL:-}
+      Bootstrap__AdminPassword: ${ADMIN_PASSWORD:-}
+      Email__Mode: ${EMAIL_MODE:-Log}
+      Email__From: ${EMAIL_FROM:-no-reply@example.com}
+      Email__SmtpHost: ${SMTP_HOST:-}
+      Email__SmtpUser: ${SMTP_USER:-}
+      Email__SmtpPassword: ${SMTP_PASSWORD:-}
+    volumes:
+      - api-data:/data
+
+volumes:
+  api-data:

@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:fl="using:TinaClass.App.Features.Flow.Localization"
+             xmlns:f="using:TinaClass.App.Features.Flow"
+             xmlns:ui="using:TinaClass.App.Common.Ui"
+             x:Class="TinaClass.App.Features.Flow.FlowPage"
+             x:DataType="f:FlowViewModel"
+             Focusable="True">
+    <!-- Arc's WorkflowCanvas (with its minimap and zoom controls) shows and edits the graph; the run's states color its nodes. The hand-rolled RunTrace
+         below it shows the same run as a strip, each step as wide as it took. -->
+    <Grid RowDefinitions="Auto,*,Auto" Margin="24,20,24,24" RowSpacing="12">
+        <StackPanel Spacing="8">
+            <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+            <Border Classes="panel" Padding="16,10" IsVisible="{Binding IsWaiting}">
+                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                    <ui:StatusDot Tone="Warning" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="{fl:FlowLangResource Pending}" />
+                    <arc:Button Grid.Column="2" Classes="compact" Variant="Secondary" Command="{Binding ReviewCommand}" Content="{fl:FlowLangResource Review}" />
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <Border Grid.Row="1" Classes="panel" IsVisible="{Binding HasFlow}">
+            <Grid>
+                <arc:WorkflowCanvas x:Name="Canvas" ShowGrid="True" LayoutDirection="LeftToRight" AutoFit="ShrinkToFit" IsEditable="True" />
+                <arc:WorkflowZoomControls x:Name="Zoom" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="12" />
+                <arc:WorkflowMinimap x:Name="Minimap" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="12" Width="168" Height="104" />
+            </Grid>
+        </Border>
+        <StackPanel Grid.Row="1" IsVisible="{Binding HasNoFlow}" VerticalAlignment="Center" Spacing="4">
+            <TextBlock Classes="h2" HorizontalAlignment="Center" Text="{fl:FlowLangResource Empty}" />
+            <TextBlock Classes="muted" HorizontalAlignment="Center" Text="{fl:FlowLangResource EmptyHint}" />
+        </StackPanel>
+
+        <Border Grid.Row="2" Classes="panel" Padding="16,12" IsVisible="{Binding HasFlow}">
+            <StackPanel Spacing="10">
+                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                    <TextBlock Classes="section secondary" Text="{fl:FlowLangResource Trace}" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Classes="muted small" IsVisible="{Binding HasRun}" Text="{Binding RunLabel}" VerticalAlignment="Center" />
+                    <arc:Badge Grid.Column="2" IsVisible="{Binding HasRun}" Tone="{Binding RunTone}" Content="{Binding RunState}" />
+                </Grid>
+                <ui:RunTrace Segments="{Binding Trace}" IsVisible="{Binding HasRun}" />
+                <StackPanel IsVisible="{Binding HasNoRun}" Spacing="2">
+                    <TextBlock FontWeight="Medium" Text="{fl:FlowLangResource NoRun}" />
+                    <TextBlock Classes="muted" Text="{fl:FlowLangResource NoRunHint}" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

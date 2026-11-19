@@ -1,0 +1,105 @@
+<shell:ShellBase xmlns="https://github.com/avaloniaui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+                 xmlns:lucide="https://github.com/AIDotNet/TKCode.Arc/lucide"
+                 xmlns:l="using:TinaClass.App.Common.Localization"
+                 xmlns:nav="using:TinaClass.App.Common.Navigation"
+                 xmlns:shell="using:TinaClass.App.Common.Shell"
+                 x:Class="TinaClass.App.Common.Shell.StudioShell"
+                 x:DataType="shell:ShellViewModel"
+                 FontSize="{arc:ArcDesignTokenResource TypeSM}"
+                 Foreground="{arc:ArcDesignTokenResource Foreground}">
+    <!-- Layout "studio" (scheme B, two wings): the left wing is Arc's Sidebar (workspace, new chat, pages with counts, a folder tree of
+         conversations, the month's spend and the user); the page fills the middle; the chat page has its own inspector wing on the right. -->
+    <shell:ShellBase.Styles>
+        <!-- On the icon rail the header and footer keep their leading part (logo, avatar); the rest fades. -->
+        <Style Selector="arc|Sidebar :is(Control).rail-fade">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+        <Style Selector="arc|Sidebar:collapsed :is(Control).rail-fade">
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+        <Style Selector="arc|Sidebar:motion-full :is(Control).rail-fade, arc|Sidebar:motion-reduced :is(Control).rail-fade">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <arc:ArcDoubleTransition Property="Opacity" Tween="Fast" />
+                </Transitions>
+            </Setter>
+        </Style>
+    </shell:ShellBase.Styles>
+    <Panel x:Name="Root" Background="{arc:ArcDesignTokenResource Background}">
+        <DockPanel ClipToBounds="True">
+            <arc:Sidebar x:Name="Nav"
+                         DockPanel.Dock="Left"
+                         ExpandedWidth="272"
+                         IsCollapseButtonVisible="False"
+                         ResizeMode="Overlay"
+                         IsCollapsed="{Binding IsSidebarCollapsed, Mode=TwoWay}"
+                         SelectedKey="{Binding SelectedKey, Mode=TwoWay}">
+                <arc:Sidebar.Header>
+                    <StackPanel Spacing="10">
+                        <!-- The workspace: logo tile, company and department. The tile is the app's mark (Arc has no logo control). -->
+                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="{arc:ArcDesignTokenResource Space3}" Margin="4,0,0,0">
+                            <Border Width="{arc:ArcDesignTokenResource Space8}" Height="{arc:ArcDesignTokenResource Space8}"
+                                    CornerRadius="{arc:ArcDesignTokenResource RadiusControl}" Background="{arc:ArcDesignTokenResource Foreground}">
+                                <TextBlock Text="{Binding WorkspaceInitial}" FontWeight="SemiBold" Foreground="{arc:ArcDesignTokenResource Background}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel Grid.Column="1" Classes="rail-fade" VerticalAlignment="Center">
+                                <TextBlock FontWeight="SemiBold" Text="{Binding WorkspaceName}" TextTrimming="CharacterEllipsis" />
+                                <TextBlock Classes="muted small" Text="{Binding WorkspaceNote}" TextTrimming="CharacterEllipsis" />
+                            </StackPanel>
+                        </Grid>
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8" Classes="rail-fade">
+                            <arc:Button Variant="Primary" HorizontalAlignment="Stretch" Command="{Binding NewChatCommand}" AutomationProperties.Name="{l:AppLangResource NewChat}">
+                                <StackPanel Orientation="Horizontal" Spacing="6" HorizontalAlignment="Center">
+                                    <lucide:LucideIcon Kind="Plus" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                                    <TextBlock Text="{l:AppLangResource NewChat}" />
+                                </StackPanel>
+                            </arc:Button>
+                            <arc:Button Grid.Column="1" Variant="Secondary" Classes="icon-only" Command="{Binding OpenPaletteCommand}"
+                                        ToolTip.Tip="{l:AppLangResource Palette}" AutomationProperties.Name="{l:AppLangResource Palette}">
+                                <lucide:LucideIcon Kind="Search" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                            </arc:Button>
+                        </Grid>
+                    </StackPanel>
+                </arc:Sidebar.Header>
+                <arc:Sidebar.Footer>
+                    <StackPanel Spacing="8">
+                        <!-- This month's spend; only with the Usage feature (ShellViewModel.HasSpend). A compact row and Arc's Progress, as in the design:
+                             Arc's UsageMeter is a large figure with a legend, too big for a footer (it is used on the Usage page). -->
+                        <Border x:Name="SpendBox" Classes="rail-fade" Padding="12,10" CornerRadius="{arc:ArcDesignTokenResource RadiusPanel}"
+                                Background="{arc:ArcDesignTokenResource SurfaceRaised}" IsVisible="{Binding HasSpend}">
+                            <StackPanel Spacing="{arc:ArcDesignTokenResource Space2}">
+                                <Grid ColumnDefinitions="*,Auto">
+                                    <TextBlock Classes="secondary small" Text="{Binding SpendLabel}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                                    <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="{arc:ArcDesignTokenResource Space1}" VerticalAlignment="Center">
+                                        <TextBlock Classes="mono small" Text="{Binding SpendText}" />
+                                        <TextBlock Classes="muted small" Text="{Binding SpendLimitText}" />
+                                    </StackPanel>
+                                </Grid>
+                                <arc:Progress Maximum="{Binding SpendLimit}" Value="{Binding SpendValue}" />
+                            </StackPanel>
+                        </Border>
+                        <!-- The user: avatar, name and role; the button opens the preferences menu. -->
+                        <arc:Button x:Name="UserButton" Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                                    Click="OnUserClick" AutomationProperties.Name="{l:AppLangResource Preferences}" ToolTip.Tip="{l:AppLangResource Preferences}">
+                            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="{arc:ArcDesignTokenResource Space3}">
+                                <arc:Avatar x:Name="UserAvatar" DisplayName="{Binding UserName}" Size="Small" />
+                                <StackPanel Grid.Column="1" Classes="rail-fade" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding UserName}" FontWeight="Medium" TextTrimming="CharacterEllipsis" />
+                                    <TextBlock Classes="muted small" Text="{Binding UserRole}" TextTrimming="CharacterEllipsis" />
+                                </StackPanel>
+                                <lucide:LucideIcon Grid.Column="2" Classes="rail-fade" Kind="ChevronsUpDown" Size="{arc:ArcDesignTokenResource GlyphSizeSM}"
+                                                   VerticalAlignment="Center" Foreground="{arc:ArcDesignTokenResource TextMuted}" />
+                            </Grid>
+                        </arc:Button>
+                    </StackPanel>
+                </arc:Sidebar.Footer>
+            </arc:Sidebar>
+            <!-- PageShift lets the page glide with the sidebar's edge while it opens or folds. -->
+            <nav:PageHost x:Name="Host" Page="{Binding CurrentPage}" RenderTransform="{Binding #Nav.PageShift}" />
+        </DockPanel>
+        <arc:CommandPaletteDialog x:Name="Palette" />
+    </Panel>
+</shell:ShellBase>

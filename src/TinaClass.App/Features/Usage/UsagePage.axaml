@@ -1,0 +1,96 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:ul="using:TinaClass.App.Features.Usage.Localization"
+             xmlns:u="using:TinaClass.App.Features.Usage"
+             x:Class="TinaClass.App.Features.Usage.UsagePage"
+             x:DataType="u:UsageViewModel"
+             Focusable="True">
+    <!-- Arc components only: MetricCard (the four figures, rolling digits), UsageMeter (the budget), BarChart (a bar per day), Progress (the
+         share of each model), Table (the members), SegmentedControl (the range), Badge, Alert. Nothing is hand-rolled here. -->
+    <UserControl.Styles>
+        <!-- TKCode.Arc 1.1.0 builds the meter's caption ("of 2000 used") and badge ("715 free") in English with no label property, so the page hides
+             them and says the same in the localized line below the meter. -->
+        <Style Selector="arc|UsageMeter /template/ arc|ProgressSwapText#PART_Caption">
+            <Setter Property="IsVisible" Value="False" />
+        </Style>
+        <Style Selector="arc|UsageMeter /template/ Border#PART_Badge">
+            <Setter Property="IsVisible" Value="False" />
+        </Style>
+    </UserControl.Styles>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+        <StackPanel MaxWidth="1120" Margin="32,28,32,40" Spacing="24">
+            <Grid ColumnDefinitions="*,Auto">
+                <StackPanel Spacing="4">
+                    <TextBlock Classes="display" Text="{ul:UsageLangResource Title}" />
+                    <TextBlock Classes="secondary" TextWrapping="Wrap" Text="{ul:UsageLangResource Lead}" />
+                </StackPanel>
+                <arc:SegmentedControl x:Name="Range" Grid.Column="1" VerticalAlignment="Top" SelectedIndex="{Binding RangeIndex, Mode=TwoWay}" />
+            </Grid>
+            <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+
+            <UniformGrid x:Name="Figures" Columns="4">
+                <arc:MetricCard x:Name="TotalCard" Margin="0,0,12,0" Value="{Binding TotalValue}" Decimals="2" />
+                <arc:MetricCard x:Name="TokensCard" Margin="0,0,12,0" Value="{Binding TokensValue}" Suffix="M" Decimals="1" />
+                <arc:MetricCard x:Name="RequestsCard" Margin="0,0,12,0" Value="{Binding RequestsValue}" Decimals="0" />
+                <arc:MetricCard x:Name="FirstTokenCard" Value="{Binding FirstTokenValue}" Suffix=" s" Decimals="2" Context="{Binding CacheText}" />
+            </UniformGrid>
+
+            <Border Classes="panel" Padding="20,16">
+                <StackPanel Spacing="12">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Classes="section" Text="{ul:UsageLangResource Budget}" VerticalAlignment="Center" />
+                        <arc:Badge Grid.Column="1" Tone="{Binding StateTone}" Content="{Binding StateText}" />
+                    </Grid>
+                    <arc:UsageMeter x:Name="Meter" Limit="{Binding BudgetLimit}" Decimals="2" />
+                    <TextBlock Classes="secondary" Text="{Binding BudgetText}" />
+                    <TextBlock Classes="muted small" Text="{Binding BudgetNote}" />
+                </StackPanel>
+            </Border>
+
+            <Border Classes="panel" Padding="20,16">
+                <StackPanel Spacing="8">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Classes="section" Text="{ul:UsageLangResource Daily}" />
+                        <TextBlock Grid.Column="1" Classes="muted small" Text="{ul:UsageLangResource DailyNote}" />
+                    </Grid>
+                    <arc:BarChart x:Name="Chart" PlotHeight="200" ShowGrid="True" ShowAverage="False" />
+                    <StackPanel IsVisible="{Binding !HasData}" Spacing="2" HorizontalAlignment="Center">
+                        <TextBlock Text="{ul:UsageLangResource Empty}" HorizontalAlignment="Center" FontWeight="Medium" />
+                        <TextBlock Classes="muted" Text="{ul:UsageLangResource EmptyHint}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Grid ColumnDefinitions="*,16,1.4*">
+                <Border Classes="panel" Padding="20,16" VerticalAlignment="Top">
+                    <StackPanel Spacing="12">
+                        <TextBlock Classes="section" Text="{ul:UsageLangResource ByModel}" />
+                        <ItemsControl ItemsSource="{Binding Models}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate><StackPanel Spacing="12" /></ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="u:ModelShareRow">
+                                    <StackPanel Spacing="6">
+                                        <Grid ColumnDefinitions="*,Auto">
+                                            <TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" />
+                                            <TextBlock Grid.Column="1" Classes="mono" Text="{Binding Cost}" />
+                                        </Grid>
+                                        <arc:Progress Value="{Binding Percent}" Maximum="100" IsValueVisible="False" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="2" Classes="panel" Padding="20,16" VerticalAlignment="Top">
+                    <StackPanel Spacing="12">
+                        <TextBlock Classes="section" Text="{ul:UsageLangResource ByMember}" />
+                        <arc:Table x:Name="MemberTable" ItemsSource="{Binding Members}" IsSelectable="False" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

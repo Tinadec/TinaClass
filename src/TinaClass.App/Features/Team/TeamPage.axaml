@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:tl="using:TinaClass.App.Features.Team.Localization"
+             xmlns:t="using:TinaClass.App.Features.Team"
+             x:Class="TinaClass.App.Features.Team.TeamPage"
+             x:DataType="t:TeamViewModel">
+    <!-- Arc components only: SegmentedControl (members or audit), Table, Badge, Button. -->
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+        <StackPanel MaxWidth="1120" Margin="32,28,32,40" Spacing="20">
+            <Grid ColumnDefinitions="*,Auto">
+                <StackPanel Spacing="4">
+                    <TextBlock Classes="display" Text="{tl:TeamLangResource Title}" />
+                    <TextBlock Classes="secondary" TextWrapping="Wrap" Text="{tl:TeamLangResource Lead}" />
+                </StackPanel>
+                <arc:SegmentedControl x:Name="Tabs" Grid.Column="1" VerticalAlignment="Top" SelectedIndex="{Binding Tab, Mode=TwoWay}" />
+            </Grid>
+            <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+            <Border Classes="panel" Padding="16,12" IsVisible="{Binding ShowsMembers}">
+                <arc:Table x:Name="MemberTable" ItemsSource="{Binding Members}" IsSelectable="False" />
+            </Border>
+            <Border Classes="panel" Padding="16,12" IsVisible="{Binding ShowsAudit}">
+                <StackPanel Spacing="8">
+                    <arc:Table x:Name="AuditTable" ItemsSource="{Binding Audit}" IsSelectable="False" />
+                    <TextBlock IsVisible="{Binding HasNoAudit}" Classes="muted" HorizontalAlignment="Center" Text="{tl:TeamLangResource EmptyAudit}" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

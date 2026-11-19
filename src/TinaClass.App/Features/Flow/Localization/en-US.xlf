@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Flow text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Flow.Localization.FlowLangResourceKind">
+    <unit id="NavFlow"><segment><source>Workflows</source><target state="translated">Workflows</target></segment></unit>
+    <unit id="Title"><segment><source>Workflows</source><target state="translated">Workflows</target></segment></unit>
+    <unit id="Empty"><segment><source>No workflows yet</source><target state="translated">No workflows yet</target></segment></unit>
+    <unit id="EmptyHint"><segment><source>Create one to chain a model, a search and an approval.</source><target state="translated">Create one to chain a model, a search and an approval.</target></segment></unit>
+    <unit id="Version"><segment><source>v{0}</source><target state="translated">v{0}</target></segment></unit>
+    <unit id="Draft"><segment><source>Draft · changes not published</source><target state="translated">Draft · changes not published</target></segment></unit>
+    <unit id="Published"><segment><source>Published v{0}</source><target state="translated">Published v{0}</target></segment></unit>
+    <unit id="Run"><segment><source>Run</source><target state="translated">Run</target></segment></unit>
+    <unit id="RunTitle"><segment><source>Run a workflow</source><target state="translated">Run a workflow</target></segment></unit>
+    <unit id="RunInput"><segment><source>What should it work on?</source><target state="translated">What should it work on?</target></segment></unit>
+    <unit id="RunInputDefault"><segment><source>Ticket #48214: export fails with a timeout</source><target state="translated">Ticket #48214: export fails with a timeout</target></segment></unit>
+    <unit id="Start"><segment><source>Start</source><target state="translated">Start</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">Cancel</target></segment></unit>
+    <unit id="Save"><segment><source>Save draft</source><target state="translated">Save draft</target></segment></unit>
+    <unit id="Publish"><segment><source>Publish</source><target state="translated">Publish</target></segment></unit>
+    <unit id="Saved"><segment><source>Draft saved</source><target state="translated">Draft saved</target></segment></unit>
+    <unit id="PublishedOk"><segment><source>Published as v{0}</source><target state="translated">Published as v{0}</target></segment></unit>
+    <unit id="LatestRun"><segment><source>Latest run</source><target state="translated">Latest run</target></segment></unit>
+    <unit id="RunLabel"><segment><source>Run #{0} · v{1}</source><target state="translated">Run #{0} · v{1}</target></segment></unit>
+    <unit id="StateRunning"><segment><source>Running</source><target state="translated">Running</target></segment></unit>
+    <unit id="StateWaiting"><segment><source>Waiting for approval</source><target state="translated">Waiting for approval</target></segment></unit>
+    <unit id="StateSucceeded"><segment><source>Succeeded</source><target state="translated">Succeeded</target></segment></unit>
+    <unit id="StateFailed"><segment><source>Failed</source><target state="translated">Failed</target></segment></unit>
+    <unit id="StateQueued"><segment><source>Queued</source><target state="translated">Queued</target></segment></unit>
+    <unit id="Pending"><segment><source>A step is waiting for your approval.</source><target state="translated">A step is waiting for your approval.</target></segment></unit>
+    <unit id="Review"><segment><source>Review</source><target state="translated">Review</target></segment></unit>
+    <unit id="Trace"><segment><source>Run trace</source><target state="translated">Run trace</target></segment></unit>
+    <unit id="NoRun"><segment><source>No runs yet</source><target state="translated">No runs yet</target></segment></unit>
+    <unit id="NoRunHint"><segment><source>Run the workflow to see each step here.</source><target state="translated">Run the workflow to see each step here.</target></segment></unit>
+    <unit id="Seconds"><segment><source>{0} s</source><target state="translated">{0} s</target></segment></unit>
+    <unit id="Millis"><segment><source>{0} ms</source><target state="translated">{0} ms</target></segment></unit>
+    <unit id="Yes"><segment><source>Yes</source><target state="translated">Yes</target></segment></unit>
+    <unit id="No"><segment><source>No</source><target state="translated">No</target></segment></unit>
+    <unit id="NodeTrigger"><segment><source>Trigger</source><target state="translated">Trigger</target></segment></unit>
+    <unit id="NodeModel"><segment><source>Model</source><target state="translated">Model</target></segment></unit>
+    <unit id="NodeRetrieve"><segment><source>Knowledge search</source><target state="translated">Knowledge search</target></segment></unit>
+    <unit id="NodeBranch"><segment><source>Branch</source><target state="translated">Branch</target></segment></unit>
+    <unit id="NodeTool"><segment><source>Tool</source><target state="translated">Tool</target></segment></unit>
+    <unit id="NodeApproval"><segment><source>Approval</source><target state="translated">Approval</target></segment></unit>
+    <unit id="NodeSend"><segment><source>Send</source><target state="translated">Send</target></segment></unit>
+    <unit id="SampleAuto"><segment><source>Confirmed automatically in the sample</source><target state="translated">Confirmed automatically in the sample</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the workflow</source><target state="translated">Could not read the workflow</target></segment></unit>
+    <unit id="Locked"><segment><source>Open a draft with changes to publish it.</source><target state="translated">Open a draft with changes to publish it.</target></segment></unit>
+  </file>
+</xliff>

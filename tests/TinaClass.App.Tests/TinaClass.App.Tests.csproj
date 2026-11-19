@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The desktop app on Avalonia's headless platform (no window opens): pages render on the sample data, view models
+       behave. Run them with "dotnet run" on this project (or "dotnet test" where VSTest works). With the environment
+       variable TINACLASS_SCREENSHOTS set to a folder, every page is also written there, light and dark, at 1440x900. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Avalonia.Headless.XUnit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/TinaClass.App/TinaClass.App.csproj" />
+  </ItemGroup>
+</Project>

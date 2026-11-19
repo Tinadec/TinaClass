@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Models text in zh-CN: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-CN" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Models.Localization.ModelsLangResourceKind">
+    <unit id="NavModels"><segment><source>Models</source><target state="translated">模型</target></segment></unit>
+    <unit id="Title"><segment><source>Models and providers</source><target state="translated">模型与服务商</target></segment></unit>
+    <unit id="Lead"><segment><source>Where answers come from: the providers you connect, their keys, and the models people can pick.</source><target state="translated">回答从哪里来：接入的服务商、它们的密钥，以及大家能选的模型。</target></segment></unit>
+    <unit id="Providers"><segment><source>Providers</source><target state="translated">服务商</target></segment></unit>
+    <unit id="Keys"><segment><source>Keys</source><target state="translated">密钥</target></segment></unit>
+    <unit id="KeysNote"><segment><source>Keys are stored by the server and only the last four characters come back.</source><target state="translated">密钥由服务端保存，界面只显示末四位。</target></segment></unit>
+    <unit id="ModelsTable"><segment><source>Models</source><target state="translated">模型</target></segment></unit>
+    <unit id="Test"><segment><source>Test connection</source><target state="translated">测试连接</target></segment></unit>
+    <unit id="Testing"><segment><source>Testing…</source><target state="translated">检测中…</target></segment></unit>
+    <unit id="StatusOk"><segment><source>Connected</source><target state="translated">已连接</target></segment></unit>
+    <unit id="StatusNoKey"><segment><source>No key set</source><target state="translated">未设置密钥</target></segment></unit>
+    <unit id="StatusError"><segment><source>Not reachable</source><target state="translated">无法连接</target></segment></unit>
+    <unit id="StatusDisabled"><segment><source>Off</source><target state="translated">已停用</target></segment></unit>
+    <unit id="Latency"><segment><source>{0} ms</source><target state="translated">{0} 毫秒</target></segment></unit>
+    <unit id="Offline"><segment><source>Offline</source><target state="translated">离线</target></segment></unit>
+    <unit id="ColModel"><segment><source>Model</source><target state="translated">模型</target></segment></unit>
+    <unit id="ColProvider"><segment><source>Provider</source><target state="translated">服务商</target></segment></unit>
+    <unit id="ColContext"><segment><source>Context</source><target state="translated">上下文</target></segment></unit>
+    <unit id="ColPrice"><segment><source>Per 1M tokens (in / out)</source><target state="translated">每百万 tokens（入 / 出）</target></segment></unit>
+    <unit id="ColDefault"><segment><source>Default</source><target state="translated">默认</target></segment></unit>
+    <unit id="ColEnabled"><segment><source>On</source><target state="translated">启用</target></segment></unit>
+    <unit id="Free"><segment><source>Free</source><target state="translated">免费</target></segment></unit>
+    <unit id="Default"><segment><source>Default</source><target state="translated">默认</target></segment></unit>
+    <unit id="Embedding"><segment><source>Embedding</source><target state="translated">嵌入</target></segment></unit>
+    <unit id="EmptyKeys"><segment><source>Every provider here works without a key.</source><target state="translated">这里的服务商都不需要密钥。</target></segment></unit>
+    <unit id="ErrorKeyRequired"><segment><source>This provider needs a key first.</source><target state="translated">这个服务商需要先设置密钥。</target></segment></unit>
+    <unit id="KeyFormat"><segment><source>Paste the key you got from the provider.</source><target state="translated">粘贴服务商给你的密钥。</target></segment></unit>
+    <unit id="KConnected"><segment><source>Connected</source><target state="translated">已连接</target></segment></unit>
+    <unit id="KInvalid"><segment><source>Invalid</source><target state="translated">无效</target></segment></unit>
+    <unit id="KNotSet"><segment><source>Not set</source><target state="translated">未设置</target></segment></unit>
+    <unit id="KTesting"><segment><source>Testing</source><target state="translated">测试中</target></segment></unit>
+    <unit id="KNoKey"><segment><source>No key added</source><target state="translated">还没有添加密钥</target></segment></unit>
+    <unit id="KRemoved"><segment><source>Key removed</source><target state="translated">密钥已移除</target></segment></unit>
+    <unit id="KNeverUsed"><segment><source>Never used</source><target state="translated">从未使用</target></segment></unit>
+    <unit id="KRejected"><segment><source>Rejected</source><target state="translated">被拒绝</target></segment></unit>
+    <unit id="KAdd"><segment><source>Add key</source><target state="translated">添加密钥</target></segment></unit>
+    <unit id="KUndo"><segment><source>Undo</source><target state="translated">撤销</target></segment></unit>
+    <unit id="KCancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="KSave"><segment><source>Save</source><target state="translated">保存</target></segment></unit>
+  </file>
+</xliff>

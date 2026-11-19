@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:cl="using:TinaClass.App.Features.Chat.Localization"
+             xmlns:c="using:TinaClass.App.Features.Chat"
+             x:Class="TinaClass.App.Features.Chat.ChatInspector"
+             x:DataType="c:ChatInspectorViewModel">
+    <!-- The right wing of the chat (scheme B): the plan, the numbers of the answer and what it cited. Arc: Tabs, AgentPlan, GenerationStats,
+         ContextWindow. The source list is a plain items list of text rows (Arc's AiSourcesRow lives inside the chat's own answer). -->
+    <Border BorderBrush="{arc:ArcDesignTokenResource Border}" BorderThickness="1,0,0,0">
+        <arc:Tabs ContentMargin="0,12,0,0" Margin="12,8,12,0">
+            <arc:TabItem Header="{cl:ChatLangResource InspectorRun}">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Spacing="{arc:ArcDesignTokenResource Space4}" Margin="0,0,0,16">
+                        <TextBlock Classes="muted small" TextWrapping="Wrap" Text="{cl:ChatLangResource InspectorNoRun}" IsVisible="{Binding !HasPlan}" />
+                        <arc:AgentPlan x:Name="Plan" Steps="{Binding Steps}" Status="{Binding PlanStatus}" IsVisible="{Binding HasPlan}" />
+                        <arc:GenerationStats x:Name="Stats" Status="{Binding Status}" Model="{Binding Model}" Usage="{Binding Usage}" StartedAt="{Binding StartedAt}"
+                                             Variant="Card" IsVisible="{Binding HasPlan}" />
+                        <!-- What the answer cited, under the numbers (design 8): one row per source; the Sources tab has the quotes. -->
+                        <StackPanel Spacing="{arc:ArcDesignTokenResource Space2}" IsVisible="{Binding HasSources}">
+                            <TextBlock Classes="section secondary" Text="{cl:ChatLangResource InspectorCited}" />
+                            <ItemsControl ItemsSource="{Binding Sources}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="c:SourceRow">
+                                        <Border Classes="panel" Padding="12,10" Margin="0,0,0,8">
+                                            <StackPanel Spacing="{arc:ArcDesignTokenResource Space1}">
+                                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="{arc:ArcDesignTokenResource Space2}">
+                                                    <arc:Badge Tone="Neutral" Size="Small" Content="{Binding Index}" />
+                                                    <TextBlock Grid.Column="1" FontWeight="Medium" TextTrimming="CharacterEllipsis" Text="{Binding Title}" />
+                                                    <TextBlock Grid.Column="2" Classes="mono muted small" Text="{Binding Score}" />
+                                                </Grid>
+                                                <TextBlock Classes="muted small" TextTrimming="CharacterEllipsis" Text="{Binding Where}" />
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </arc:TabItem>
+            <arc:TabItem Header="{cl:ChatLangResource InspectorSources}">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Spacing="{arc:ArcDesignTokenResource Space3}" Margin="0,0,0,16">
+                        <TextBlock Classes="muted small" TextWrapping="Wrap" Text="{cl:ChatLangResource InspectorNoSources}" IsVisible="{Binding !HasSources}" />
+                        <TextBlock Classes="secondary small" Text="{cl:ChatLangResource InspectorCited}" IsVisible="{Binding HasSources}" />
+                        <ItemsControl ItemsSource="{Binding Sources}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="c:SourceRow">
+                                    <StackPanel Spacing="{arc:ArcDesignTokenResource Space1}" Margin="0,0,0,12">
+                                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="{arc:ArcDesignTokenResource Space2}">
+                                            <arc:Badge Tone="Neutral" Size="Small" Content="{Binding Index}" />
+                                            <TextBlock Grid.Column="1" FontWeight="Medium" TextTrimming="CharacterEllipsis" Text="{Binding Title}" />
+                                            <TextBlock Grid.Column="2" Classes="mono muted small" Text="{Binding Score}" />
+                                        </Grid>
+                                        <TextBlock Classes="muted small" Text="{Binding Where}" />
+                                        <TextBlock Classes="secondary small" TextWrapping="Wrap" MaxLines="3" TextTrimming="CharacterEllipsis" Text="{Binding Quote}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+            </arc:TabItem>
+            <arc:TabItem Header="{cl:ChatLangResource InspectorContext}">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                    <arc:ContextWindow x:Name="Context" Models="{Binding ContextModels}" Items="{Binding ContextItems}" Margin="0,0,0,16" />
+                </ScrollViewer>
+            </arc:TabItem>
+        </arc:Tabs>
+    </Border>
+</UserControl>

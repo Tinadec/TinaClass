@@ -1,0 +1,53 @@
+using TKCode.Arc.Localization;
+
+namespace TinaClass.App.Features.Usage.Localization;
+
+/// <summary>The text of the Usage feature (one member per string; the .xlf files next to this one hold en-US, zh-CN and zh-TW).</summary>
+[LanguageCatalog]
+public enum UsageLangResourceKind
+{
+    NavUsage,
+    Title,
+    Lead,
+    RangeMonth,
+    Range7,
+    Total,
+    Tokens,
+    Requests,
+    FirstToken,
+    CacheHit,
+    Seconds,
+    Budget,
+    BudgetUsed,
+    StateOk,
+    StateWarn50,
+    StateWarn80,
+    StateOver,
+    Projected,
+    Lasts,
+    Daily,
+    DailyNote,
+    ByModel,
+    ByMember,
+    ColMember,
+    ColModel,
+    ColCost,
+    ColRequests,
+    ColTokens,
+    ColShare,
+    AutoRuns,
+    Empty,
+    EmptyHint,
+    LoadError,
+    RoleOwner,
+    RoleAdmin,
+    RoleMember,
+    RoleViewer,
+    RoleAgent,
+    ActionPreviousRange,
+    ActionNextRange,
+    CurrencyUnit,
+    MeterFree,
+    MeterOver,
+    DailyAverage,
+}

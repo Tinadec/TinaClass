@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Api text in zh-TW: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-TW" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Common.Api.Localization.ApiLangResourceKind">
+    <unit id="SignInTitle"><segment><source>Sign in to {0}</source><target state="translated">登入 {0}</target></segment></unit>
+    <unit id="SignInTo"><segment><source>Using the API at {0}</source><target state="translated">使用 {0} 上的 API</target></segment></unit>
+    <unit id="Email"><segment><source>Email</source><target state="translated">電子郵件</target></segment></unit>
+    <unit id="Password"><segment><source>Password</source><target state="translated">密碼</target></segment></unit>
+    <unit id="RememberMe"><segment><source>Keep me signed in</source><target state="translated">保持登入</target></segment></unit>
+    <unit id="SignIn"><segment><source>Sign in</source><target state="translated">登入</target></segment></unit>
+    <unit id="SignOut"><segment><source>Sign out</source><target state="translated">登出</target></segment></unit>
+    <unit id="ErrorInvalidCredentials"><segment><source>The email or password is wrong, or sign-in is blocked for a few minutes after too many attempts.</source><target state="translated">電子郵件或密碼不對，或者嘗試次數過多，暫時無法登入。</target></segment></unit>
+    <unit id="ErrorSessionExpired"><segment><source>Your session ended. Sign in again.</source><target state="translated">登入已過期，請重新登入。</target></segment></unit>
+    <unit id="ErrorForbidden"><segment><source>You are not allowed to do this.</source><target state="translated">你沒有權限執行此操作。</target></segment></unit>
+    <unit id="ErrorNotFound"><segment><source>It was not found. Someone may have removed it.</source><target state="translated">找不到，可能已被刪除。</target></segment></unit>
+    <unit id="ErrorConflict"><segment><source>It was changed by someone else. Reload and try again.</source><target state="translated">已被別人修改，請重新整理後再試。</target></segment></unit>
+    <unit id="ErrorValidation"><segment><source>Some of what you entered is not valid.</source><target state="translated">輸入的內容有誤。</target></segment></unit>
+    <unit id="ErrorRateLimited"><segment><source>Too many requests. Wait a minute and try again.</source><target state="translated">請求太頻繁，請稍等一分鐘再試。</target></segment></unit>
+    <unit id="ErrorUnreachable"><segment><source>Cannot reach {0}. Check that the API is running.</source><target state="translated">無法連線 {0}，請確認 API 已啟動。</target></segment></unit>
+    <unit id="ErrorGeneric"><segment><source>Something went wrong. Try again.</source><target state="translated">出錯了，請重試。</target></segment></unit>
+    <unit id="ErrorAccountLocked"><segment><source>This account is locked for a few minutes after too many wrong passwords.</source><target state="translated">密碼錯誤次數過多，帳戶暫時鎖定。</target></segment></unit>
+    <unit id="ErrorBudgetExceeded"><segment><source>The monthly budget is used up and new requests are blocked. An administrator can raise it under Usage.</source><target state="translated">本月預算已用完，新請求被阻止。管理員可以在「用量」裡調高預算。</target></segment></unit>
+    <unit id="ErrorNoModel"><segment><source>No model is available. Turn one on under Models.</source><target state="translated">沒有可用的模型，請先在「模型」裡啟用一個。</target></segment></unit>
+    <unit id="ErrorProviderFailed"><segment><source>The provider did not answer. Try again or pick another model.</source><target state="translated">服務商沒有應答，請重試或換一個模型。</target></segment></unit>
+    <unit id="ErrorInvalidState"><segment><source>That cannot be done in the current state.</source><target state="translated">目前狀態下不能執行這個操作。</target></segment></unit>
+    <unit id="ErrorKeyRequired"><segment><source>This provider needs a key. Set one under Models.</source><target state="translated">這個服務商需要金鑰，請先在「模型」裡設定。</target></segment></unit>
+  </file>
+</xliff>

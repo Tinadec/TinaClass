@@ -1,0 +1,9 @@
+{
+  "name": "TinClass",
+  "version": "1.0.0",
+  "logo": "spark",
+  "currency": "CNY",
+  "dataSource": "sample",
+  "apiBaseUrl": "http://localhost:5080",
+  "language": "system"
+}

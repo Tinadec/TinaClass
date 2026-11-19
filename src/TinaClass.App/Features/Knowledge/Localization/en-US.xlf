@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Knowledge text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Knowledge.Localization.KnowledgeLangResourceKind">
+    <unit id="NavKnowledge"><segment><source>Knowledge</source><target state="translated">Knowledge</target></segment></unit>
+    <unit id="Title"><segment><source>Knowledge bases</source><target state="translated">Knowledge bases</target></segment></unit>
+    <unit id="Lead"><segment><source>The documents the assistant can cite. Add files, watch them get indexed, and test what retrieval finds.</source><target state="translated">The documents the assistant can cite. Add files, watch them get indexed, and test what retrieval finds.</target></segment></unit>
+    <unit id="Bases"><segment><source>Bases</source><target state="translated">Bases</target></segment></unit>
+    <unit id="NewBase"><segment><source>New knowledge base</source><target state="translated">New knowledge base</target></segment></unit>
+    <unit id="Upload"><segment><source>Upload</source><target state="translated">Upload</target></segment></unit>
+    <unit id="DropLabel"><segment><source>Drop files here, or browse</source><target state="translated">Drop files here, or browse</target></segment></unit>
+    <unit id="DropNote"><segment><source>PDF, Word, Excel, Markdown, text and images</source><target state="translated">PDF, Word, Excel, Markdown, text and images</target></segment></unit>
+    <unit id="Documents"><segment><source>Documents</source><target state="translated">Documents</target></segment></unit>
+    <unit id="DocCounts"><segment><source>{0} documents · {1} chunks</source><target state="translated">{0} documents · {1} chunks</target></segment></unit>
+    <unit id="ShowingOf"><segment><source>Showing {0} of {1}</source><target state="translated">Showing {0} of {1}</target></segment></unit>
+    <unit id="Filter"><segment><source>Filter documents</source><target state="translated">Filter documents</target></segment></unit>
+    <unit id="ColName"><segment><source>Name</source><target state="translated">Name</target></segment></unit>
+    <unit id="ColSize"><segment><source>Size</source><target state="translated">Size</target></segment></unit>
+    <unit id="ColState"><segment><source>State</source><target state="translated">State</target></segment></unit>
+    <unit id="ColChunks"><segment><source>Chunks</source><target state="translated">Chunks</target></segment></unit>
+    <unit id="ColBy"><segment><source>Added by</source><target state="translated">Added by</target></segment></unit>
+    <unit id="ColWhen"><segment><source>When</source><target state="translated">When</target></segment></unit>
+    <unit id="StateQueued"><segment><source>Queued</source><target state="translated">Queued</target></segment></unit>
+    <unit id="StateUploading"><segment><source>Uploading</source><target state="translated">Uploading</target></segment></unit>
+    <unit id="StateParsing"><segment><source>Parsing</source><target state="translated">Parsing</target></segment></unit>
+    <unit id="StateChunking"><segment><source>Chunking</source><target state="translated">Chunking</target></segment></unit>
+    <unit id="StateEmbedding"><segment><source>Embedding</source><target state="translated">Embedding</target></segment></unit>
+    <unit id="StateReady"><segment><source>Ready</source><target state="translated">Ready</target></segment></unit>
+    <unit id="StateReindexing"><segment><source>Reindexing</source><target state="translated">Reindexing</target></segment></unit>
+    <unit id="StateFailed"><segment><source>Failed</source><target state="translated">Failed</target></segment></unit>
+    <unit id="Retry"><segment><source>Retry</source><target state="translated">Retry</target></segment></unit>
+    <unit id="Delete"><segment><source>Delete</source><target state="translated">Delete</target></segment></unit>
+    <unit id="Settings"><segment><source>Settings</source><target state="translated">Settings</target></segment></unit>
+    <unit id="SetEmbedding"><segment><source>Embedding model</source><target state="translated">Embedding model</target></segment></unit>
+    <unit id="SetChunk"><segment><source>Chunk size</source><target state="translated">Chunk size</target></segment></unit>
+    <unit id="SetOverlap"><segment><source>Overlap</source><target state="translated">Overlap</target></segment></unit>
+    <unit id="SetHybrid"><segment><source>Hybrid search</source><target state="translated">Hybrid search</target></segment></unit>
+    <unit id="SetRerank"><segment><source>Rerank</source><target state="translated">Rerank</target></segment></unit>
+    <unit id="SetThreshold"><segment><source>Score threshold</source><target state="translated">Score threshold</target></segment></unit>
+    <unit id="SetTopK"><segment><source>Passages returned</source><target state="translated">Passages returned</target></segment></unit>
+    <unit id="SetVisibility"><segment><source>Visible to</source><target state="translated">Visible to</target></segment></unit>
+    <unit id="On"><segment><source>On</source><target state="translated">On</target></segment></unit>
+    <unit id="Off"><segment><source>Off</source><target state="translated">Off</target></segment></unit>
+    <unit id="Tokens"><segment><source>{0} tokens</source><target state="translated">{0} tokens</target></segment></unit>
+    <unit id="VisWorkspace"><segment><source>Everyone</source><target state="translated">Everyone</target></segment></unit>
+    <unit id="VisSpace"><segment><source>The space</source><target state="translated">The space</target></segment></unit>
+    <unit id="VisPrivate"><segment><source>Only you</source><target state="translated">Only you</target></segment></unit>
+    <unit id="Test"><segment><source>Retrieval test</source><target state="translated">Retrieval test</target></segment></unit>
+    <unit id="TestHint"><segment><source>Ask a question to see which passages would be found.</source><target state="translated">Ask a question to see which passages would be found.</target></segment></unit>
+    <unit id="TestRun"><segment><source>Search</source><target state="translated">Search</target></segment></unit>
+    <unit id="TestPlaceholder"><segment><source>For example: why is the export slow</source><target state="translated">For example: why is the export slow</target></segment></unit>
+    <unit id="Hits"><segment><source>{0} passages in {1} ms</source><target state="translated">{0} passages in {1} ms</target></segment></unit>
+    <unit id="NoHits"><segment><source>Nothing matched</source><target state="translated">Nothing matched</target></segment></unit>
+    <unit id="Score"><segment><source>Score {0}</source><target state="translated">Score {0}</target></segment></unit>
+    <unit id="Page"><segment><source>p.{0}</source><target state="translated">p.{0}</target></segment></unit>
+    <unit id="EmptyBases"><segment><source>No knowledge base yet</source><target state="translated">No knowledge base yet</target></segment></unit>
+    <unit id="EmptyBasesHint"><segment><source>Create one and drop your files in.</source><target state="translated">Create one and drop your files in.</target></segment></unit>
+    <unit id="EmptyDocs"><segment><source>No documents in this base</source><target state="translated">No documents in this base</target></segment></unit>
+    <unit id="EmptyDocsHint"><segment><source>Drop files on the area above.</source><target state="translated">Drop files on the area above.</target></segment></unit>
+    <unit id="NewBaseTitle"><segment><source>New knowledge base</source><target state="translated">New knowledge base</target></segment></unit>
+    <unit id="NewBaseName"><segment><source>Name</source><target state="translated">Name</target></segment></unit>
+    <unit id="NewBaseDescription"><segment><source>What it holds</source><target state="translated">What it holds</target></segment></unit>
+    <unit id="Create"><segment><source>Create</source><target state="translated">Create</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">Cancel</target></segment></unit>
+    <unit id="ConfirmDelete"><segment><source>Delete {0}? Its passages are removed from the index.</source><target state="translated">Delete {0}? Its passages are removed from the index.</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the knowledge bases</source><target state="translated">Could not read the knowledge bases</target></segment></unit>
+    <unit id="FileTooBig"><segment><source>{0} is larger than {1}</source><target state="translated">{0} is larger than {1}</target></segment></unit>
+    <unit id="UploadFailed"><segment><source>Upload failed</source><target state="translated">Upload failed</target></segment></unit>
+    <unit id="ErrorDuplicate"><segment><source>A document with this name is already in the base.</source><target state="translated">A document with this name is already in the base.</target></segment></unit>
+    <unit id="DropLimit"><segment><source>Up to 20 files, 25 MB each</source><target state="translated">Up to 20 files, 25 MB each</target></segment></unit>
+  </file>
+</xliff>

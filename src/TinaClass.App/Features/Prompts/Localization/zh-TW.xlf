@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Prompts text in zh-TW: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-TW" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Prompts.Localization.PromptsLangResourceKind">
+    <unit id="NavPrompts"><segment><source>Prompts</source><target state="translated">提示詞</target></segment></unit>
+    <unit id="Title"><segment><source>Prompts</source><target state="translated">提示詞</target></segment></unit>
+    <unit id="New"><segment><source>New prompt</source><target state="translated">新建提示詞</target></segment></unit>
+    <unit id="Save"><segment><source>Save</source><target state="translated">儲存</target></segment></unit>
+    <unit id="Publish"><segment><source>Publish</source><target state="translated">發布</target></segment></unit>
+    <unit id="RunCases"><segment><source>Run test cases</source><target state="translated">运行測試用例</target></segment></unit>
+    <unit id="CasesPassed"><segment><source>{0}/{1} cases pass</source><target state="translated">{0}/{1} 個用例通過</target></segment></unit>
+    <unit id="CasesBadge"><segment><source>{0}/{1}</source><target state="translated">{0}/{1}</target></segment></unit>
+    <unit id="Version"><segment><source>v{0}</source><target state="translated">v{0}</target></segment></unit>
+    <unit id="PublishedNote"><segment><source>Published v{0}</source><target state="translated">已發布 v{0}</target></segment></unit>
+    <unit id="Unsaved"><segment><source>Unsaved changes</source><target state="translated">有未儲存的修改</target></segment></unit>
+    <unit id="Saved"><segment><source>Saved</source><target state="translated">已儲存</target></segment></unit>
+    <unit id="Uses"><segment><source>{0} uses</source><target state="translated">使用 {0} 次</target></segment></unit>
+    <unit id="Owner"><segment><source>By {0}</source><target state="translated">{0} 創建</target></segment></unit>
+    <unit id="PublishTitle"><segment><source>Publish a version</source><target state="translated">發布新版本</target></segment></unit>
+    <unit id="PublishNote"><segment><source>What changed</source><target state="translated">改了什么</target></segment></unit>
+    <unit id="PublishDefault"><segment><source>Edited in TinaClass</source><target state="translated">在 TinaClass 中修改</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="Search"><segment><source>Search prompts</source><target state="translated">搜尋提示詞</target></segment></unit>
+    <unit id="Empty"><segment><source>No prompts yet</source><target state="translated">還没有提示詞</target></segment></unit>
+    <unit id="EmptyHint"><segment><source>Start from one of the examples.</source><target state="translated">从示例里挑一個開始。</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the prompts</source><target state="translated">无法讀取提示詞</target></segment></unit>
+    <unit id="NewName"><segment><source>New prompt</source><target state="translated">新提示詞</target></segment></unit>
+    <unit id="NewCommand"><segment><source>/new</source><target state="translated">/new</target></segment></unit>
+    <unit id="LSystem"><segment><source>System</source><target state="translated">系統</target></segment></unit>
+    <unit id="LUser"><segment><source>User</source><target state="translated">使用者</target></segment></unit>
+    <unit id="LSystemPlaceholder"><segment><source>Describe the assistant's role and rules</source><target state="translated">描述助手的角色和規則</target></segment></unit>
+    <unit id="LUserPlaceholder"><segment><source>Write the message the assistant answers</source><target state="translated">寫下助手要回答的消息</target></segment></unit>
+    <unit id="LTypeBefore"><segment><source>Type</source><target state="translated">輸入</target></segment></unit>
+    <unit id="LTypeAfter"><segment><source>to add a variable</source><target state="translated">添加變量</target></segment></unit>
+    <unit id="LTokens"><segment><source>{0} tokens</source><target state="translated">{0} 個 token</target></segment></unit>
+    <unit id="LEmptyValue"><segment><source>Empty</source><target state="translated">空</target></segment></unit>
+    <unit id="LRun"><segment><source>Run</source><target state="translated">运行</target></segment></unit>
+    <unit id="LStop"><segment><source>Stop</source><target state="translated">停止</target></segment></unit>
+    <unit id="LRetry"><segment><source>Retry</source><target state="translated">重試</target></segment></unit>
+    <unit id="LIdle"><segment><source>Run {0} to see the reply here.</source><target state="translated">运行「{0}」，回复会顯示在這里。</target></segment></unit>
+    <unit id="LIdleNoCase"><segment><source>Run the prompt to see the reply here.</source><target state="translated">运行提示詞，回复会顯示在這里。</target></segment></unit>
+    <unit id="LThinking"><segment><source>Thinking</source><target state="translated">思考中</target></segment></unit>
+    <unit id="LWriting"><segment><source>Writing</source><target state="translated">輸出中</target></segment></unit>
+    <unit id="LReply"><segment><source>Reply</source><target state="translated">回复</target></segment></unit>
+    <unit id="LStopped"><segment><source>Stopped</source><target state="translated">已停止</target></segment></unit>
+    <unit id="LRunFailed"><segment><source>Run failed</source><target state="translated">运行失败</target></segment></unit>
+    <unit id="LProduction"><segment><source>Production</source><target state="translated">線上</target></segment></unit>
+    <unit id="LLatest"><segment><source>Latest</source><target state="translated">最新</target></segment></unit>
+    <unit id="LPromote"><segment><source>Promote to production</source><target state="translated">設為線上版本</target></segment></unit>
+    <unit id="LBackToEditing"><segment><source>Back to editing</source><target state="translated">返回編輯</target></segment></unit>
+    <unit id="LModel"><segment><source>Model</source><target state="translated">模型</target></segment></unit>
+    <unit id="LEffort"><segment><source>Effort</source><target state="translated">推理强度</target></segment></unit>
+    <unit id="LCopy"><segment><source>Copy reply</source><target state="translated">复制回复</target></segment></unit>
+    <unit id="LCopied"><segment><source>Copied</source><target state="translated">已复制</target></segment></unit>
+    <unit id="LToday"><segment><source>today</source><target state="translated">今天</target></segment></unit>
+    <unit id="LYesterday"><segment><source>yesterday</source><target state="translated">昨天</target></segment></unit>
+    <unit id="LDaysAgo"><segment><source>{0} days ago</source><target state="translated">{0} 天前</target></segment></unit>
+    <unit id="LLastWeek"><segment><source>last week</source><target state="translated">上周</target></segment></unit>
+    <unit id="LWeeksAgo"><segment><source>{0} weeks ago</source><target state="translated">{0} 周前</target></segment></unit>
+    <unit id="LSimulated"><segment><source>Simulated</source><target state="translated">模拟</target></segment></unit>
+    <unit id="LAdded"><segment><source>added</source><target state="translated">新增</target></segment></unit>
+    <unit id="LRemoved"><segment><source>removed</source><target state="translated">移除</target></segment></unit>
+    <unit id="LVersions"><segment><source>Versions</source><target state="translated">版本</target></segment></unit>
+    <unit id="LCompareWith"><segment><source>Compare with {0}</source><target state="translated">与 {0} 比较</target></segment></unit>
+    <unit id="LUndo"><segment><source>Undo</source><target state="translated">撤銷</target></segment></unit>
+    <unit id="LVariables"><segment><source>Variables</source><target state="translated">變量</target></segment></unit>
+    <unit id="LTestCase"><segment><source>Test case</source><target state="translated">測試用例</target></segment></unit>
+    <unit id="LSecondsFormat"><segment><source>{0} s</source><target state="translated">{0} 秒</target></segment></unit>
+    <unit id="LSimulatedReply"><segment><source>This reply is the built-in sample: no model was called, so every run gives the same text.</source><target state="translated">這是內置示例回复：没有调用模型，每次运行的文字都一样。</target></segment></unit>
+    <unit id="ErrorCommandTaken"><segment><source>That command is already used by another prompt.</source><target state="translated">這個指令已被其他提示詞使用。</target></segment></unit>
+  </file>
+</xliff>

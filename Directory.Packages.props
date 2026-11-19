@@ -1,0 +1,38 @@
+<Project>
+  <ItemGroup>
+    <!-- Desktop. TKCode.Arc 1.1.0 needs Avalonia [12.1.5, 13.0.0): keep every Avalonia package on one version (12.1.5). -->
+    <PackageVersion Include="Avalonia.Desktop" Version="12.1.5" />
+    <PackageVersion Include="Avalonia.Fonts.Inter" Version="12.1.5" />
+    <PackageVersion Include="Avalonia.Headless.XUnit" Version="12.1.5" />
+    <PackageVersion Include="TKCode.Arc" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Blocks" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Fonts" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Icons.Lucide" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Themes.Corners" Version="1.1.0" />
+    <!-- Optional Arc packages, not referenced by the scaffold. A template that needs one adds only
+         <PackageReference Include="TKCode.Arc.Dock" /> to its project (all of them require the Avalonia version above). -->
+    <PackageVersion Include="TKCode.Arc.AdvancedCharts" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Dock" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Mobile" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Pdf" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Special" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Terminal" Version="1.1.0" />
+    <PackageVersion Include="TKCode.Arc.Workflow" Version="1.1.0" />
+    <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.14" />
+
+    <!-- API. The EF Core packages share one version; the PostgreSQL provider has its own (it follows EF Core's major version). -->
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.14" />
+    <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="10.0.14" />
+    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.2" />
+
+    <!-- Tests -->
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.14" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.11.0" />
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+  </ItemGroup>
+</Project>

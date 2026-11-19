@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chat text in zh-TW: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-TW" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Chat.Localization.ChatLangResourceKind">
+    <unit id="NavChat"><segment><source>Chat</source><target state="translated">對話</target></segment></unit>
+    <unit id="Greeting"><segment><source>What are we working on?</source><target state="translated">今天想聊點什麼？</target></segment></unit>
+    <unit id="Placeholder"><segment><source>Message TinaClass</source><target state="translated">給 TinaClass 發訊息</target></segment></unit>
+    <unit id="StarterSummarize"><segment><source>Summarize a document</source><target state="translated">總結一份文件</target></segment></unit>
+    <unit id="StarterSummarizePrompt"><segment><source>Summarize the attached document in five bullet points and list the open questions.</source><target state="translated">用五個要點總結附件裡的文件，並列出尚未解決的問題。</target></segment></unit>
+    <unit id="StarterPainPoints"><segment><source>Top pain points</source><target state="translated">提煉使用者痛點</target></segment></unit>
+    <unit id="StarterPainPointsPrompt"><segment><source>Based on the Q3 interviews and the support tickets, what are the top three export pain points, and what should we do first?</source><target state="translated">結合工單資料，幫我總結匯出功能的三大痛點，並給出下個迭代的優先順序建議。</target></segment></unit>
+    <unit id="StarterSql"><segment><source>Explain a slow query</source><target state="translated">分析慢查詢</target></segment></unit>
+    <unit id="StarterSqlPrompt"><segment><source>Explain why this export SQL is slow and how to fix it.</source><target state="translated">解釋這段匯出 SQL 為什麼慢，並給出改法。</target></segment></unit>
+    <unit id="StarterWeekly"><segment><source>Weekly report</source><target state="translated">整理週報</target></segment></unit>
+    <unit id="StarterWeeklyPrompt"><segment><source>Turn this week's ticket report into a short summary for management.</source><target state="translated">把本週的工單週報改成給管理層看的摘要。</target></segment></unit>
+    <unit id="InspectorRun"><segment><source>Run</source><target state="translated">執行</target></segment></unit>
+    <unit id="InspectorSources"><segment><source>Sources</source><target state="translated">來源</target></segment></unit>
+    <unit id="InspectorContext"><segment><source>Context</source><target state="translated">上下文</target></segment></unit>
+    <unit id="InspectorPlan"><segment><source>Plan</source><target state="translated">計畫</target></segment></unit>
+    <unit id="InspectorNoRun"><segment><source>Ask something and the plan, sources and cost of the answer appear here.</source><target state="translated">提問之後，回答的計畫、來源和花費會顯示在這裡。</target></segment></unit>
+    <unit id="InspectorCost"><segment><source>Cost of this answer</source><target state="translated">本次回答花費</target></segment></unit>
+    <unit id="InspectorNoSources"><segment><source>This answer cites no sources.</source><target state="translated">這則回答沒有引用來源。</target></segment></unit>
+    <unit id="InspectorCited"><segment><source>Cited in this answer</source><target state="translated">本次回答引用</target></segment></unit>
+    <unit id="ToggleInspector"><segment><source>Show or hide the inspector</source><target state="translated">顯示或隱藏檢查器</target></segment></unit>
+    <unit id="NewChat"><segment><source>New chat</source><target state="translated">新對話</target></segment></unit>
+    <unit id="Rename"><segment><source>Rename</source><target state="translated">重新命名</target></segment></unit>
+    <unit id="Pin"><segment><source>Pin</source><target state="translated">置頂</target></segment></unit>
+    <unit id="Unpin"><segment><source>Unpin</source><target state="translated">取消置頂</target></segment></unit>
+    <unit id="DeleteChat"><segment><source>Delete</source><target state="translated">刪除</target></segment></unit>
+    <unit id="MoveTo"><segment><source>Move to folder</source><target state="translated">移到資料夾</target></segment></unit>
+    <unit id="Unfiled"><segment><source>Unfiled</source><target state="translated">未歸檔</target></segment></unit>
+    <unit id="Folders"><segment><source>Folders</source><target state="translated">資料夾</target></segment></unit>
+    <unit id="Pinned"><segment><source>Pinned</source><target state="translated">已置頂</target></segment></unit>
+    <unit id="NewFolder"><segment><source>New folder</source><target state="translated">新增資料夾</target></segment></unit>
+    <unit id="ErrorNotFound"><segment><source>The conversation no longer exists.</source><target state="translated">這個對話已經不存在了。</target></segment></unit>
+    <unit id="PlanHeading"><segment><source>Run plan</source><target state="translated">執行計畫</target></segment></unit>
+    <unit id="PlanApprove"><segment><source>Approve</source><target state="translated">批准</target></segment></unit>
+    <unit id="PlanPause"><segment><source>Pause</source><target state="translated">暫停</target></segment></unit>
+    <unit id="PlanResume"><segment><source>Resume</source><target state="translated">繼續</target></segment></unit>
+    <unit id="PlanRetry"><segment><source>Retry</source><target state="translated">重試</target></segment></unit>
+    <unit id="PlanSkip"><segment><source>Skip</source><target state="translated">跳過</target></segment></unit>
+    <unit id="PlanStateDone"><segment><source>Done</source><target state="translated">完成</target></segment></unit>
+    <unit id="PlanStateActive"><segment><source>Working</source><target state="translated">進行中</target></segment></unit>
+    <unit id="PlanStatePending"><segment><source>Waiting</source><target state="translated">未開始</target></segment></unit>
+    <unit id="PlanStateFailed"><segment><source>Failed</source><target state="translated">失敗</target></segment></unit>
+    <unit id="PlanStateSkipped"><segment><source>Skipped</source><target state="translated">已跳過</target></segment></unit>
+    <unit id="PlanWorking"><segment><source>Working on step {0}</source><target state="translated">正在做第 {0} 步</target></segment></unit>
+    <unit id="PlanPaused"><segment><source>Paused at step {0}</source><target state="translated">第 {0} 步已暫停</target></segment></unit>
+    <unit id="PlanFailed"><segment><source>Step {0} failed</source><target state="translated">第 {0} 步失敗</target></segment></unit>
+    <unit id="PlanDoneIn"><segment><source>Done in {0}</source><target state="translated">用時 {0}</target></segment></unit>
+    <unit id="PlanSteps"><segment><source>{0} steps</source><target state="translated">{0} 步</target></segment></unit>
+    <unit id="PlanPosition"><segment><source>Step {0} of {1}</source><target state="translated">第 {0} / {1} 步</target></segment></unit>
+    <unit id="PlanSecond"><segment><source>{0} s</source><target state="translated">{0} 秒</target></segment></unit>
+    <unit id="StatsFirstToken"><segment><source>First token</source><target state="translated">首字</target></segment></unit>
+    <unit id="StatsSpeed"><segment><source>Speed</source><target state="translated">速度</target></segment></unit>
+    <unit id="StatsOutput"><segment><source>Output</source><target state="translated">輸出</target></segment></unit>
+    <unit id="StatsCost"><segment><source>Cost</source><target state="translated">花費</target></segment></unit>
+    <unit id="StatsDone"><segment><source>Done</source><target state="translated">完成</target></segment></unit>
+    <unit id="StatsDoneIn"><segment><source>Done in {0}</source><target state="translated">用時 {0}</target></segment></unit>
+    <unit id="StatsWaiting"><segment><source>Waiting</source><target state="translated">等待中</target></segment></unit>
+    <unit id="StatsStreaming"><segment><source>Writing</source><target state="translated">生成中</target></segment></unit>
+    <unit id="StatsStopped"><segment><source>Stopped</source><target state="translated">已停止</target></segment></unit>
+    <unit id="StatsFailed"><segment><source>Failed</source><target state="translated">失敗</target></segment></unit>
+    <unit id="StatsDetails"><segment><source>Details</source><target state="translated">詳情</target></segment></unit>
+    <unit id="StatsShowDetails"><segment><source>Show details</source><target state="translated">展開詳情</target></segment></unit>
+    <unit id="StatsHideDetails"><segment><source>Hide details</source><target state="translated">收起詳情</target></segment></unit>
+    <unit id="StatsRetry"><segment><source>Retry</source><target state="translated">重試</target></segment></unit>
+    <unit id="AiThinking"><segment><source>Thinking</source><target state="translated">思考中</target></segment></unit>
+    <unit id="AiThoughtFor"><segment><source>Thought for {0}s</source><target state="translated">已思考 {0} 秒</target></segment></unit>
+    <unit id="AiCopy"><segment><source>Copy</source><target state="translated">複製</target></segment></unit>
+    <unit id="AiCopied"><segment><source>Copied</source><target state="translated">已複製</target></segment></unit>
+    <unit id="AiEdit"><segment><source>Edit</source><target state="translated">編輯</target></segment></unit>
+    <unit id="AiCancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="AiSend"><segment><source>Send</source><target state="translated">傳送</target></segment></unit>
+    <unit id="AiRetry"><segment><source>Regenerate</source><target state="translated">重新生成</target></segment></unit>
+    <unit id="AiGood"><segment><source>Good answer</source><target state="translated">回答得好</target></segment></unit>
+    <unit id="AiBad"><segment><source>Bad answer</source><target state="translated">回答不好</target></segment></unit>
+    <unit id="AiStopped"><segment><source>Stopped</source><target state="translated">已停止</target></segment></unit>
+    <unit id="AiStoppedEarly"><segment><source>Stopped before answering</source><target state="translated">還沒回答就停止了</target></segment></unit>
+    <unit id="AiReplyFailed"><segment><source>The answer failed</source><target state="translated">回答失敗</target></segment></unit>
+    <unit id="AiStop"><segment><source>Stop</source><target state="translated">停止</target></segment></unit>
+    <unit id="AiAttach"><segment><source>Attach files</source><target state="translated">新增檔案</target></segment></unit>
+    <unit id="AiSources"><segment><source>Sources</source><target state="translated">來源</target></segment></unit>
+    <unit id="AiSearches"><segment><source>Searches</source><target state="translated">檢索</target></segment></unit>
+    <unit id="AiResult"><segment><source>Result</source><target state="translated">結果</target></segment></unit>
+    <unit id="AiNewChat"><segment><source>New chat</source><target state="translated">新對話</target></segment></unit>
+    <unit id="AiUntitled"><segment><source>New chat</source><target state="translated">新對話</target></segment></unit>
+    <unit id="AiScroll"><segment><source>Scroll to latest</source><target state="translated">回到最新</target></segment></unit>
+    <unit id="AiPrevVersion"><segment><source>Previous version</source><target state="translated">上一個版本</target></segment></unit>
+    <unit id="AiNextVersion"><segment><source>Next version</source><target state="translated">下一個版本</target></segment></unit>
+    <unit id="AiVersion"><segment><source>Version {0} of {1}</source><target state="translated">版本 {0} / {1}</target></segment></unit>
+    <unit id="PlanStartOver"><segment><source>Start over</source><target state="translated">重新開始</target></segment></unit>
+    <unit id="RenameTitle"><segment><source>Rename conversation</source><target state="translated">重新命名對話</target></segment></unit>
+    <unit id="RenameLabel"><segment><source>Title</source><target state="translated">標題</target></segment></unit>
+    <unit id="DeleteTitle"><segment><source>Delete this conversation?</source><target state="translated">刪除這個對話？</target></segment></unit>
+    <unit id="DeleteBody"><segment><source>"{0}" and its messages are removed. This cannot be undone.</source><target state="translated">「{0}」和它的訊息會被刪除，無法復原。</target></segment></unit>
+  </file>
+</xliff>

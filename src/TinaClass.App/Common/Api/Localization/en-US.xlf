@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Api text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Common.Api.Localization.ApiLangResourceKind">
+    <unit id="SignInTitle"><segment><source>Sign in to {0}</source><target state="translated">Sign in to {0}</target></segment></unit>
+    <unit id="SignInTo"><segment><source>Using the API at {0}</source><target state="translated">Using the API at {0}</target></segment></unit>
+    <unit id="Email"><segment><source>Email</source><target state="translated">Email</target></segment></unit>
+    <unit id="Password"><segment><source>Password</source><target state="translated">Password</target></segment></unit>
+    <unit id="RememberMe"><segment><source>Keep me signed in</source><target state="translated">Keep me signed in</target></segment></unit>
+    <unit id="SignIn"><segment><source>Sign in</source><target state="translated">Sign in</target></segment></unit>
+    <unit id="SignOut"><segment><source>Sign out</source><target state="translated">Sign out</target></segment></unit>
+    <unit id="ErrorInvalidCredentials"><segment><source>The email or password is wrong, or sign-in is blocked for a few minutes after too many attempts.</source><target state="translated">The email or password is wrong, or sign-in is blocked for a few minutes after too many attempts.</target></segment></unit>
+    <unit id="ErrorSessionExpired"><segment><source>Your session ended. Sign in again.</source><target state="translated">Your session ended. Sign in again.</target></segment></unit>
+    <unit id="ErrorForbidden"><segment><source>You are not allowed to do this.</source><target state="translated">You are not allowed to do this.</target></segment></unit>
+    <unit id="ErrorNotFound"><segment><source>It was not found. Someone may have removed it.</source><target state="translated">It was not found. Someone may have removed it.</target></segment></unit>
+    <unit id="ErrorConflict"><segment><source>It was changed by someone else. Reload and try again.</source><target state="translated">It was changed by someone else. Reload and try again.</target></segment></unit>
+    <unit id="ErrorValidation"><segment><source>Some of what you entered is not valid.</source><target state="translated">Some of what you entered is not valid.</target></segment></unit>
+    <unit id="ErrorRateLimited"><segment><source>Too many requests. Wait a minute and try again.</source><target state="translated">Too many requests. Wait a minute and try again.</target></segment></unit>
+    <unit id="ErrorUnreachable"><segment><source>Cannot reach {0}. Check that the API is running.</source><target state="translated">Cannot reach {0}. Check that the API is running.</target></segment></unit>
+    <unit id="ErrorGeneric"><segment><source>Something went wrong. Try again.</source><target state="translated">Something went wrong. Try again.</target></segment></unit>
+    <unit id="ErrorAccountLocked"><segment><source>This account is locked for a few minutes after too many wrong passwords.</source><target state="translated">This account is locked for a few minutes after too many wrong passwords.</target></segment></unit>
+    <unit id="ErrorBudgetExceeded"><segment><source>The monthly budget is used up and new requests are blocked. An administrator can raise it under Usage.</source><target state="translated">The monthly budget is used up and new requests are blocked. An administrator can raise it under Usage.</target></segment></unit>
+    <unit id="ErrorNoModel"><segment><source>No model is available. Turn one on under Models.</source><target state="translated">No model is available. Turn one on under Models.</target></segment></unit>
+    <unit id="ErrorProviderFailed"><segment><source>The provider did not answer. Try again or pick another model.</source><target state="translated">The provider did not answer. Try again or pick another model.</target></segment></unit>
+    <unit id="ErrorInvalidState"><segment><source>That cannot be done in the current state.</source><target state="translated">That cannot be done in the current state.</target></segment></unit>
+    <unit id="ErrorKeyRequired"><segment><source>This provider needs a key. Set one under Models.</source><target state="translated">This provider needs a key. Set one under Models.</target></segment></unit>
+  </file>
+</xliff>

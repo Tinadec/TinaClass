@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Flow text in zh-TW: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-TW" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Flow.Localization.FlowLangResourceKind">
+    <unit id="NavFlow"><segment><source>Workflows</source><target state="translated">工作流程</target></segment></unit>
+    <unit id="Title"><segment><source>Workflows</source><target state="translated">工作流程</target></segment></unit>
+    <unit id="Empty"><segment><source>No workflows yet</source><target state="translated">還没有工作流程</target></segment></unit>
+    <unit id="EmptyHint"><segment><source>Create one to chain a model, a search and an approval.</source><target state="translated">新建一個，把模型、檢索和審批串起來。</target></segment></unit>
+    <unit id="Version"><segment><source>v{0}</source><target state="translated">v{0}</target></segment></unit>
+    <unit id="Draft"><segment><source>Draft · changes not published</source><target state="translated">草稿 · 有未發布的修改</target></segment></unit>
+    <unit id="Published"><segment><source>Published v{0}</source><target state="translated">已發布 v{0}</target></segment></unit>
+    <unit id="Run"><segment><source>Run</source><target state="translated">运行</target></segment></unit>
+    <unit id="RunTitle"><segment><source>Run a workflow</source><target state="translated">运行工作流程</target></segment></unit>
+    <unit id="RunInput"><segment><source>What should it work on?</source><target state="translated">讓它處理什么？</target></segment></unit>
+    <unit id="RunInputDefault"><segment><source>Ticket #48214: export fails with a timeout</source><target state="translated">工单 #48214：導出超時失败</target></segment></unit>
+    <unit id="Start"><segment><source>Start</source><target state="translated">開始</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="Save"><segment><source>Save draft</source><target state="translated">儲存草稿</target></segment></unit>
+    <unit id="Publish"><segment><source>Publish</source><target state="translated">發布</target></segment></unit>
+    <unit id="Saved"><segment><source>Draft saved</source><target state="translated">草稿已儲存</target></segment></unit>
+    <unit id="PublishedOk"><segment><source>Published as v{0}</source><target state="translated">已發布為 v{0}</target></segment></unit>
+    <unit id="LatestRun"><segment><source>Latest run</source><target state="translated">最近一次运行</target></segment></unit>
+    <unit id="RunLabel"><segment><source>Run #{0} · v{1}</source><target state="translated">运行 #{0} · v{1}</target></segment></unit>
+    <unit id="StateRunning"><segment><source>Running</source><target state="translated">运行中</target></segment></unit>
+    <unit id="StateWaiting"><segment><source>Waiting for approval</source><target state="translated">等待審批</target></segment></unit>
+    <unit id="StateSucceeded"><segment><source>Succeeded</source><target state="translated">已完成</target></segment></unit>
+    <unit id="StateFailed"><segment><source>Failed</source><target state="translated">失败</target></segment></unit>
+    <unit id="StateQueued"><segment><source>Queued</source><target state="translated">排隊中</target></segment></unit>
+    <unit id="Pending"><segment><source>A step is waiting for your approval.</source><target state="translated">有一步在等你審批。</target></segment></unit>
+    <unit id="Review"><segment><source>Review</source><target state="translated">去審批</target></segment></unit>
+    <unit id="Trace"><segment><source>Run trace</source><target state="translated">运行轨迹</target></segment></unit>
+    <unit id="NoRun"><segment><source>No runs yet</source><target state="translated">還没有运行</target></segment></unit>
+    <unit id="NoRunHint"><segment><source>Run the workflow to see each step here.</source><target state="translated">运行一次，這里会按用時顯示每一步。</target></segment></unit>
+    <unit id="Seconds"><segment><source>{0} s</source><target state="translated">{0} 秒</target></segment></unit>
+    <unit id="Millis"><segment><source>{0} ms</source><target state="translated">{0} 毫秒</target></segment></unit>
+    <unit id="Yes"><segment><source>Yes</source><target state="translated">是</target></segment></unit>
+    <unit id="No"><segment><source>No</source><target state="translated">否</target></segment></unit>
+    <unit id="NodeTrigger"><segment><source>Trigger</source><target state="translated">觸發器</target></segment></unit>
+    <unit id="NodeModel"><segment><source>Model</source><target state="translated">模型</target></segment></unit>
+    <unit id="NodeRetrieve"><segment><source>Knowledge search</source><target state="translated">知識庫檢索</target></segment></unit>
+    <unit id="NodeBranch"><segment><source>Branch</source><target state="translated">條件分支</target></segment></unit>
+    <unit id="NodeTool"><segment><source>Tool</source><target state="translated">工具</target></segment></unit>
+    <unit id="NodeApproval"><segment><source>Approval</source><target state="translated">人工審批</target></segment></unit>
+    <unit id="NodeSend"><segment><source>Send</source><target state="translated">發送</target></segment></unit>
+    <unit id="SampleAuto"><segment><source>Confirmed automatically in the sample</source><target state="translated">示例里自動確認</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the workflow</source><target state="translated">无法讀取工作流程</target></segment></unit>
+    <unit id="Locked"><segment><source>Open a draft with changes to publish it.</source><target state="translated">先修改草稿才能發布。</target></segment></unit>
+  </file>
+</xliff>

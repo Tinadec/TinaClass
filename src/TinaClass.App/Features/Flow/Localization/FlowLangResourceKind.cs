@@ -1,0 +1,52 @@
+using TKCode.Arc.Localization;
+
+namespace TinaClass.App.Features.Flow.Localization;
+
+/// <summary>The text of the Flow feature (one member per string; the .xlf files next to this one hold en-US, zh-CN and zh-TW).</summary>
+[LanguageCatalog]
+public enum FlowLangResourceKind
+{
+    NavFlow,
+    Title,
+    Empty,
+    EmptyHint,
+    Version,
+    Draft,
+    Published,
+    Run,
+    RunTitle,
+    RunInput,
+    RunInputDefault,
+    Start,
+    Cancel,
+    Save,
+    Publish,
+    Saved,
+    PublishedOk,
+    LatestRun,
+    RunLabel,
+    StateRunning,
+    StateWaiting,
+    StateSucceeded,
+    StateFailed,
+    StateQueued,
+    Pending,
+    Review,
+    Trace,
+    NoRun,
+    NoRunHint,
+    Seconds,
+    Millis,
+    Yes,
+    No,
+    NodeTrigger,
+    NodeModel,
+    NodeRetrieve,
+    NodeBranch,
+    NodeTool,
+    NodeApproval,
+    NodeSend,
+    SampleAuto,
+    LoadError,
+    Locked,
+}

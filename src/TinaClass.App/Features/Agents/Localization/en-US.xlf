@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Agents text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Agents.Localization.AgentsLangResourceKind">
+    <unit id="NavAgents"><segment><source>Agents</source><target state="translated">Agents</target></segment></unit>
+    <unit id="Title"><segment><source>Agents</source><target state="translated">Agents</target></segment></unit>
+    <unit id="Lead"><segment><source>Agents work through tools you allow. Anything that leaves the workspace waits for your approval.</source><target state="translated">Agents work through tools you allow. Anything that leaves the workspace waits for your approval.</target></segment></unit>
+    <unit id="ListTitle"><segment><source>Your agents</source><target state="translated">Your agents</target></segment></unit>
+    <unit id="Empty"><segment><source>No agents yet</source><target state="translated">No agents yet</target></segment></unit>
+    <unit id="EmptyHint"><segment><source>Start from a template when the agent builder is on.</source><target state="translated">Start from a template when the agent builder is on.</target></segment></unit>
+    <unit id="Runs"><segment><source>{0} runs</source><target state="translated">{0} runs</target></segment></unit>
+    <unit id="Success"><segment><source>{0}% succeeded</source><target state="translated">{0}% succeeded</target></segment></unit>
+    <unit id="Model"><segment><source>Model</source><target state="translated">Model</target></segment></unit>
+    <unit id="Schedule"><segment><source>Schedule</source><target state="translated">Schedule</target></segment></unit>
+    <unit id="Manual"><segment><source>On demand</source><target state="translated">On demand</target></segment></unit>
+    <unit id="Instruction"><segment><source>Instruction</source><target state="translated">Instruction</target></segment></unit>
+    <unit id="ToolsTitle"><segment><source>Tools</source><target state="translated">Tools</target></segment></unit>
+    <unit id="ToolsNote"><segment><source>Risk decides who has to approve.</source><target state="translated">Risk decides who has to approve.</target></segment></unit>
+    <unit id="NoTools"><segment><source>This agent has no tools.</source><target state="translated">This agent has no tools.</target></segment></unit>
+    <unit id="Bases"><segment><source>Knowledge bases</source><target state="translated">Knowledge bases</target></segment></unit>
+    <unit id="BasesCount"><segment><source>{0} knowledge bases</source><target state="translated">{0} knowledge bases</target></segment></unit>
+    <unit id="RunNow"><segment><source>Run now</source><target state="translated">Run now</target></segment></unit>
+    <unit id="RunNowTitle"><segment><source>Run {0}</source><target state="translated">Run {0}</target></segment></unit>
+    <unit id="RunSubject"><segment><source>What should it work on?</source><target state="translated">What should it work on?</target></segment></unit>
+    <unit id="RunSubjectDefault"><segment><source>Check the newest ticket</source><target state="translated">Check the newest ticket</target></segment></unit>
+    <unit id="LatestRun"><segment><source>Latest run</source><target state="translated">Latest run</target></segment></unit>
+    <unit id="RecentRuns"><segment><source>Earlier runs</source><target state="translated">Earlier runs</target></segment></unit>
+    <unit id="NoRun"><segment><source>No runs yet</source><target state="translated">No runs yet</target></segment></unit>
+    <unit id="NoRunHint"><segment><source>Run it now to watch its plan fill in.</source><target state="translated">Run it now to watch its plan fill in.</target></segment></unit>
+    <unit id="Trigger"><segment><source>Started by</source><target state="translated">Started by</target></segment></unit>
+    <unit id="TriggerManual"><segment><source>You</source><target state="translated">You</target></segment></unit>
+    <unit id="TriggerWebhook"><segment><source>Webhook</source><target state="translated">Webhook</target></segment></unit>
+    <unit id="TriggerSchedule"><segment><source>Schedule</source><target state="translated">Schedule</target></segment></unit>
+    <unit id="StateQueued"><segment><source>Queued</source><target state="translated">Queued</target></segment></unit>
+    <unit id="StateRunning"><segment><source>Running</source><target state="translated">Running</target></segment></unit>
+    <unit id="StateWaiting"><segment><source>Waiting for approval</source><target state="translated">Waiting for approval</target></segment></unit>
+    <unit id="StateSucceeded"><segment><source>Succeeded</source><target state="translated">Succeeded</target></segment></unit>
+    <unit id="StateFailed"><segment><source>Failed</source><target state="translated">Failed</target></segment></unit>
+    <unit id="StateCancelled"><segment><source>Cancelled</source><target state="translated">Cancelled</target></segment></unit>
+    <unit id="RiskRead"><segment><source>Read</source><target state="translated">Read</target></segment></unit>
+    <unit id="RiskWrite"><segment><source>Write</source><target state="translated">Write</target></segment></unit>
+    <unit id="RiskExternal"><segment><source>Sends out</source><target state="translated">Sends out</target></segment></unit>
+    <unit id="ApprovalAuto"><segment><source>Runs by itself</source><target state="translated">Runs by itself</target></segment></unit>
+    <unit id="ApprovalAsk"><segment><source>Asks first</source><target state="translated">Asks first</target></segment></unit>
+    <unit id="ApprovalAlways"><segment><source>Every time</source><target state="translated">Every time</target></segment></unit>
+    <unit id="Servers"><segment><source>Tool servers</source><target state="translated">Tool servers</target></segment></unit>
+    <unit id="ServerOk"><segment><source>Reachable</source><target state="translated">Reachable</target></segment></unit>
+    <unit id="ServerError"><segment><source>Not reachable</source><target state="translated">Not reachable</target></segment></unit>
+    <unit id="ServerBuiltin"><segment><source>Built in</source><target state="translated">Built in</target></segment></unit>
+    <unit id="ServerTools"><segment><source>{0} tools</source><target state="translated">{0} tools</target></segment></unit>
+    <unit id="ServerSeen"><segment><source>Last seen {0}</source><target state="translated">Last seen {0}</target></segment></unit>
+    <unit id="RunMeta"><segment><source>{0} tokens · {1}</source><target state="translated">{0} tokens · {1}</target></segment></unit>
+    <unit id="Pending"><segment><source>{0} waiting for your approval</source><target state="translated">{0} waiting for your approval</target></segment></unit>
+    <unit id="Review"><segment><source>Review</source><target state="translated">Review</target></segment></unit>
+    <unit id="ApproveTitle"><segment><source>Approve this call?</source><target state="translated">Approve this call?</target></segment></unit>
+    <unit id="ApproveHint"><segment><source>The run is paused until you decide. Nothing has been sent.</source><target state="translated">The run is paused until you decide. Nothing has been sent.</target></segment></unit>
+    <unit id="ApproveArgs"><segment><source>What it will do</source><target state="translated">What it will do</target></segment></unit>
+    <unit id="ApproveRisk"><segment><source>Risk</source><target state="translated">Risk</target></segment></unit>
+    <unit id="ApproveFrom"><segment><source>From</source><target state="translated">From</target></segment></unit>
+    <unit id="ApproveHold"><segment><source>Hold to approve</source><target state="translated">Hold to approve</target></segment></unit>
+    <unit id="ApproveDone"><segment><source>Approved</source><target state="translated">Approved</target></segment></unit>
+    <unit id="Reject"><segment><source>Reject</source><target state="translated">Reject</target></segment></unit>
+    <unit id="RejectReason"><segment><source>Reason (the agent reads it)</source><target state="translated">Reason (the agent reads it)</target></segment></unit>
+    <unit id="RejectReasonDefault"><segment><source>Not now. Ask the customer first.</source><target state="translated">Not now. Ask the customer first.</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">Cancel</target></segment></unit>
+    <unit id="Close"><segment><source>Close</source><target state="translated">Close</target></segment></unit>
+    <unit id="NoApprovals"><segment><source>Nothing is waiting for you.</source><target state="translated">Nothing is waiting for you.</target></segment></unit>
+    <unit id="Decided"><segment><source>The decision is saved.</source><target state="translated">The decision is saved.</target></segment></unit>
+    <unit id="Start"><segment><source>Start</source><target state="translated">Start</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the agents</source><target state="translated">Could not read the agents</target></segment></unit>
+    <unit id="SourceAgent"><segment><source>Agent {0}</source><target state="translated">Agent {0}</target></segment></unit>
+    <unit id="SourceFlow"><segment><source>Workflow {0}</source><target state="translated">Workflow {0}</target></segment></unit>
+    <unit id="PHeading"><segment><source>Run plan</source><target state="translated">Run plan</target></segment></unit>
+    <unit id="PApprove"><segment><source>Approve</source><target state="translated">Approve</target></segment></unit>
+    <unit id="PPause"><segment><source>Pause</source><target state="translated">Pause</target></segment></unit>
+    <unit id="PResume"><segment><source>Review approval</source><target state="translated">Review approval</target></segment></unit>
+    <unit id="PRetry"><segment><source>Retry</source><target state="translated">Retry</target></segment></unit>
+    <unit id="PSkip"><segment><source>Skip</source><target state="translated">Skip</target></segment></unit>
+    <unit id="PStateDone"><segment><source>Done</source><target state="translated">Done</target></segment></unit>
+    <unit id="PStateActive"><segment><source>Working</source><target state="translated">Working</target></segment></unit>
+    <unit id="PStatePending"><segment><source>Waiting</source><target state="translated">Waiting</target></segment></unit>
+    <unit id="PStateFailed"><segment><source>Failed</source><target state="translated">Failed</target></segment></unit>
+    <unit id="PStateSkipped"><segment><source>Skipped</source><target state="translated">Skipped</target></segment></unit>
+    <unit id="PWorking"><segment><source>Working on step {0}</source><target state="translated">Working on step {0}</target></segment></unit>
+    <unit id="PPaused"><segment><source>Waiting for approval at step {0}</source><target state="translated">Waiting for approval at step {0}</target></segment></unit>
+    <unit id="PFailed"><segment><source>Step {0} failed</source><target state="translated">Step {0} failed</target></segment></unit>
+    <unit id="PDoneIn"><segment><source>Done in {0}</source><target state="translated">Done in {0}</target></segment></unit>
+    <unit id="PStepCount"><segment><source>{0} steps</source><target state="translated">{0} steps</target></segment></unit>
+    <unit id="PPosition"><segment><source>Step {0} of {1}</source><target state="translated">Step {0} of {1}</target></segment></unit>
+    <unit id="PSecond"><segment><source>{0} s</source><target state="translated">{0} s</target></segment></unit>
+    <unit id="SampleStartThink"><segment><source>Understand the task</source><target state="translated">Understand the task</target></segment></unit>
+    <unit id="SampleStartTool"><segment><source>Search the knowledge bases</source><target state="translated">Search the knowledge bases</target></segment></unit>
+    <unit id="SampleStartReply"><segment><source>Write the result</source><target state="translated">Write the result</target></segment></unit>
+    <unit id="SampleSent"><segment><source>Email sent</source><target state="translated">Email sent</target></segment></unit>
+    <unit id="SampleSentDetail"><segment><source>Sent to the customer after approval</source><target state="translated">Sent to the customer after approval</target></segment></unit>
+    <unit id="SampleRejected"><segment><source>Not sent</source><target state="translated">Not sent</target></segment></unit>
+    <unit id="SampleStopped"><segment><source>Rejected: {0}</source><target state="translated">Rejected: {0}</target></segment></unit>
+    <unit id="PStartOver"><segment><source>Start over</source><target state="translated">Start over</target></segment></unit>
+  </file>
+</xliff>

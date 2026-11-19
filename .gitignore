@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+.DS_Store
+/artifacts/
+# Local databases and the deployment secrets (deploy/.env.example is the template for the latter): never commit them.
+*.db
+*.db-shm
+*.db-wal
+deploy/.env

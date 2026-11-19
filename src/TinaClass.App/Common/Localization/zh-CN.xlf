@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App text in zh-CN: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-CN" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Common.Localization.AppLangResourceKind">
+    <unit id="NavSectionMain"><segment><source>Workspace</source><target state="translated">工作区</target></segment></unit>
+    <unit id="NavSectionFolders"><segment><source>Folders</source><target state="translated">文件夹</target></segment></unit>
+    <unit id="ToggleSidebar"><segment><source>Toggle sidebar</source><target state="translated">折叠侧边栏</target></segment></unit>
+    <unit id="Appearance"><segment><source>Appearance</source><target state="translated">外观</target></segment></unit>
+    <unit id="AppearanceLight"><segment><source>Light</source><target state="translated">浅色</target></segment></unit>
+    <unit id="AppearanceDark"><segment><source>Dark</source><target state="translated">深色</target></segment></unit>
+    <unit id="AppearanceSystem"><segment><source>System</source><target state="translated">跟随系统</target></segment></unit>
+    <unit id="Preferences"><segment><source>Preferences</source><target state="translated">偏好设置</target></segment></unit>
+    <unit id="Language"><segment><source>Language</source><target state="translated">语言</target></segment></unit>
+    <unit id="Motion"><segment><source>Motion</source><target state="translated">动效</target></segment></unit>
+    <unit id="MotionSystem"><segment><source>System</source><target state="translated">跟随系统</target></segment></unit>
+    <unit id="MotionFull"><segment><source>Full</source><target state="translated">完整</target></segment></unit>
+    <unit id="MotionReduced"><segment><source>Reduced</source><target state="translated">减少</target></segment></unit>
+    <unit id="MotionOff"><segment><source>Off</source><target state="translated">关闭</target></segment></unit>
+    <unit id="NewChat"><segment><source>New chat</source><target state="translated">新对话</target></segment></unit>
+    <unit id="Search"><segment><source>Search or run a command</source><target state="translated">搜索或输入命令</target></segment></unit>
+    <unit id="RoleOwner"><segment><source>Owner</source><target state="translated">所有者</target></segment></unit>
+    <unit id="RoleAdmin"><segment><source>Administrator</source><target state="translated">管理员</target></segment></unit>
+    <unit id="RoleMember"><segment><source>Member</source><target state="translated">成员</target></segment></unit>
+    <unit id="RoleViewer"><segment><source>Viewer</source><target state="translated">只读成员</target></segment></unit>
+    <unit id="WorkspaceNote"><segment><source>Product development · Team</source><target state="translated">产品研发部 · 团队版</target></segment></unit>
+    <unit id="SpendThisMonth"><segment><source>Spent in {0}</source><target state="translated">{0}花费</target></segment></unit>
+    <unit id="SpendOf"><segment><source>of {0}</source><target state="translated">/ {0}</target></segment></unit>
+    <unit id="Unfiled"><segment><source>Unfiled</source><target state="translated">未归档</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">取消</target></segment></unit>
+    <unit id="Save"><segment><source>Save</source><target state="translated">保存</target></segment></unit>
+    <unit id="Delete"><segment><source>Delete</source><target state="translated">删除</target></segment></unit>
+    <unit id="Close"><segment><source>Close</source><target state="translated">关闭</target></segment></unit>
+    <unit id="Retry"><segment><source>Retry</source><target state="translated">重试</target></segment></unit>
+    <unit id="Loading"><segment><source>Loading…</source><target state="translated">加载中…</target></segment></unit>
+    <unit id="Empty"><segment><source>Nothing here yet</source><target state="translated">这里还没有内容</target></segment></unit>
+    <unit id="Today"><segment><source>Today</source><target state="translated">今天</target></segment></unit>
+    <unit id="Yesterday"><segment><source>Yesterday</source><target state="translated">昨天</target></segment></unit>
+    <unit id="Palette"><segment><source>Search or run a command</source><target state="translated">搜索或运行命令</target></segment></unit>
+    <unit id="PaletteShort"><segment><source>Search</source><target state="translated">搜索</target></segment></unit>
+    <unit id="BadgePending"><segment><source>{0} pending</source><target state="translated">{0} 待审批</target></segment></unit>
+    <unit id="Spaces"><segment><source>Spaces</source><target state="translated">空间</target></segment></unit>
+    <unit id="NoConversations"><segment><source>No conversations yet</source><target state="translated">还没有对话</target></segment></unit>
+    <unit id="MoreActions"><segment><source>More</source><target state="translated">更多</target></segment></unit>
+    <unit id="Breadcrumb"><segment><source>Workspace</source><target state="translated">工作区</target></segment></unit>
+    <unit id="Share"><segment><source>Share</source><target state="translated">分享</target></segment></unit>
+    <unit id="ToggleTheme"><segment><source>Switch light or dark</source><target state="translated">切换浅色或深色</target></segment></unit>
+    <unit id="ModeFocus"><segment><source>Focus</source><target state="translated">专注</target></segment></unit>
+    <unit id="SignedInAs"><segment><source>Signed in as {0}</source><target state="translated">已登录为 {0}</target></segment></unit>
+    <unit id="PaletteGroupPages"><segment><source>Go to</source><target state="translated">前往</target></segment></unit>
+    <unit id="PaletteGroupChats"><segment><source>Conversations</source><target state="translated">对话</target></segment></unit>
+    <unit id="PaletteGroupActions"><segment><source>Actions</source><target state="translated">操作</target></segment></unit>
+    <unit id="PaletteAsk"><segment><source>Ask AI: {0}</source><target state="translated">问 AI：{0}</target></segment></unit>
+    <unit id="PaletteAskHint"><segment><source>Press Tab to ask</source><target state="translated">按 Tab 提问</target></segment></unit>
+    <unit id="PaletteEmpty"><segment><source>Nothing found</source><target state="translated">没有找到</target></segment></unit>
+    <unit id="PaletteEmptyHint"><segment><source>Ask the assistant instead.</source><target state="translated">换个方式，直接问助手。</target></segment></unit>
+    <unit id="PaletteClose"><segment><source>Close</source><target state="translated">关闭</target></segment></unit>
+    <unit id="PaletteResults"><segment><source>Results</source><target state="translated">结果</target></segment></unit>
+    <unit id="ActionNewChat"><segment><source>New chat</source><target state="translated">新对话</target></segment></unit>
+    <unit id="ActionToggleTheme"><segment><source>Switch light or dark</source><target state="translated">切换浅色或深色</target></segment></unit>
+    <unit id="ActionToggleSidebar"><segment><source>Show or hide the sidebar</source><target state="translated">显示或隐藏侧栏</target></segment></unit>
+  </file>
+</xliff>

@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:cl="using:TinaClass.App.Features.Chat.Localization"
+             xmlns:c="using:TinaClass.App.Features.Chat"
+             xmlns:ui="using:TinaClass.App.Common.Ui"
+             x:Class="TinaClass.App.Features.Chat.ChatPage"
+             x:DataType="c:ChatViewModel">
+    <!-- Arc components first: AiChat (the thread, composer, model menu, conversation menu), ResizablePanels (the right wing folds away),
+         AgentPlan, GenerationStats, ContextWindow (in ChatInspector). The chat's own labels follow the app's language. Hand-rolled: only the gradient glow around the composer while an
+         answer is made (ui:ComposerGlow; Arc draws none). -->
+    <arc:ResizablePanels x:Name="Wings" Orientation="Horizontal" Label="{cl:ChatLangResource NavChat}">
+        <arc:ResizablePanel Id="chat" Label="{cl:ChatLangResource NavChat}" DefaultSize="68" MinSize="480">
+            <arc:AiChat x:Name="Chat" ui:ComposerGlow.Follows=":busy" Responder="{Binding Responder}" ColumnWidth="720"
+                        GreetingText="{cl:ChatLangResource Greeting}" PlaceholderText="{cl:ChatLangResource Placeholder}" />
+        </arc:ResizablePanel>
+        <arc:ResizablePanel Id="inspector" Label="{cl:ChatLangResource InspectorRun}" DefaultSize="32" MinSize="320" MaxSize="460" IsCollapsible="True"
+                            IsCollapsed="{Binding IsInspectorCollapsed, Mode=TwoWay}">
+            <c:ChatInspector DataContext="{Binding Inspector}" />
+        </arc:ResizablePanel>
+    </arc:ResizablePanels>
+</UserControl>

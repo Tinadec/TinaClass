@@ -1,0 +1,113 @@
+<arc:ArcWindow xmlns="https://github.com/avaloniaui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+               xmlns:lucide="https://github.com/AIDotNet/TKCode.Arc/lucide"
+               xmlns:l="using:TinaClass.App.Common.Localization"
+               xmlns:nav="using:TinaClass.App.Common.Navigation"
+               xmlns:ui="using:TinaClass.App.Common.Ui"
+               xmlns:shell="using:TinaClass.App.Common.Shell"
+               x:Class="TinaClass.App.Common.Shell.MainWindow"
+               x:DataType="shell:ShellViewModel"
+               Title="{Binding AppName}"
+               Width="1440"
+               Height="900"
+               MinWidth="1024"
+               MinHeight="700"
+               WindowStartupLocation="CenterScreen">
+    <arc:ArcWindow.Styles>
+        <StyleInclude Source="avares://TinaClass.App/Common/Styles/Panels.axaml" />
+    </arc:ArcWindow.Styles>
+    <arc:ArcWindow.KeyBindings>
+        <!-- Cmd+K / Ctrl+K the command palette, Cmd+N / Ctrl+N a new chat, Cmd+B / Ctrl+B the sidebar, Cmd+Shift+L / Ctrl+Shift+L light or dark. -->
+        <KeyBinding Gesture="Meta+K" Command="{Binding OpenPaletteCommand}" />
+        <KeyBinding Gesture="Ctrl+K" Command="{Binding OpenPaletteCommand}" />
+        <KeyBinding Gesture="Meta+N" Command="{Binding NewChatCommand}" />
+        <KeyBinding Gesture="Ctrl+N" Command="{Binding NewChatCommand}" />
+        <KeyBinding Gesture="Meta+Shift+L" Command="{Binding ToggleThemeCommand}" />
+        <KeyBinding Gesture="Ctrl+Shift+L" Command="{Binding ToggleThemeCommand}" />
+        <KeyBinding Gesture="Meta+B" Command="{Binding ToggleSidebarCommand}" />
+        <KeyBinding Gesture="Ctrl+B" Command="{Binding ToggleSidebarCommand}" />
+    </arc:ArcWindow.KeyBindings>
+    <arc:ArcWindow.TitleBar>
+        <!-- The top bar of the design is the window's TitleBar: the sidebar button and breadcrumb on the left; the page's note and buttons,
+             the palette and the appearance on the right. -->
+        <arc:TitleBar>
+            <arc:TitleBar.Icon>
+                <!-- The product mark (template option logoMark): a generic Lucide shape, never a third party's logo. -->
+                <lucide:LucideIcon Kind="{Binding LogoKind}" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+            </arc:TitleBar.Icon>
+            <arc:TitleBar.LeftContent>
+                <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
+                    <arc:Button Classes="icon-only" Variant="Ghost" Command="{Binding ToggleSidebarCommand}" IsVisible="{Binding HasSidebar}"
+                                ToolTip.Tip="{Binding SidebarTip}" AutomationProperties.Name="{l:AppLangResource ToggleSidebar}">
+                        <lucide:LucideIcon Kind="PanelLeft" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                    </arc:Button>
+                    <ItemsControl ItemsSource="{Binding BarCrumbs}" VerticalAlignment="Center">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><StackPanel Orientation="Horizontal" Spacing="6" /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="shell:Crumb">
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                    <lucide:LucideIcon Kind="ChevronRight" Size="12" IsVisible="{Binding HasSeparator}" Foreground="{arc:ArcDesignTokenResource TextMuted}" VerticalAlignment="Center" />
+                                    <TextBlock Text="{Binding Text}" MaxWidth="320" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Text}" VerticalAlignment="Center"
+                                               Classes.muted="{Binding !IsLast}" FontWeight="{Binding IsLast, Converter={x:Static shell:Crumbs.Weight}}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </arc:TitleBar.LeftContent>
+            <arc:TitleBar.RightContent>
+                <StackPanel Orientation="Horizontal" Spacing="8" Margin="0,0,8,0" VerticalAlignment="Center">
+                    <TextBlock Classes="muted small" Text="{Binding BarNote}" IsVisible="{Binding BarNote, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" VerticalAlignment="Center" />
+                    <ItemsControl ItemsSource="{Binding BarActions}" VerticalAlignment="Center">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><StackPanel Orientation="Horizontal" Spacing="8" /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="nav:PageAction">
+                                <arc:Button Classes="compact" Classes.primary="{Binding IsPrimary}" Variant="Secondary" Command="{Binding Command}"
+                                            ToolTip.Tip="{Binding Label}" AutomationProperties.Name="{Binding Label}">
+                                    <StackPanel Orientation="Horizontal" Spacing="6">
+                                        <lucide:LucideIcon Kind="{Binding IconKind}" IsVisible="{Binding HasIcon}" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                                        <TextBlock Text="{Binding Label}" IsVisible="{Binding ShowsText}" />
+                                    </StackPanel>
+                                </arc:Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <!-- The palette: the search icon and its key cap. -->
+                    <arc:Button Classes="compact" Variant="Secondary" Command="{Binding OpenPaletteCommand}" ToolTip.Tip="{l:AppLangResource Palette}"
+                                AutomationProperties.Name="{l:AppLangResource Palette}">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <lucide:LucideIcon Kind="Search" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                            <ui:KeyCap Gesture="Mod+K" />
+                        </StackPanel>
+                    </arc:Button>
+                    <!-- Appearance: the icon shows the mode chosen; the menu picks light, dark or the system's. -->
+                    <arc:Button x:Name="AppearanceButton" Classes="icon-only" Variant="Ghost"
+                                ToolTip.Tip="{Binding AppearanceTip}" AutomationProperties.Name="{l:AppLangResource Appearance}">
+                        <lucide:LucideIcon Kind="{Binding AppearanceIcon}" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                        <arc:DropdownMenu.Menu>
+                            <arc:MenuSurface x:Name="AppearanceMenu" Side="Bottom" Alignment="End">
+                                <arc:MenuEntry Header="{l:AppLangResource AppearanceLight}" ToggleType="Radio" GroupName="appearance"
+                                               IsChecked="{Binding IsLight, Mode=OneWay}" Command="{Binding SetAppearanceCommand}" CommandParameter="Light">
+                                    <arc:MenuEntry.Icon><lucide:LucideIcon Kind="Sun" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" /></arc:MenuEntry.Icon>
+                                </arc:MenuEntry>
+                                <arc:MenuEntry Header="{l:AppLangResource AppearanceDark}" ToggleType="Radio" GroupName="appearance"
+                                               IsChecked="{Binding IsDark, Mode=OneWay}" Command="{Binding SetAppearanceCommand}" CommandParameter="Dark">
+                                    <arc:MenuEntry.Icon><lucide:LucideIcon Kind="Moon" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" /></arc:MenuEntry.Icon>
+                                </arc:MenuEntry>
+                                <arc:MenuEntry Header="{l:AppLangResource AppearanceSystem}" ToggleType="Radio" GroupName="appearance"
+                                               IsChecked="{Binding IsSystem, Mode=OneWay}" Command="{Binding SetAppearanceCommand}" CommandParameter="System">
+                                    <arc:MenuEntry.Icon><lucide:LucideIcon Kind="Monitor" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" /></arc:MenuEntry.Icon>
+                                </arc:MenuEntry>
+                            </arc:MenuSurface>
+                        </arc:DropdownMenu.Menu>
+                    </arc:Button>
+                </StackPanel>
+            </arc:TitleBar.RightContent>
+        </arc:TitleBar>
+    </arc:ArcWindow.TitleBar>
+</arc:ArcWindow>

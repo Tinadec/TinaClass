@@ -1,0 +1,94 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:kl="using:TinaClass.App.Features.Knowledge.Localization"
+             xmlns:k="using:TinaClass.App.Features.Knowledge"
+             xmlns:ui="using:TinaClass.App.Common.Ui"
+             x:Class="TinaClass.App.Features.Knowledge.KnowledgePage"
+             x:DataType="k:KnowledgeViewModel">
+    <!-- Three columns as the work pages of design 9: the bases (a plain ListBox in a panel), the documents (FileDropzone, SearchField, Table with
+         Progress and Badge states) and the properties (the hand-rolled read-only DescriptionList and the retrieval test). Under 1100 px the
+         properties column is dropped (code-behind). -->
+    <Grid x:Name="Columns" ColumnDefinitions="224,*,288" Margin="24,20,24,24" ColumnSpacing="16">
+        <Border Classes="panel" VerticalAlignment="Stretch">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Classes="section secondary" Margin="16,14,16,8" Text="{kl:KnowledgeLangResource Bases}" />
+                <ListBox ItemsSource="{Binding Bases}" SelectedItem="{Binding SelectedBase, Mode=TwoWay}" Background="Transparent" Padding="6,0,6,8">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="k:BaseRow">
+                            <StackPanel Spacing="2" Margin="6,6">
+                                <TextBlock Text="{Binding Name}" FontWeight="Medium" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Name}" />
+                                <TextBlock Classes="muted small" Text="{Binding Counts}" TextTrimming="CharacterEllipsis" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Border>
+
+        <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Spacing="16" Margin="0,0,4,0">
+                <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+                <StackPanel IsVisible="{Binding HasNoBases}" Spacing="4" Margin="0,80,0,0" HorizontalAlignment="Center">
+                    <TextBlock Classes="h2" HorizontalAlignment="Center" Text="{kl:KnowledgeLangResource EmptyBases}" />
+                    <TextBlock Classes="muted" HorizontalAlignment="Center" Text="{kl:KnowledgeLangResource EmptyBasesHint}" />
+                </StackPanel>
+                <StackPanel IsVisible="{Binding HasBase}" Spacing="16">
+                    <StackPanel Spacing="2">
+                        <TextBlock Classes="display" Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+                        <TextBlock Classes="secondary" Text="{Binding Counts}" />
+                    </StackPanel>
+                    <arc:FileDropzone x:Name="Dropzone" AllowMultiple="True" MaxFiles="20" ListPlacement="Below" />
+                    <arc:SearchField x:Name="FilterBox" Text="{Binding Filter, Mode=TwoWay}" MaxWidth="360" HorizontalAlignment="Left" />
+                    <arc:Table x:Name="DocTable" ItemsSource="{Binding Documents}" />
+                    <StackPanel IsVisible="{Binding HasNoDocuments}" Spacing="2" HorizontalAlignment="Center" Margin="0,16">
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Medium" Text="{kl:KnowledgeLangResource EmptyDocs}" />
+                        <TextBlock Classes="muted" HorizontalAlignment="Center" Text="{kl:KnowledgeLangResource EmptyDocsHint}" />
+                    </StackPanel>
+                    <TextBlock Classes="muted small" Text="{Binding ShowingText}" HorizontalAlignment="Right" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="Side" Grid.Column="2" HorizontalScrollBarVisibility="Disabled" IsVisible="{Binding HasBase}">
+            <StackPanel Spacing="16" Margin="0,0,4,0">
+                <Border Classes="panel" Padding="16,12">
+                    <StackPanel Spacing="8">
+                        <TextBlock Classes="section secondary" Text="{kl:KnowledgeLangResource Settings}" />
+                        <ui:DescriptionList ItemsSource="{Binding Settings}" LabelWidth="104" />
+                    </StackPanel>
+                </Border>
+                <Border Classes="panel" Padding="16,12">
+                    <StackPanel Spacing="10">
+                        <TextBlock Classes="section secondary" Text="{kl:KnowledgeLangResource Test}" />
+                        <TextBlock Classes="muted small" TextWrapping="Wrap" Text="{kl:KnowledgeLangResource TestHint}" />
+                        <arc:SearchField x:Name="TestBox" Text="{Binding TestQuery, Mode=TwoWay}" Placeholder="{kl:KnowledgeLangResource TestPlaceholder}" />
+                        <arc:Button Variant="Secondary" Classes="compact" HorizontalAlignment="Left" IsLoading="{Binding IsSearching}" Command="{Binding SearchCommand}"
+                                    Content="{kl:KnowledgeLangResource TestRun}" />
+                        <TextBlock Classes="muted small" Text="{Binding HitsSummary}" />
+                        <TextBlock IsVisible="{Binding HasNoHits}" Classes="muted" Text="{kl:KnowledgeLangResource NoHits}" />
+                        <ItemsControl ItemsSource="{Binding Hits}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate><StackPanel Spacing="8" /></ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="k:HitRow">
+                                    <Border Classes="line" Padding="0,8,0,0">
+                                        <StackPanel Spacing="4">
+                                            <Grid ColumnDefinitions="*,Auto">
+                                                <TextBlock Text="{Binding Document}" FontWeight="Medium" TextTrimming="CharacterEllipsis" ToolTip.Tip="{Binding Document}" />
+                                                <TextBlock Grid.Column="1" Classes="muted small mono" Text="{Binding Score}" />
+                                            </Grid>
+                                            <TextBlock Classes="muted small" Text="{Binding Where}" IsVisible="{Binding Where, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+                                            <TextBlock Classes="secondary" TextWrapping="Wrap" MaxLines="4" TextTrimming="CharacterEllipsis" Text="{Binding Text}" />
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

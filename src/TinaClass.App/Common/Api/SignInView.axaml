@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:lucide="https://github.com/AIDotNet/TKCode.Arc/lucide"
+             xmlns:l="using:TinaClass.App.Common.Api.Localization"
+             xmlns:api="using:TinaClass.App.Common.Api"
+             x:Class="TinaClass.App.Common.Api.SignInView"
+             x:DataType="api:SignInViewModel">
+    <!-- Arc components first: Input, PasswordField, Checkbox, Button, Alert. Hand-rolled: only the layout around them. Arc 1.1.0's
+         LoginSplit, LoginCentered and SignIn blocks run an email-code, passkey or provider flow of their own, which this API (email and
+         password) does not have, so the fields are composed here instead; the card is a token-only Border (Arc's Card is a media card). -->
+    <Border Background="{arc:ArcDesignTokenResource Background}">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Width="360" Spacing="{arc:ArcDesignTokenResource Space3}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="24">
+                <Border Classes="panel" Padding="24">
+                    <StackPanel Spacing="{arc:ArcDesignTokenResource Space4}">
+                        <Border Width="{arc:ArcDesignTokenResource Space10}" Height="{arc:ArcDesignTokenResource Space10}" HorizontalAlignment="Left"
+                                CornerRadius="{arc:ArcDesignTokenResource RadiusControl}" Background="{arc:ArcDesignTokenResource Foreground}">
+                            <lucide:LucideIcon Kind="LayoutGrid" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" Foreground="{arc:ArcDesignTokenResource Background}"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel Spacing="2">
+                            <TextBlock Classes="title" Text="{Binding Title}" />
+                            <TextBlock Classes="secondary small" Text="{Binding Subtitle}" />
+                        </StackPanel>
+                        <arc:Input Label="{l:ApiLangResource Email}" Text="{Binding Email}" Placeholder="name@company.com" />
+                        <arc:PasswordField Label="{l:ApiLangResource Password}" Text="{Binding Password}" />
+                        <arc:Checkbox Content="{l:ApiLangResource RememberMe}" IsChecked="{Binding Remember}" />
+                        <arc:Button Content="{l:ApiLangResource SignIn}" Variant="Primary" HorizontalAlignment="Stretch" IsDefault="True"
+                                    Command="{Binding SignInCommand}" />
+                    </StackPanel>
+                </Border>
+                <arc:Alert Tone="Danger" Title="{Binding Error}" IsOpen="{Binding HasError}" />
+            </StackPanel>
+        </ScrollViewer>
+    </Border>
+</UserControl>

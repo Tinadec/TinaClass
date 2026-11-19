@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Team text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Team.Localization.TeamLangResourceKind">
+    <unit id="NavTeam"><segment><source>Team</source><target state="translated">Team</target></segment></unit>
+    <unit id="Title"><segment><source>Team</source><target state="translated">Team</target></segment></unit>
+    <unit id="Lead"><segment><source>Who is in the workspace, what they may do, and what changed.</source><target state="translated">Who is in the workspace, what they may do, and what changed.</target></segment></unit>
+    <unit id="TabMembers"><segment><source>Members</source><target state="translated">Members</target></segment></unit>
+    <unit id="TabAudit"><segment><source>Audit log</source><target state="translated">Audit log</target></segment></unit>
+    <unit id="Invite"><segment><source>Invite a member</source><target state="translated">Invite a member</target></segment></unit>
+    <unit id="InviteTitle"><segment><source>Invite a member</source><target state="translated">Invite a member</target></segment></unit>
+    <unit id="InviteEmail"><segment><source>Email</source><target state="translated">Email</target></segment></unit>
+    <unit id="InviteRole"><segment><source>Role</source><target state="translated">Role</target></segment></unit>
+    <unit id="InviteSend"><segment><source>Send invitation</source><target state="translated">Send invitation</target></segment></unit>
+    <unit id="InviteSent"><segment><source>Invitation sent to {0}</source><target state="translated">Invitation sent to {0}</target></segment></unit>
+    <unit id="InviteLink"><segment><source>The link works once and is shown only now:</source><target state="translated">The link works once and is shown only now:</target></segment></unit>
+    <unit id="Close"><segment><source>Close</source><target state="translated">Close</target></segment></unit>
+    <unit id="Cancel"><segment><source>Cancel</source><target state="translated">Cancel</target></segment></unit>
+    <unit id="ColName"><segment><source>Name</source><target state="translated">Name</target></segment></unit>
+    <unit id="ColEmail"><segment><source>Email</source><target state="translated">Email</target></segment></unit>
+    <unit id="ColRole"><segment><source>Role</source><target state="translated">Role</target></segment></unit>
+    <unit id="ColStatus"><segment><source>Status</source><target state="translated">Status</target></segment></unit>
+    <unit id="ColJoined"><segment><source>Joined</source><target state="translated">Joined</target></segment></unit>
+    <unit id="ColActor"><segment><source>Who</source><target state="translated">Who</target></segment></unit>
+    <unit id="ColAction"><segment><source>Action</source><target state="translated">Action</target></segment></unit>
+    <unit id="ColDetail"><segment><source>Detail</source><target state="translated">Detail</target></segment></unit>
+    <unit id="ColWhen"><segment><source>When</source><target state="translated">When</target></segment></unit>
+    <unit id="StatusActive"><segment><source>Active</source><target state="translated">Active</target></segment></unit>
+    <unit id="StatusInvited"><segment><source>Invited</source><target state="translated">Invited</target></segment></unit>
+    <unit id="StatusDisabled"><segment><source>Disabled</source><target state="translated">Disabled</target></segment></unit>
+    <unit id="RoleOwner"><segment><source>Owner</source><target state="translated">Owner</target></segment></unit>
+    <unit id="RoleAdmin"><segment><source>Administrator</source><target state="translated">Administrator</target></segment></unit>
+    <unit id="RoleMember"><segment><source>Member</source><target state="translated">Member</target></segment></unit>
+    <unit id="RoleViewer"><segment><source>Viewer</source><target state="translated">Viewer</target></segment></unit>
+    <unit id="Disable"><segment><source>Disable</source><target state="translated">Disable</target></segment></unit>
+    <unit id="Enable"><segment><source>Enable</source><target state="translated">Enable</target></segment></unit>
+    <unit id="EmptyAudit"><segment><source>Nothing recorded yet</source><target state="translated">Nothing recorded yet</target></segment></unit>
+    <unit id="LoadError"><segment><source>Could not read the team</source><target state="translated">Could not read the team</target></segment></unit>
+    <unit id="FilterAll"><segment><source>All actions</source><target state="translated">All actions</target></segment></unit>
+    <unit id="ErrorLastOwner"><segment><source>A workspace needs at least one owner.</source><target state="translated">A workspace needs at least one owner.</target></segment></unit>
+  </file>
+</xliff>
