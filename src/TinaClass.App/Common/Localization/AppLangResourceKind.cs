@@ -62,4 +62,5 @@ public enum AppLangResourceKind
     ActionNewChat,
     ActionToggleTheme,
     ActionToggleSidebar,
+    Settings,
 }

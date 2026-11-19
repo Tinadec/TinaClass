@@ -33,8 +33,11 @@
              the palette and the appearance on the right. -->
         <arc:TitleBar>
             <arc:TitleBar.Icon>
-                <!-- The product mark (template option logoMark): a generic Lucide shape, never a third party's logo. -->
-                <lucide:LucideIcon Kind="{Binding LogoKind}" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" />
+                <!-- The product mark: the Tinadec robot head (Common/Ui/Brand.cs). Hand-rolled: Arc has no logo control.
+                     The path fills with the foreground token, so it follows the theme like a Lucide icon. -->
+                <Path Data="{x:Static ui:Brand.Logo}" Fill="{arc:ArcDesignTokenResource Foreground}"
+                      Width="{arc:ArcDesignTokenResource GlyphSizeSM}" Height="{arc:ArcDesignTokenResource GlyphSizeSM}"
+                      Stretch="Uniform" />
             </arc:TitleBar.Icon>
             <arc:TitleBar.LeftContent>
                 <StackPanel Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">

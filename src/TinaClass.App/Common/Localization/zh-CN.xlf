@@ -58,5 +58,6 @@
     <unit id="ActionNewChat"><segment><source>New chat</source><target state="translated">新对话</target></segment></unit>
     <unit id="ActionToggleTheme"><segment><source>Switch light or dark</source><target state="translated">切换浅色或深色</target></segment></unit>
     <unit id="ActionToggleSidebar"><segment><source>Show or hide the sidebar</source><target state="translated">显示或隐藏侧栏</target></segment></unit>
+    <unit id="Settings"><segment><source>Settings</source><target state="translated">设置</target></segment></unit>
   </file>
 </xliff>

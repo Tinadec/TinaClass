@@ -58,5 +58,6 @@
     <unit id="ActionNewChat"><segment><source>New chat</source><target state="translated">New chat</target></segment></unit>
     <unit id="ActionToggleTheme"><segment><source>Switch light or dark</source><target state="translated">Switch light or dark</target></segment></unit>
     <unit id="ActionToggleSidebar"><segment><source>Show or hide the sidebar</source><target state="translated">Show or hide the sidebar</target></segment></unit>
+    <unit id="Settings"><segment><source>Settings</source><target state="translated">Settings</target></segment></unit>
   </file>
 </xliff>

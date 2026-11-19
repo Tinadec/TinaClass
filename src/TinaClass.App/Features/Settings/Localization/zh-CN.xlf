@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings text in zh-CN. -->
+<xliff version="2.1" srcLang="en-US" trgLang="zh-CN" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Settings.Localization.SettingsLangResourceKind">
+    <unit id="NavSettings"><segment><source>Settings</source><target state="translated">设置</target></segment></unit>
+    <unit id="Title"><segment><source>Settings</source><target state="translated">设置</target></segment></unit>
+    <unit id="Lead"><segment><source>How the assistant behaves for you on this computer.</source><target state="translated">助手在这台电脑上如何为你工作。</target></segment></unit>
+    <unit id="GroupAssistant"><segment><source>Assistant</source><target state="translated">助手</target></segment></unit>
+    <unit id="GroupBehavior"><segment><source>Behavior</source><target state="translated">行为</target></segment></unit>
+    <unit id="GroupTools"><segment><source>Tools and safety</source><target state="translated">工具与安全</target></segment></unit>
+    <unit id="GroupModel"><segment><source>Model</source><target state="translated">模型</target></segment></unit>
+    <unit id="GroupAppearance"><segment><source>Appearance</source><target state="translated">外观</target></segment></unit>
+    <unit id="GroupAbout"><segment><source>About</source><target state="translated">关于</target></segment></unit>
+    <unit id="PersonaName"><segment><source>Assistant name</source><target state="translated">助手名称</target></segment></unit>
+    <unit id="PersonaNameHint"><segment><source>Shown in the composer and answers.</source><target state="translated">显示在输入框与回答里。</target></segment></unit>
+    <unit id="PersonaRole"><segment><source>It acts as</source><target state="translated">扮演角色</target></segment></unit>
+    <unit id="PersonaRoleHint"><segment><source>The role it plays in your classroom.</source><target state="translated">它在你的课堂里扮演的角色。</target></segment></unit>
+    <unit id="PersonaAudience"><segment><source>Answers for</source><target state="translated">回答对象</target></segment></unit>
+    <unit id="PersonaAudienceHint"><segment><source>Who it explains to: a colleague, or students.</source><target state="translated">它向谁解释：同行，还是学生。</target></segment></unit>
+    <unit id="PersonaPlaceholder"><segment><source>Choose…</source><target state="translated">请选择…</target></segment></unit>
+    <unit id="StreamResponses"><segment><source>Stream answers</source><target state="translated">流式回答</target></segment></unit>
+    <unit id="StreamResponsesHint"><segment><source>Show the answer as it is written, not all at once.</source><target state="translated">边生成边显示，而不是一次性给出。</target></segment></unit>
+    <unit id="ShowReasoning"><segment><source>Show thinking</source><target state="translated">显示思考过程</target></segment></unit>
+    <unit id="ShowReasoningHint"><segment><source>Display the assistant's reasoning step before the answer.</source><target state="translated">在回答前显示助手的推理步骤。</target></segment></unit>
+    <unit id="UseKnowledge"><segment><source>Use knowledge base</source><target state="translated">使用知识库</target></segment></unit>
+    <unit id="UseKnowledgeHint"><segment><source>Look up your documents before answering.</source><target state="translated">回答前检索你的文档。</target></segment></unit>
+    <unit id="Autonomy"><segment><source>Independence</source><target state="translated">自主程度</target></segment></unit>
+    <unit id="AutonomyHint"><segment><source>How much the assistant may do before asking you.</source><target state="translated">助手在征求你同意前可以自主做多少。</target></segment></unit>
+    <unit id="AutonomyAsk"><segment><source>Ask first</source><target state="translated">先询问</target></segment></unit>
+    <unit id="AutonomyAuto"><segment><source>Mostly automatic</source><target state="translated">基本自动</target></segment></unit>
+    <unit id="AutonomyPlan"><segment><source>Plan first</source><target state="translated">先出计划</target></segment></unit>
+    <unit id="ConfirmExternal"><segment><source>Always confirm external tools</source><target state="translated">外部工具一律需确认</target></segment></unit>
+    <unit id="ConfirmExternalHint"><segment><source>A tool that reaches outside the app never runs without your approval.</source><target state="translated">触及应用之外的工具，未经你批准绝不运行。</target></segment></unit>
+    <unit id="ToolsNote"><segment><source>Which tools exist is managed on the Agents page; here you set the safety boundary.</source><target state="translated">有哪些工具在「智能体」页管理；这里设置安全边界。</target></segment></unit>
+    <unit id="DefaultModel"><segment><source>Default model</source><target state="translated">默认模型</target></segment></unit>
+    <unit id="DefaultModelHint"><segment><source>The model new conversations start with.</source><target state="translated">新对话默认使用的模型。</target></segment></unit>
+    <unit id="OpenModels"><segment><source>Manage models and keys</source><target state="translated">管理模型与密钥</target></segment></unit>
+    <unit id="ModelSummaryNone"><segment><source>No default set</source><target state="translated">未设置默认模型</target></segment></unit>
+    <unit id="ModelManagedNote"><segment><source>Providers and keys live on the Models page; this shows a summary only.</source><target state="translated">服务商与密钥在「模型」页管理；此处仅显示摘要。</target></segment></unit>
+    <unit id="Appearance"><segment><source>Theme</source><target state="translated">主题</target></segment></unit>
+    <unit id="AppearanceHint"><segment><source>Light, dark, or the system's choice.</source><target state="translated">浅色、深色，或跟随系统。</target></segment></unit>
+    <unit id="AppearanceLight"><segment><source>Light</source><target state="translated">浅色</target></segment></unit>
+    <unit id="AppearanceDark"><segment><source>Dark</source><target state="translated">深色</target></segment></unit>
+    <unit id="AppearanceSystem"><segment><source>System</source><target state="translated">跟随系统</target></segment></unit>
+    <unit id="Language"><segment><source>Language</source><target state="translated">语言</target></segment></unit>
+    <unit id="LanguageHint"><segment><source>The language of the interface.</source><target state="translated">界面使用的语言。</target></segment></unit>
+    <unit id="Motion"><segment><source>Motion</source><target state="translated">动效</target></segment></unit>
+    <unit id="MotionHint"><segment><source>How much the interface animates; System follows the operating system.</source><target state="translated">界面动画的强度；跟随系统取操作系统的设置。</target></segment></unit>
+    <unit id="MotionSystem"><segment><source>System</source><target state="translated">跟随系统</target></segment></unit>
+    <unit id="MotionFull"><segment><source>Full</source><target state="translated">完整</target></segment></unit>
+    <unit id="MotionReduced"><segment><source>Reduced</source><target state="translated">减弱</target></segment></unit>
+    <unit id="MotionOff"><segment><source>Off</source><target state="translated">关闭</target></segment></unit>
+    <unit id="KeepLocal"><segment><source>Keep data on this device</source><target state="translated">数据仅保留在本机</target></segment></unit>
+    <unit id="KeepLocalHint"><segment><source>Conversations are not synced or exported.</source><target state="translated">对话不同步、不导出。</target></segment></unit>
+    <unit id="ResetSettings"><segment><source>Reset settings</source><target state="translated">重置设置</target></segment></unit>
+    <unit id="ResetSettingsConfirm"><segment><source>Reset every setting to its default? This cannot be undone.</source><target state="translated">把所有设置恢复默认？此操作无法撤销。</target></segment></unit>
+    <unit id="SettingsReset"><segment><source>Settings reset</source><target state="translated">已重置设置</target></segment></unit>
+    <unit id="AboutVersion"><segment><source>Version {0}</source><target state="translated">版本 {0}</target></segment></unit>
+    <unit id="AboutNote"><segment><source>An AI assistant for the classroom. Settings apply on this device only.</source><target state="translated">面向课堂的 AI 助手。设置仅作用于本机。</target></segment></unit>
+    <unit id="Saved"><segment><source>Saved</source><target state="translated">已保存</target></segment></unit>
+    <unit id="RoleAssistant"><segment><source>Teaching assistant</source><target state="translated">课堂助教</target></segment></unit>
+    <unit id="RoleTutor"><segment><source>Tutor</source><target state="translated">一对一辅导</target></segment></unit>
+    <unit id="RoleCoach"><segment><source>Coach</source><target state="translated">备课教练</target></segment></unit>
+    <unit id="AudienceColleague"><segment><source>My colleague (staff)</source><target state="translated">给同行（教师）</target></segment></unit>
+    <unit id="AudienceStudents"><segment><source>Students</source><target state="translated">给学生</target></segment></unit>
+  </file>
+</xliff>

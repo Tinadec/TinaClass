@@ -4,6 +4,7 @@
                  xmlns:lucide="https://github.com/AIDotNet/TKCode.Arc/lucide"
                  xmlns:l="using:TinaClass.App.Common.Localization"
                  xmlns:nav="using:TinaClass.App.Common.Navigation"
+                 xmlns:ui="using:TinaClass.App.Common.Ui"
                  xmlns:shell="using:TinaClass.App.Common.Shell"
                  x:Class="TinaClass.App.Common.Shell.StudioShell"
                  x:DataType="shell:ShellViewModel"
@@ -38,15 +39,18 @@
                          SelectedKey="{Binding SelectedKey, Mode=TwoWay}">
                 <arc:Sidebar.Header>
                     <StackPanel Spacing="10">
-                        <!-- The workspace: logo tile, company and department. The tile is the app's mark (Arc has no logo control). -->
+                        <!-- The workspace: the Tinadec robot head as the tile, and the "Tinadec" wordmark (Common/Ui/Brand.cs).
+                             Hand-rolled: Arc has no logo or wordmark control. Both fill with theme tokens. -->
                         <Grid ColumnDefinitions="Auto,*" ColumnSpacing="{arc:ArcDesignTokenResource Space3}" Margin="4,0,0,0">
                             <Border Width="{arc:ArcDesignTokenResource Space8}" Height="{arc:ArcDesignTokenResource Space8}"
                                     CornerRadius="{arc:ArcDesignTokenResource RadiusControl}" Background="{arc:ArcDesignTokenResource Foreground}">
-                                <TextBlock Text="{Binding WorkspaceInitial}" FontWeight="SemiBold" Foreground="{arc:ArcDesignTokenResource Background}"
-                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Path Data="{x:Static ui:Brand.Logo}" Fill="{arc:ArcDesignTokenResource Background}" Stretch="Uniform"
+                                      Width="{arc:ArcDesignTokenResource GlyphSizeMD}" Height="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                                      HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
-                            <StackPanel Grid.Column="1" Classes="rail-fade" VerticalAlignment="Center">
-                                <TextBlock FontWeight="SemiBold" Text="{Binding WorkspaceName}" TextTrimming="CharacterEllipsis" />
+                            <StackPanel Grid.Column="1" Classes="rail-fade" VerticalAlignment="Center" Spacing="{arc:ArcDesignTokenResource Space1}">
+                                <Path Data="{x:Static ui:Brand.Wordmark}" Fill="{arc:ArcDesignTokenResource Foreground}" Stretch="Uniform"
+                                      Height="{arc:ArcDesignTokenResource TypeLG}" HorizontalAlignment="Left" VerticalAlignment="Center" />
                                 <TextBlock Classes="muted small" Text="{Binding WorkspaceNote}" TextTrimming="CharacterEllipsis" />
                             </StackPanel>
                         </Grid>

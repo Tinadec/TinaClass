@@ -1,0 +1,141 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
+             xmlns:lucide="https://github.com/AIDotNet/TKCode.Arc/lucide"
+             xmlns:sl="using:TinaClass.App.Features.Settings.Localization"
+             xmlns:s="using:TinaClass.App.Features.Settings"
+             x:Class="TinaClass.App.Features.Settings.SettingsPage"
+             x:DataType="s:SettingsViewModel">
+    <!-- Arc components first: Switch, Input, ComboBox, Button, SegmentedControl (arc:Choices) for the small radio sets.
+         The layout is hand-rolled: a fixed group rail on the left, a scrollable column of bordered groups on the right
+         (the same left-rail + content pattern the design uses, in plain Border.panel groups). -->
+    <Grid ColumnDefinitions="Auto,*" Margin="32,28,32,40" ColumnSpacing="28">
+        <!-- The group rail: one entry per section; choosing it scrolls the column to that group. -->
+        <StackPanel Width="180" Spacing="2" VerticalAlignment="Top">
+            <TextBlock Classes="display" Text="{sl:SettingsLangResource Title}" Margin="0,0,0,14" />
+            <arc:Button Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="assistant" Click="OnAnchorClick">
+                <TextBlock Text="{sl:SettingsLangResource GroupAssistant}" /></arc:Button>
+            <arc:Button Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="behavior" Click="OnAnchorClick">
+                <TextBlock Text="{sl:SettingsLangResource GroupBehavior}" /></arc:Button>
+            <arc:Button Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="tools" Click="OnAnchorClick">
+                <TextBlock Text="{sl:SettingsLangResource GroupTools}" /></arc:Button>
+            <arc:Button Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="model" Click="OnAnchorClick">
+                <TextBlock Text="{sl:SettingsLangResource GroupModel}" /></arc:Button>
+            <arc:Button Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="appearance" Click="OnAnchorClick">
+                <TextBlock Text="{sl:SettingsLangResource GroupAppearance}" /></arc:Button>
+            <arc:Button Variant="Ghost" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="about" Click="OnAnchorClick">
+                <TextBlock Text="{sl:SettingsLangResource GroupAbout}" /></arc:Button>
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel MaxWidth="720" Spacing="20">
+                <TextBlock Classes="secondary" TextWrapping="Wrap" Text="{sl:SettingsLangResource Lead}" />
+                <arc:Alert Tone="Danger" IsOpen="{Binding HasError}" Content="{Binding Error}" />
+
+                <!-- Assistant -->
+                <Border x:Name="GroupAssistant" Classes="panel" Padding="20">
+                    <StackPanel Spacing="14">
+                        <TextBlock Classes="section" Text="{sl:SettingsLangResource GroupAssistant}" />
+                        <Grid ColumnDefinitions="140,*" ColumnSpacing="16" RowDefinitions="Auto,Auto,Auto" RowSpacing="12">
+                            <TextBlock Grid.Row="0" Text="{sl:SettingsLangResource PersonaName}" VerticalAlignment="Center" />
+                            <arc:Input Grid.Row="0" Grid.Column="1" Text="{Binding PersonaName}" />
+                            <TextBlock Grid.Row="1" Text="{sl:SettingsLangResource PersonaRole}" VerticalAlignment="Center" />
+                            <arc:Select Grid.Row="1" Grid.Column="1" x:Name="RoleBox" />
+                            <TextBlock Grid.Row="2" Text="{sl:SettingsLangResource PersonaAudience}" VerticalAlignment="Center" />
+                            <arc:Select Grid.Row="2" Grid.Column="1" x:Name="AudienceBox" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <!-- Behavior -->
+                <Border x:Name="GroupBehavior" Classes="panel" Padding="20">
+                    <StackPanel Spacing="14">
+                        <TextBlock Classes="section" Text="{sl:SettingsLangResource GroupBehavior}" />
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="16" RowDefinitions="Auto,Auto,Auto" RowSpacing="12">
+                            <StackPanel Grid.Row="0" VerticalAlignment="Center" Spacing="2">
+                                <TextBlock Text="{sl:SettingsLangResource StreamResponses}" />
+                                <TextBlock Classes="muted small" Text="{sl:SettingsLangResource StreamResponsesHint}" />
+                            </StackPanel>
+                            <arc:Switch Grid.Row="0" Grid.Column="1" IsChecked="{Binding StreamResponses}" VerticalAlignment="Center" />
+                            <StackPanel Grid.Row="1" VerticalAlignment="Center" Spacing="2">
+                                <TextBlock Text="{sl:SettingsLangResource ShowReasoning}" />
+                                <TextBlock Classes="muted small" Text="{sl:SettingsLangResource ShowReasoningHint}" />
+                            </StackPanel>
+                            <arc:Switch Grid.Row="1" Grid.Column="1" IsChecked="{Binding ShowReasoning}" VerticalAlignment="Center" />
+                            <StackPanel Grid.Row="2" VerticalAlignment="Center" Spacing="2">
+                                <TextBlock Text="{sl:SettingsLangResource UseKnowledge}" />
+                                <TextBlock Classes="muted small" Text="{sl:SettingsLangResource UseKnowledgeHint}" />
+                            </StackPanel>
+                            <arc:Switch Grid.Row="2" Grid.Column="1" IsChecked="{Binding UseKnowledge}" VerticalAlignment="Center" />
+                        </Grid>
+                        <StackPanel Spacing="6">
+                            <TextBlock Text="{sl:SettingsLangResource Autonomy}" />
+                            <arc:SegmentedControl x:Name="AutonomyTabs" />
+                            <TextBlock Classes="muted small" Text="{sl:SettingsLangResource AutonomyHint}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Tools and safety -->
+                <Border x:Name="GroupTools" Classes="panel" Padding="20">
+                    <StackPanel Spacing="14">
+                        <TextBlock Classes="section" Text="{sl:SettingsLangResource GroupTools}" />
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="16">
+                            <StackPanel VerticalAlignment="Center" Spacing="2">
+                                <TextBlock Text="{sl:SettingsLangResource ConfirmExternal}" />
+                                <TextBlock Classes="muted small" Text="{sl:SettingsLangResource ConfirmExternalHint}" />
+                            </StackPanel>
+                            <arc:Switch Grid.Column="1" IsChecked="{Binding ConfirmExternal}" VerticalAlignment="Center" />
+                        </Grid>
+                        <TextBlock Classes="muted small" Text="{sl:SettingsLangResource ToolsNote}" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Model: a summary only; the Models page edits providers, keys and the default. -->
+                <Border x:Name="GroupModel" Classes="panel" Padding="20">
+                    <StackPanel Spacing="14">
+                        <TextBlock Classes="section" Text="{sl:SettingsLangResource GroupModel}" />
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="16">
+                            <StackPanel VerticalAlignment="Center" Spacing="2">
+                                <TextBlock Text="{sl:SettingsLangResource DefaultModel}" />
+                                <TextBlock Classes="muted small" Text="{sl:SettingsLangResource DefaultModelHint}" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                                <TextBlock Classes="secondary" Text="{Binding ModelSummary}" VerticalAlignment="Center" />
+                                <arc:Button Classes="compact" Variant="Secondary" Content="{sl:SettingsLangResource OpenModels}" Command="{Binding OpenModelsCommand}" />
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Classes="muted small" Text="{sl:SettingsLangResource ModelManagedNote}" />
+                    </StackPanel>
+                </Border>
+
+                <!-- Appearance -->
+                <Border x:Name="GroupAppearance" Classes="panel" Padding="20">
+                    <StackPanel Spacing="14">
+                        <TextBlock Classes="section" Text="{sl:SettingsLangResource GroupAppearance}" />
+                        <Grid ColumnDefinitions="140,*" ColumnSpacing="16" RowDefinitions="Auto,Auto,Auto" RowSpacing="12">
+                            <TextBlock Grid.Row="0" Text="{sl:SettingsLangResource Appearance}" VerticalAlignment="Center" />
+                            <arc:Select Grid.Row="0" Grid.Column="1" x:Name="AppearanceBox" />
+                            <TextBlock Grid.Row="1" Text="{sl:SettingsLangResource Language}" VerticalAlignment="Center" />
+                            <arc:Select Grid.Row="1" Grid.Column="1" x:Name="LanguageBox" />
+                            <TextBlock Grid.Row="2" Text="{sl:SettingsLangResource Motion}" VerticalAlignment="Center" />
+                            <arc:Select Grid.Row="2" Grid.Column="1" x:Name="MotionBox" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <!-- About -->
+                <Border x:Name="GroupAbout" Classes="panel" Padding="20">
+                    <StackPanel Spacing="12">
+                        <TextBlock Classes="section" Text="{sl:SettingsLangResource GroupAbout}" />
+                        <TextBlock Classes="muted small" Text="{sl:SettingsLangResource AboutNote}" TextWrapping="Wrap" />
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="16">
+                            <TextBlock Classes="secondary" Text="{Binding Version, StringFormat={}{0}}" VerticalAlignment="Center" />
+                            <arc:Button Grid.Column="1" Classes="compact" Variant="Secondary" Content="{sl:SettingsLangResource ResetSettings}" Command="{Binding ResetCommand}" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

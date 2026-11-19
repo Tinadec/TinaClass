@@ -18,7 +18,7 @@ public sealed record SampleConversation(Guid Id, string Title, Guid? FolderId, b
 /// </summary>
 public static class SampleCore
 {
-    public const string Company = "栖云科技";
+    public const string Company = "Tinadec";
     public const string Department = "产品研发部";
 
     public static IReadOnlyList<SamplePerson> People { get; } =

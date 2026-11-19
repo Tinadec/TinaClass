@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Settings text in en-US: each unit's target translates its source; a missing unit fails the build (ARCF021). -->
+<xliff version="2.1" srcLang="en-US" trgLang="en-US" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="TinaClass.App.Features.Settings.Localization.SettingsLangResourceKind">
+    <unit id="NavSettings"><segment><source>Settings</source><target state="translated">Settings</target></segment></unit>
+    <unit id="Title"><segment><source>Settings</source><target state="translated">Settings</target></segment></unit>
+    <unit id="Lead"><segment><source>How the assistant behaves for you on this computer.</source><target state="translated">How the assistant behaves for you on this computer.</target></segment></unit>
+    <unit id="GroupAssistant"><segment><source>Assistant</source><target state="translated">Assistant</target></segment></unit>
+    <unit id="GroupBehavior"><segment><source>Behavior</source><target state="translated">Behavior</target></segment></unit>
+    <unit id="GroupTools"><segment><source>Tools and safety</source><target state="translated">Tools and safety</target></segment></unit>
+    <unit id="GroupModel"><segment><source>Model</source><target state="translated">Model</target></segment></unit>
+    <unit id="GroupAppearance"><segment><source>Appearance</source><target state="translated">Appearance</target></segment></unit>
+    <unit id="GroupAbout"><segment><source>About</source><target state="translated">About</target></segment></unit>
+    <unit id="PersonaName"><segment><source>Assistant name</source><target state="translated">Assistant name</target></segment></unit>
+    <unit id="PersonaNameHint"><segment><source>Shown in the composer and answers.</source><target state="translated">Shown in the composer and answers.</target></segment></unit>
+    <unit id="PersonaRole"><segment><source>It acts as</source><target state="translated">It acts as</target></segment></unit>
+    <unit id="PersonaRoleHint"><segment><source>The role it plays in your classroom.</source><target state="translated">The role it plays in your classroom.</target></segment></unit>
+    <unit id="PersonaAudience"><segment><source>Answers for</source><target state="translated">Answers for</target></segment></unit>
+    <unit id="PersonaAudienceHint"><segment><source>Who it explains to: a colleague, or students.</source><target state="translated">Who it explains to: a colleague, or students.</target></segment></unit>
+    <unit id="PersonaPlaceholder"><segment><source>Choose…</source><target state="translated">Choose…</target></segment></unit>
+    <unit id="StreamResponses"><segment><source>Stream answers</source><target state="translated">Stream answers</target></segment></unit>
+    <unit id="StreamResponsesHint"><segment><source>Show the answer as it is written, not all at once.</source><target state="translated">Show the answer as it is written, not all at once.</target></segment></unit>
+    <unit id="ShowReasoning"><segment><source>Show thinking</source><target state="translated">Show thinking</target></segment></unit>
+    <unit id="ShowReasoningHint"><segment><source>Display the assistant's reasoning step before the answer.</source><target state="translated">Display the assistant's reasoning step before the answer.</target></segment></unit>
+    <unit id="UseKnowledge"><segment><source>Use knowledge base</source><target state="translated">Use knowledge base</target></segment></unit>
+    <unit id="UseKnowledgeHint"><segment><source>Look up your documents before answering.</source><target state="translated">Look up your documents before answering.</target></segment></unit>
+    <unit id="Autonomy"><segment><source>Independence</source><target state="translated">Independence</target></segment></unit>
+    <unit id="AutonomyHint"><segment><source>How much the assistant may do before asking you.</source><target state="translated">How much the assistant may do before asking you.</target></segment></unit>
+    <unit id="AutonomyAsk"><segment><source>Ask first</source><target state="translated">Ask first</target></segment></unit>
+    <unit id="AutonomyAuto"><segment><source>Mostly automatic</source><target state="translated">Mostly automatic</target></segment></unit>
+    <unit id="AutonomyPlan"><segment><source>Plan first</source><target state="translated">Plan first</target></segment></unit>
+    <unit id="ConfirmExternal"><segment><source>Always confirm external tools</source><target state="translated">Always confirm external tools</target></segment></unit>
+    <unit id="ConfirmExternalHint"><segment><source>A tool that reaches outside the app never runs without your approval.</source><target state="translated">A tool that reaches outside the app never runs without your approval.</target></segment></unit>
+    <unit id="ToolsNote"><segment><source>Which tools exist is managed on the Agents page; here you set the safety boundary.</source><target state="translated">Which tools exist is managed on the Agents page; here you set the safety boundary.</target></segment></unit>
+    <unit id="DefaultModel"><segment><source>Default model</source><target state="translated">Default model</target></segment></unit>
+    <unit id="DefaultModelHint"><segment><source>The model new conversations start with.</source><target state="translated">The model new conversations start with.</target></segment></unit>
+    <unit id="OpenModels"><segment><source>Manage models and keys</source><target state="translated">Manage models and keys</target></segment></unit>
+    <unit id="ModelSummaryNone"><segment><source>No default set</source><target state="translated">No default set</target></segment></unit>
+    <unit id="ModelManagedNote"><segment><source>Providers and keys live on the Models page; this shows a summary only.</source><target state="translated">Providers and keys live on the Models page; this shows a summary only.</target></segment></unit>
+    <unit id="Appearance"><segment><source>Theme</source><target state="translated">Theme</target></segment></unit>
+    <unit id="AppearanceHint"><segment><source>Light, dark, or the system's choice.</source><target state="translated">Light, dark, or the system's choice.</target></segment></unit>
+    <unit id="AppearanceLight"><segment><source>Light</source><target state="translated">Light</target></segment></unit>
+    <unit id="AppearanceDark"><segment><source>Dark</source><target state="translated">Dark</target></segment></unit>
+    <unit id="AppearanceSystem"><segment><source>System</source><target state="translated">System</target></segment></unit>
+    <unit id="Language"><segment><source>Language</source><target state="translated">Language</target></segment></unit>
+    <unit id="LanguageHint"><segment><source>The language of the interface.</source><target state="translated">The language of the interface.</target></segment></unit>
+    <unit id="Motion"><segment><source>Motion</source><target state="translated">Motion</target></segment></unit>
+    <unit id="MotionHint"><segment><source>How much the interface animates; System follows the operating system.</source><target state="translated">How much the interface animates; System follows the operating system.</target></segment></unit>
+    <unit id="MotionSystem"><segment><source>System</source><target state="translated">System</target></segment></unit>
+    <unit id="MotionFull"><segment><source>Full</source><target state="translated">Full</target></segment></unit>
+    <unit id="MotionReduced"><segment><source>Reduced</source><target state="translated">Reduced</target></segment></unit>
+    <unit id="MotionOff"><segment><source>Off</source><target state="translated">Off</target></segment></unit>
+    <unit id="KeepLocal"><segment><source>Keep data on this device</source><target state="translated">Keep data on this device</target></segment></unit>
+    <unit id="KeepLocalHint"><segment><source>Conversations are not synced or exported.</source><target state="translated">Conversations are not synced or exported.</target></segment></unit>
+    <unit id="ResetSettings"><segment><source>Reset settings</source><target state="translated">Reset settings</target></segment></unit>
+    <unit id="ResetSettingsConfirm"><segment><source>Reset every setting to its default? This cannot be undone.</source><target state="translated">Reset every setting to its default? This cannot be undone.</target></segment></unit>
+    <unit id="SettingsReset"><segment><source>Settings reset</source><target state="translated">Settings reset</target></segment></unit>
+    <unit id="AboutVersion"><segment><source>Version {0}</source><target state="translated">Version {0}</target></segment></unit>
+    <unit id="AboutNote"><segment><source>An AI assistant for the classroom. Settings apply on this device only.</source><target state="translated">An AI assistant for the classroom. Settings apply on this device only.</target></segment></unit>
+    <unit id="Saved"><segment><source>Saved</source><target state="translated">Saved</target></segment></unit>
+    <unit id="RoleAssistant"><segment><source>Teaching assistant</source><target state="translated">Teaching assistant</target></segment></unit>
+    <unit id="RoleTutor"><segment><source>Tutor</source><target state="translated">Tutor</target></segment></unit>
+    <unit id="RoleCoach"><segment><source>Coach</source><target state="translated">Coach</target></segment></unit>
+    <unit id="AudienceColleague"><segment><source>My colleague (staff)</source><target state="translated">My colleague (staff)</target></segment></unit>
+    <unit id="AudienceStudents"><segment><source>Students</source><target state="translated">Students</target></segment></unit>
+  </file>
+</xliff>

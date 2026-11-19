@@ -3,6 +3,7 @@
              xmlns:arc="https://github.com/AIDotNet/TKCode.Arc"
              xmlns:lucide="https://github.com/AIDotNet/TKCode.Arc/lucide"
              xmlns:l="using:TinaClass.App.Common.Api.Localization"
+             xmlns:ui="using:TinaClass.App.Common.Ui"
              xmlns:api="using:TinaClass.App.Common.Api"
              x:Class="TinaClass.App.Common.Api.SignInView"
              x:DataType="api:SignInViewModel">
@@ -14,13 +15,16 @@
             <StackPanel Width="360" Spacing="{arc:ArcDesignTokenResource Space3}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="24">
                 <Border Classes="panel" Padding="24">
                     <StackPanel Spacing="{arc:ArcDesignTokenResource Space4}">
+                        <!-- The Tinadec brand (Common/Ui/Brand.cs): the robot-head mark in the tile and the wordmark, both on theme tokens. -->
                         <Border Width="{arc:ArcDesignTokenResource Space10}" Height="{arc:ArcDesignTokenResource Space10}" HorizontalAlignment="Left"
                                 CornerRadius="{arc:ArcDesignTokenResource RadiusControl}" Background="{arc:ArcDesignTokenResource Foreground}">
-                            <lucide:LucideIcon Kind="LayoutGrid" Size="{arc:ArcDesignTokenResource GlyphSizeSM}" Foreground="{arc:ArcDesignTokenResource Background}"
-                                               HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <Path Data="{x:Static ui:Brand.Logo}" Fill="{arc:ArcDesignTokenResource Background}" Stretch="Uniform"
+                                  Width="{arc:ArcDesignTokenResource GlyphSizeMD}" Height="{arc:ArcDesignTokenResource GlyphSizeMD}"
+                                  HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
-                        <StackPanel Spacing="2">
-                            <TextBlock Classes="title" Text="{Binding Title}" />
+                        <StackPanel Spacing="{arc:ArcDesignTokenResource Space2}">
+                            <Path Data="{x:Static ui:Brand.Wordmark}" Fill="{arc:ArcDesignTokenResource Foreground}" Stretch="Uniform"
+                                  Height="{arc:ArcDesignTokenResource TypeXL}" HorizontalAlignment="Left" VerticalAlignment="Center" />
                             <TextBlock Classes="secondary small" Text="{Binding Subtitle}" />
                         </StackPanel>
                         <arc:Input Label="{l:ApiLangResource Email}" Text="{Binding Email}" Placeholder="name@company.com" />

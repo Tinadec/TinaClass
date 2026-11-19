@@ -39,6 +39,38 @@ public sealed class UserSettings
     /// <summary>Whether the sidebar is folded to its icon rail.</summary>
     public bool IsSidebarCollapsed { get; set; }
 
+    // -- The assistant: who it is and how much it may do on its own. --
+
+    /// <summary>The name the assistant uses in the composer and answers.</summary>
+    public string AssistantName { get; set; } = "助手";
+
+    /// <summary>The role it plays (a persona key, e.g. "teaching_assistant", "tutor", "coach").</summary>
+    public string AssistantRole { get; set; } = "teaching_assistant";
+
+    /// <summary>Who it explains to by default: "colleague" or "students".</summary>
+    public string AssistantAudience { get; set; } = "colleague";
+
+    /// <summary>Whether answers stream token by token (false: wait for the whole answer).</summary>
+    public bool StreamResponses { get; set; } = true;
+
+    /// <summary>Whether the agent shows its reasoning step before the answer.</summary>
+    public bool ShowReasoning { get; set; } = true;
+
+    /// <summary>How much independence the agent has with tools: "ask" (every risky call waits), "auto" (safe tools run free, risky still asks) or "plan" (a plan first, tools after a person confirms it).</summary>
+    public string AgentAutonomy { get; set; } = "ask";
+
+    /// <summary>Whether a tool that reaches outside the app always needs a person's approval.</summary>
+    public bool ConfirmExternalTools { get; set; } = true;
+
+    /// <summary>Whether the agent reads the selected knowledge base before answering (retrieval on by default).</summary>
+    public bool UseKnowledge { get; set; } = true;
+
+    /// <summary>The default model code the agent uses for new conversations, or empty for the provider's default.</summary>
+    public string? DefaultModelCode { get; set; }
+
+    /// <summary>Whether to keep the chat history on this device only.</summary>
+    public bool KeepDataLocal { get; set; } = true;
+
     public WindowPlacement? Window { get; set; }
 
     public static UserSettings Load(ISettingsStore store)

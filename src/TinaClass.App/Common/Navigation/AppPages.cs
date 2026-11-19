@@ -18,6 +18,8 @@ using TinaClass.App.Features.Team;
 using TinaClass.App.Features.Team.Localization;
 using TinaClass.App.Features.Usage;
 using TinaClass.App.Features.Usage.Localization;
+using TinaClass.App.Features.Settings;
+using TinaClass.App.Features.Settings.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using TKCode.Arc.Icons.Lucide;
 
@@ -38,6 +40,7 @@ public static class AppPages
     public const string Prompts = "prompts";
     public const string Team = "team";
     public const string Usage = "usage";
+    public const string Settings = "settings";
 
     public static IReadOnlyList<AppPage> All { get; } =
     [
@@ -49,7 +52,8 @@ public static class AppPages
         new(Prompts, () => PromptsLangResources.Get(PromptsLangResourceKind.NavPrompts), LucideIconKind.Sparkles, () => View<PromptsPage, PromptsViewModel>(), Model<PromptsViewModel>),
         new(Team, () => TeamLangResources.Get(TeamLangResourceKind.NavTeam), LucideIconKind.Users, () => View<TeamPage, TeamViewModel>(), Model<TeamViewModel>),
         new(Usage, () => UsageLangResources.Get(UsageLangResourceKind.NavUsage), LucideIconKind.ChartColumn, () => View<UsagePage, UsageViewModel>(), Model<UsageViewModel>),
-        new(Models, () => ModelsLangResources.Get(ModelsLangResourceKind.NavModels), LucideIconKind.Settings, () => View<ModelsPage, ModelsViewModel>(), Model<ModelsViewModel>),
+        new(Models, () => ModelsLangResources.Get(ModelsLangResourceKind.NavModels), LucideIconKind.Cpu, () => View<ModelsPage, ModelsViewModel>(), Model<ModelsViewModel>),
+        new(Settings, () => SettingsLangResources.Get(SettingsLangResourceKind.NavSettings), LucideIconKind.Settings, () => View<SettingsPage, SettingsViewModel>(), Model<SettingsViewModel>),
     ];
 
     public static AppPage? Find(string? key) => All.FirstOrDefault(page => page.Key == key);

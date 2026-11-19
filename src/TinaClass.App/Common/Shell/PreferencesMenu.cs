@@ -33,6 +33,15 @@ public static class PreferencesMenu
         menu.Items.Add(appearance);
         menu.Items.Add(language);
         menu.Items.Add(motion);
+        // Full settings live on their own page; the menu keeps the quick preferences and a way in.
+        var settings = new MenuEntry
+        {
+            Header = Text.Get(AppLangResourceKind.Settings),
+            Icon = new LucideIcon { Kind = LucideIconKind.Settings, Size = 16 },
+            Command = vm.OpenSettingsCommand,
+        };
+        ArcLanguage.Changed += (_, _) => settings.Header = Text.Get(AppLangResourceKind.Settings);
+        menu.Items.Add(settings);
         return menu;
     }
 

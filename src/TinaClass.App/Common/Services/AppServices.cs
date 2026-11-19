@@ -9,6 +9,7 @@ using TinaClass.App.Features.Flow;
 using TinaClass.App.Features.Prompts;
 using TinaClass.App.Features.Team;
 using TinaClass.App.Features.Usage;
+using TinaClass.App.Features.Settings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using TinaClass.App.Common.Api;
@@ -49,6 +50,7 @@ public static class AppServices
         services.AddPrompts();
         services.AddTeam();
         services.AddUsage();
+        services.AddSettings();
         if (ApiSettings.Current.UsesApi)
         {
             services.AddSingleton<ApiSession>();

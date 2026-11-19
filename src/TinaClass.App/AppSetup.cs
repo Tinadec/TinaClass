@@ -16,6 +16,7 @@ using TinaClass.App.Features.Flow.Localization;
 using TinaClass.App.Features.Prompts.Localization;
 using TinaClass.App.Features.Team.Localization;
 using TinaClass.App.Features.Usage.Localization;
+using TinaClass.App.Features.Settings.Localization;
 
 namespace TinaClass.App;
 
@@ -51,6 +52,7 @@ public static class AppSetup
                        PromptsLangResources.Catalog,
                        TeamLangResources.Catalog,
                        UsageLangResources.Catalog,
+                       SettingsLangResources.Catalog,
                    ]))
                    // The theme of the first frame: arc.theme.json, then the appearance chosen in the app (if any).
                    .WithTheme(theme =>

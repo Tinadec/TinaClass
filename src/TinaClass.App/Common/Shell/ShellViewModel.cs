@@ -186,12 +186,8 @@ public sealed partial class ShellViewModel : ObservableObject, INavigator
     [ObservableProperty]
     private string _spendLabel = string.Empty;
 
-    /// <summary>The company and department line of the sidebar's header (sample data; the API's workspace is the app name).</summary>
-    public string WorkspaceName => ApiMode ? AppInfo.Current.Name : SampleCore.Company;
-
+    /// <summary>The department line under the wordmark in the sidebar's header (sample data; empty with the API).</summary>
     public string WorkspaceNote => ApiMode ? string.Empty : Text.Get(AppLangResourceKind.WorkspaceNote);
-
-    public string WorkspaceInitial => WorkspaceName.Length > 0 ? WorkspaceName[..1] : "L";
 
     private static bool ApiMode
     {
@@ -251,14 +247,6 @@ public sealed partial class ShellViewModel : ObservableObject, INavigator
 
     public string AppName => AppInfo.Current.Name;
 
-    /// <summary>The mark in the title bar: the template's <c>logoMark</c> option (app.json <c>logo</c>), one of three generic Lucide shapes.</summary>
-    public LucideIconKind LogoKind => AppInfo.Current.Logo switch
-    {
-        "ring" => LucideIconKind.CircleDot,
-        "grid" => LucideIconKind.LayoutGrid,
-        _ => LucideIconKind.Sparkles,
-    };
-
     public void Navigate(string key)
     {
         if (AppPages.Find(key) is not { } page)
@@ -294,6 +282,10 @@ public sealed partial class ShellViewModel : ObservableObject, INavigator
 
     [RelayCommand]
     private void ToggleSidebar() => IsSidebarCollapsed = !IsSidebarCollapsed;
+
+    /// <summary>Opens the settings page (from the preferences menu).</summary>
+    [RelayCommand]
+    private void OpenSettings() => Navigate(AppPages.Settings);
 
     public string SidebarTip => Text.Get(AppLangResourceKind.ToggleSidebar) + (OperatingSystem.IsMacOS() ? "  ⌘B" : "  Ctrl+B");
 
