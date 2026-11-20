@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "logo": "spark",
   "currency": "CNY",
-  "dataSource": "sample",
+  "dataSource": "api",
   "apiBaseUrl": "http://localhost:5080",
   "language": "system"
 }
